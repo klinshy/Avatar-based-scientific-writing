@@ -17,17 +17,23 @@
                 path = path.substr(path, path.length - 'index.html'.length);
             }
             const instanceId = Math.random().toString(36).substring(2, 15);
-            const url = `https://play.workadventu.re/_/${instanceId}/${host}${path}office.tmj`;
-            document.getElementById('testMapURL').href = url;
-            document.getElementById('testMapBtnURL').href = url;
-            document.getElementById('testMapURL').innerText = url;
+            const mapSelector = document.getElementById('mapSelector');
+            const updateURLs = () => {
+                const selectedMap = mapSelector.value;
+                const url = `https://play.workadventu.re/_/${instanceId}/${host}${path}${selectedMap}`;
+                document.getElementById('testMapURL').href = url;
+                document.getElementById('testMapBtnURL').href = url;
+                document.getElementById('testMapURL').innerText = url;
 
-            const tmjURL = window.location.protocol + '//' + window.location.host + path + 'office.tmj';
-            document.getElementById('tmjURL').innerText = tmjURL;
+                const tmjURL = window.location.protocol + '//' + window.location.host + path + selectedMap;
+                document.getElementById('tmjURL').innerText = tmjURL;
 
-            const gettingStartedLink = 'https://workadventu.re/getting-started?name=Map&mapUrl=' + tmjURL;
-            document.getElementById('gettingStartedLink').href = gettingStartedLink;
+                const gettingStartedLink = 'https://workadventu.re/getting-started?name=Map&mapUrl=' + tmjURL;
+                document.getElementById('gettingStartedLink').href = gettingStartedLink;
+            };
 
+            mapSelector.addEventListener('change', updateURLs);
+            updateURLs();
         };
     </script>
     <style>
@@ -149,6 +155,17 @@
         <main>
             <section>
                 <h2>Test my map</h2>
+                <label for="mapSelector">Select a map:</label>
+                <select id="mapSelector">
+                    <option value="office.tmj">office.tmj</option>
+                    <option value="matrix.tmj">matrix.tmj</option>
+                    <option value="modul1.tmj">modul1.tmj</option>
+                    <option value="modul2.tmj">modul2.tmj</option>
+                    <option value="modul3.tmj">modul3.tmj</option>
+                    <option value="modul4.tmj">modul4.tmj</option>
+                    <option value="modul5.tmj">modul5.tmj</option>
+                    <option value="notlog.tmj">notlog.tmj</option>
+                </select>
                 <p><a id="testMapURL" href="#" class="url"></a></p>
                 <p class="tips">(In order to test another map, locate "office.tmj" at the end of the URL and replace it by another file name)</p>
                 <img src="/office.png" alt="Map thumbnail" class="map">

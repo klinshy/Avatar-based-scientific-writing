@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="configVariable" type="variable">
+  <properties>
+   <property name="default" value="default_content"/>
+   <property name="description" value="Description of the variable"/>
+   <property name="label" value="Label"/>
+   <property name="persist" type="bool" value="true"/>
+   <property name="writableBy" value="tags..."/>
+  </properties>
+  <point/>
+ </object>
+</template>
