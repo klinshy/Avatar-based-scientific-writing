@@ -102,6 +102,110 @@
         "/Users/kos/Documents/GitHub/Hub/map.tmj#wink_sprite": {
             "scaleInDock": 1
         },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj": {
+            "expandedGroupLayers": [
+                136,
+                116
+            ],
+            "expandedObjectLayers": [
+                136,
+                116,
+                127
+            ],
+            "scale": 0.75,
+            "selectedLayer": 40,
+            "viewCenter": {
+                "x": 560.6666666666665,
+                "y": 743.3333333333333
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#CWT v2 Tileset": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Fantasy_Outside_A1&A2_32x32_green": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#God ray linear 45 tall": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Hackaton-Remaster-Spritesheet": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Aurora_Borealis": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Aurora_Borealis_2": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Black": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Blue": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Green": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Orange": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Overlays_1": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Overlays_2": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Pink": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Purple": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Rainbow": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Red": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_White": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Yellow": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#LimeZu_24_User_Interface_32x32_edited": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#WA_User_Interface": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#cooliobot": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#cuckoo full sprite": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#holoflickr": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#info": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#posters": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#smoke texture": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#tileset1": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#tileset_first_walls": {
+            "scaleInDock": 1
+        },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj": {
             "expandedGroupLayers": [
                 101
@@ -893,30 +997,29 @@
         },
         "templates.tmj": {
             "expandedGroupLayers": [
-                7,
-                4,
-                2,
                 9,
+                5,
                 3,
+                12,
                 11,
+                7,
                 8,
                 19,
-                5,
-                12
+                2,
+                4
             ],
             "expandedObjectLayers": [
-                4,
+                19,
                 2,
                 20,
-                6,
-                44,
-                19
+                4,
+                6
             ],
-            "scale": 1.0943,
+            "scale": 2,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 446.8610070364617,
-                "y": 300.19190349995426
+                "x": 458.75,
+                "y": 225.75
             }
         },
         "templates.tmj#!$Big_drawbridge_animated": {
@@ -1105,7 +1208,7 @@
         },
         "templates.tmj#WA_Special_Zones": {
             "dynamicWrapping": false,
-            "scaleInDock": 0.25
+            "scaleInDock": 1.5
         },
         "templates.tmj#cyber_A1_corrupt": {
             "scaleInDock": 1
