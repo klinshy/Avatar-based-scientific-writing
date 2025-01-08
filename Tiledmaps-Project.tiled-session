@@ -1,14 +1,19 @@
 {
-    "activeFile": "templates.tmj",
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj",
     "expandedProjectPaths": [
         ".",
-        "tilesets/WinLu/exterior",
+        "tilesets",
         "tilesets/WinLu",
-        "tilesets"
+        "tilesets/WinLu/exterior"
     ],
     "fileStates": {
         "": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "/Users/kos/Documents/GitHub/Hub/map.tmj": {
             "expandedObjectLayers": [
@@ -108,15 +113,16 @@
                 116
             ],
             "expandedObjectLayers": [
+                127,
                 136,
                 116,
-                127
+                3
             ],
             "scale": 0.75,
-            "selectedLayer": 40,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 560.6666666666665,
-                "y": 743.3333333333333
+                "x": 608,
+                "y": 744
             }
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#CWT v2 Tileset": {
@@ -215,11 +221,11 @@
                 103,
                 101
             ],
-            "scale": 1.5,
-            "selectedLayer": 26,
+            "scale": 2,
+            "selectedLayer": 25,
             "viewCenter": {
-                "x": 1337,
-                "y": 1036.3333333333333
+                "x": 1133,
+                "y": 1196
             }
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj#!$Spaceship_gate2": {
@@ -279,6 +285,232 @@
         "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj#firework_spritesheets": {
             "scaleInDock": 1
         },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj": {
+            "expandedGroupLayers": [
+                2,
+                11,
+                8,
+                56,
+                19,
+                53,
+                5,
+                9,
+                7,
+                12,
+                45,
+                4,
+                3
+            ],
+            "expandedObjectLayers": [
+                2,
+                42,
+                6,
+                19,
+                20,
+                4
+            ],
+            "scale": 2,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 476.5,
+                "y": 268
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj#WA_Special_Zones": {
+            "scaleInDock": 1.5
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj": {
+            "expandedGroupLayers": [
+                11,
+                10
+            ],
+            "scale": 0.6171,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 16.20482903905372,
+                "y": 16.204829039053607
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#3_Bathroom_32x32-Revamp_v0": {
+            "scaleInDock": 0.2347
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#Modern_Office_32x32_Revamp_v0": {
+            "scaleInDock": 1.0759
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#Room_Builder_3d_walls_32x32": {
+            "scaleInDock": 1.5
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#Room_Builder_Floor_Connectors_32x32": {
+            "scaleInDock": 1.2079
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#Room_Builder_Floor_Paths_32x32": {
+            "scaleInDock": 0.777
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#Room_Builder_Floor_Shadows_32x32": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#Room_Builder_Floors_32x32": {
+            "scaleInDock": 0.75
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#theOffice": {
+            "scaleInDock": 0.1743
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj": {
+            "scale": 1,
+            "selectedLayer": 18,
+            "viewCenter": {
+                "x": 1020,
+                "y": 508
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#10_Birthday_party_32x32_revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#11_Halloween_32x32_Revamp_v1": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#12_Kitchen_32x32_Revamp_v1": {
+            "scaleInDock": 1.1172
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#13_Conference_Hall_32x32_Revamp_v1": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1.0239
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#14_Basement_32x32_Revamp_v1": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.6821
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#14_Swimming_Pool_32x32_Revamp_v0": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#15_Christmas_32x32_Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#16_Grocery_store_32x32_Revamp_v0": {
+            "scaleInDock": 0.8817
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#16_Office_32x32_Revamp_v0": {
+            "scaleInDock": 0.3986
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#17_Visibile_Upstairs_System_32x32_Revamp_v0": {
+            "scaleInDock": 0.73
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#18_Jail_32x32_Revamp_v0": {
+            "scaleInDock": 0.9999
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#19_Hospital_32x32_Revamp_v0": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.6633
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#1_Generic_32x32_Revamp_v0": {
+            "scaleInDock": 1.0657
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#20_Japanese_interiors_32x32_Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#21_Clothing_Store_32x32_Revamp_V0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#22_Museum_32x32-Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#22_Post_Office_32x32_Revamp_v0": {
+            "scaleInDock": 0.9161
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#23_Television_and_Film_Studio_32x32_Revamp_v1": {
+            "scaleInDock": 0.7809
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#24_Ice_Cream_Shop_32x32_Revamp_v0": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#25_Shooting_Range_32x32_Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#26_Condominium_32x32_Revamp_v0": {
+            "scaleInDock": 0.33
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#2_City_Terrains_32x32_Revamp_v0": {
+            "scaleInDock": 0.33
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#2_LivingRoom_32x32- Revamp_v0": {
+            "scaleInDock": 0.939
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#3_Bathroom_32x32-Revamp_v0": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#4_Bedroom_32x32_Revamp_v0": {
+            "scaleInDock": 0.8152
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#5_Classroom_and_library_32x32_Revamp_v1": {
+            "scaleInDock": 0.8317
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#6_Music_and_sport_32x32-Revamp_v0": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#7_Art_32x32_revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#8_Gym_32x32_revamp_v0": {
+            "scaleInDock": 1.5
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#9_Fishing_32x32_revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#Modern_Office_32x32_Revamp_v0": {
+            "scaleInDock": 0.9187
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#Room_Builder_3d_walls_32x32": {
+            "scaleInDock": 1.3287
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#Room_Builder_Floor_Connectors_32x32": {
+            "scaleInDock": 1.2079
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#Room_Builder_Floor_Paths_32x32": {
+            "scaleInDock": 1.065
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#Room_Builder_Floor_Shadows_32x32": {
+            "scaleInDock": 0.75
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#Room_Builder_Floors_32x32": {
+            "scaleInDock": 2
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj#theOffice": {
+            "scaleInDock": 0.1743
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj": {
+            "scale": 0.509326171875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 768.6626402070751,
+                "y": 511.4600709423833
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj#3_Bathroom_32x32-Revamp_v0": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj#Modern_Office_32x32_Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj#Room_Builder_3d_walls_32x32": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj#Room_Builder_Floor_Connectors_32x32": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj#Room_Builder_Floor_Paths_32x32": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj#Room_Builder_Floor_Shadows_32x32": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj#Room_Builder_Floors_32x32": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj#theOffice": {
+            "scaleInDock": 1
+        },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/winterevent-map.tmj": {
             "expandedObjectLayers": [
                 2
@@ -324,6 +556,35 @@
             "scaleInDock": 1
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/winterevent-map.tmj#weather effects, snow light anim 32x128": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1024,
+                "y": 1673.333333333333
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj#CWT Remaster 1st v2 BG": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj#CWT Remaster 1st v2 FG": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj#CWT Tileset": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj#Shadows&Light": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj#ToBeShadowed": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj#robots": {
             "scaleInDock": 1
         },
         "/Users/kos/Documents/GitHub/escape/jumping.tmj": {
@@ -436,6 +697,219 @@
         "/Users/kos/Documents/GitHub/escape/jumping.tmj#weather effects, cloud cover autotile 16x16": {
             "scaleInDock": 1
         },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj": {
+            "scale": 1,
+            "selectedLayer": 17,
+            "viewCenter": {
+                "x": 262,
+                "y": 361
+            }
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Decoration": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Exterior": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Logo_Long": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Miscellaneous": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Room_Builder": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Seats": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Tables": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_User_Interface": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#firework_spritesheets": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj#material-tiles": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj": {
+            "expandedGroupLayers": [
+                10,
+                43,
+                12,
+                34
+            ],
+            "expandedObjectLayers": [
+                30,
+                32,
+                12,
+                28
+            ],
+            "scale": 0.25,
+            "selectedLayer": 29,
+            "viewCenter": {
+                "x": 768,
+                "y": 508
+            }
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#10_Birthday_party_32x32_revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#11_Halloween_32x32_Revamp_v1": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#12_Kitchen_32x32_Revamp_v1": {
+            "scaleInDock": 1.5333
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#13_Conference_Hall_32x32_Revamp_v1": {
+            "scaleInDock": 0.39
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#14_Basement_32x32_Revamp_v1": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#14_Swimming_Pool_32x32_Revamp_v0": {
+            "scaleInDock": 0.39
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#15_Christmas_32x32_Revamp_v0": {
+            "scaleInDock": 0.39
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#16_Grocery_store_32x32_Revamp_v0": {
+            "scaleInDock": 0.9566
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#16_Office_32x32_Revamp_v0": {
+            "scaleInDock": 0.7004
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#17_Visibile_Upstairs_System_32x32_Revamp_v0": {
+            "scaleInDock": 0.73
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#18_Jail_32x32_Revamp_v0": {
+            "scaleInDock": 0.8317
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#19_Hospital_32x32_Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#1_Generic_32x32_Revamp_v0": {
+            "scaleInDock": 0.2822
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#20_Japanese_interiors_32x32_Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#21_Clothing_Store_32x32_Revamp_V0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#22_Museum_32x32-Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#22_Post_Office_32x32_Revamp_v0": {
+            "scaleInDock": 0.33
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#23_Television_and_Film_Studio_32x32_Revamp_v1": {
+            "scaleInDock": 0.7809
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#24_Ice_Cream_Shop_32x32_Revamp_v0": {
+            "scaleInDock": 0.75
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#25_Shooting_Range_32x32_Revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#26_Condominium_32x32_Revamp_v0": {
+            "scaleInDock": 0.75
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#2_City_Terrains_32x32_Revamp_v0": {
+            "scaleInDock": 0.1942
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#2_LivingRoom_32x32- Revamp_v0": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#3_Bathroom_32x32-Revamp_v0": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#4_Bedroom_32x32_Revamp_v0": {
+            "scaleInDock": 0.8152
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#4_Generic_Buildings_32x32": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#5_Classroom_and_library_32x32_Revamp_v1": {
+            "scaleInDock": 4
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#6_Garage_Sales_32x32": {
+            "scaleInDock": 0.5801
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#6_Music_and_sport_32x32-Revamp_v0": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#7_Art_32x32_revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#8_Gym_32x32_revamp_v0": {
+            "scaleInDock": 1.5
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#9_Fishing_32x32_revamp_v0": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#CWT v2 Tileset": {
+            "scaleInDock": 0.5911
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Hackaton-Remaster-Spritesheet": {
+            "scaleInDock": 0.3725
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Lighting_Kit_Black": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Modern_Exteriors_Complete_Tileset_32x32": {
+            "scaleInDock": 0.125
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Modern_Office_32x32_Revamp_v0": {
+            "scaleInDock": 1.363
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Office Map Base Tileset": {
+            "scaleInDock": 0.33
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Room_Builder_3d_walls_32x32": {
+            "scaleInDock": 0.25
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Room_Builder_Floor_Connectors_32x32": {
+            "scaleInDock": 1.2079
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Room_Builder_Floor_Paths_32x32": {
+            "scaleInDock": 1.065
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Room_Builder_Floor_Shadows_32x32": {
+            "scaleInDock": 0.75
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#Room_Builder_Floors_32x32": {
+            "scaleInDock": 0.7009
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#animated_door_bathroom_32x32": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#animated_door_glass_left_32x32": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/Pixel/the-office.tmj#theOffice": {
+            "scaleInDock": 0.33
+        },
+        "/Users/kos/Documents/Pixel/untitled.tmj": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "/Users/kos/Documents/Pixel/untitled.tmj#workathon_logo_96x96": {
+            "scaleInDock": 0.6344
+        },
         "/Users/kos/Github/commitcircle/commit-map.tmj": {
             "expandedObjectLayers": [
                 3
@@ -443,8 +917,8 @@
             "scale": 1.0974,
             "selectedLayer": 17,
             "viewCenter": {
-                "x": 2259.4313832695466,
-                "y": 2318.206670311646
+                "x": 971.3869145252415,
+                "y": 1375.5239657371972
             }
         },
         "/Users/kos/Github/commitcircle/commit-map.tmj#Chunk 1": {
@@ -997,29 +1471,30 @@
         },
         "templates.tmj": {
             "expandedGroupLayers": [
-                9,
-                5,
-                3,
-                12,
+                2,
                 11,
-                7,
                 8,
                 19,
-                2,
-                4
+                5,
+                9,
+                7,
+                12,
+                45,
+                4,
+                3
             ],
             "expandedObjectLayers": [
-                19,
                 2,
+                6,
+                19,
                 20,
-                4,
-                6
+                4
             ],
-            "scale": 2,
+            "scale": 0.6838,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 458.75,
-                "y": 225.75
+                "x": 400.7019596373209,
+                "y": 320.2690845276396
             }
         },
         "templates.tmj#!$Big_drawbridge_animated": {
@@ -1521,22 +1996,34 @@
             "scaleInEditor": 1
         }
     },
+    "last.imagePath": "/Users/kos/Documents",
+    "map.fixedSize": false,
+    "map.lastUsedFormat": "json",
     "openFiles": [
-        "templates.tmj"
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj",
+        "/Users/kos/Documents/Pixel/the-office.tmj",
+        "templates.tmj",
+        "/Users/kos/Documents/Pixel/untitled.tmj",
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj"
     ],
     "project": "",
+    "property.type": "bool",
     "recentFiles": [
-        "templates.tmj",
-        "tilesets/WinLu/exterior/Fantasy_Outside_A1_green.tsx",
-        "modul4.tmj",
-        "modul3.tmj",
-        "modul2.tmj",
-        "modul1.tmj",
-        "matrix.tmj",
         "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj",
-        "/Users/kos/Documents/GitHub/Hub/map.tmj",
-        "tiled/notlog.tmx",
-        "notlog.tmj",
-        "/Users/kos/Documents/GitHub/escape/jumping.tmj"
-    ]
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj",
+        "/Users/kos/Documents/Pixel/untitled.tmj",
+        "templates.tmj",
+        "/Users/kos/Documents/Pixel/the-office.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj",
+        "/Users/kos/Github/commitcircle/commit-map.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.type": 0
 }
