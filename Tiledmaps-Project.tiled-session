@@ -3,12 +3,12 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj",
+    "activeFile": "matrix-hub.tmj",
     "expandedProjectPaths": [
-        ".",
-        "tilesets",
+        "tilesets/WinLu/exterior",
         "tilesets/WinLu",
-        "tilesets/WinLu/exterior"
+        ".",
+        "tilesets"
     ],
     "fileStates": {
         "": {
@@ -212,20 +212,59 @@
         "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#tileset_first_walls": {
             "scaleInDock": 1
         },
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj": {
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj": {
             "expandedGroupLayers": [
-                101
+                10,
+                59,
+                15,
+                83,
+                70,
+                6,
+                14,
+                9,
+                88,
+                71,
+                5,
+                76,
+                12,
+                69,
+                73,
+                4,
+                66,
+                7
             ],
             "expandedObjectLayers": [
+                10,
+                64,
                 2,
-                103,
+                86,
+                9,
+                71,
+                11,
+                12,
+                73,
+                66
+            ],
+            "scale": 1.5,
+            "selectedLayer": 11,
+            "viewCenter": {
+                "x": 801,
+                "y": 195.33333333333334
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj#WA_Special_Zones": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj": {
+            "expandedGroupLayers": [
                 101
             ],
             "scale": 2,
             "selectedLayer": 25,
             "viewCenter": {
-                "x": 1133,
-                "y": 1196
+                "x": 880.25,
+                "y": 960
             }
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj#!$Spaceship_gate2": {
@@ -283,52 +322,54 @@
             "scaleInDock": 1
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj#firework_spritesheets": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj": {
             "expandedGroupLayers": [
-                2,
+                5,
                 11,
-                8,
-                56,
+                45,
+                3,
+                4,
+                10,
                 19,
                 53,
-                5,
+                56,
                 9,
                 7,
                 12,
-                45,
-                4,
-                3
+                2,
+                8
             ],
             "expandedObjectLayers": [
-                2,
-                42,
                 6,
-                19,
+                42,
                 20,
-                4
+                4,
+                19,
+                2
             ],
-            "scale": 2,
+            "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 476.5,
-                "y": 268
+                "x": 648.6666666666666,
+                "y": -20
             }
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj#WA_Special_Zones": {
-            "scaleInDock": 1.5
+            "scaleInDock": 0.33
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj": {
             "expandedGroupLayers": [
                 11,
                 10
             ],
-            "scale": 0.6171,
+            "scale": 3,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 16.20482903905372,
-                "y": 16.204829039053607
+                "x": -154.49999999999997,
+                "y": 142
             }
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj#3_Bathroom_32x32-Revamp_v0": {
@@ -698,11 +739,11 @@
             "scaleInDock": 1
         },
         "/Users/kos/Documents/GitHub/stepFX/office.tmj": {
-            "scale": 1,
-            "selectedLayer": 17,
+            "scale": 0.33,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 262,
-                "y": 361
+                "x": 495.4545454545455,
+                "y": 336.3636363636364
             }
         },
         "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Decoration": {
@@ -736,7 +777,8 @@
             "scaleInDock": 1
         },
         "/Users/kos/Documents/GitHub/stepFX/office.tmj#firework_spritesheets": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "/Users/kos/Documents/GitHub/stepFX/office.tmj#material-tiles": {
             "scaleInDock": 1
@@ -745,20 +787,20 @@
             "expandedGroupLayers": [
                 10,
                 43,
-                12,
-                34
+                34,
+                12
             ],
             "expandedObjectLayers": [
-                30,
-                32,
+                28,
                 12,
-                28
+                30,
+                32
             ],
-            "scale": 0.25,
+            "scale": 1.0012,
             "selectedLayer": 29,
             "viewCenter": {
-                "x": 768,
-                "y": 508
+                "x": 767.5789053136235,
+                "y": 509.38873351977617
             }
         },
         "/Users/kos/Documents/Pixel/the-office.tmj#10_Birthday_party_32x32_revamp_v0": {
@@ -903,7 +945,7 @@
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 0,
+                "x": -50.5,
                 "y": 0
             }
         },
@@ -1126,6 +1168,35 @@
         "/Users/kos/Github/commitcircle/commit-map.tmj#schrift": {
             "scaleInDock": 1
         },
+        "matrix-hub.tmj": {
+            "scale": 1.0015,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 981.0284573140289,
+                "y": 531.2031952071891
+            }
+        },
+        "matrix-hub.tmj#cyber_A1_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#cyber_A2_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#cyber_A4_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#cyber_B_corrupt": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#cyber_C_corrupt": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#details_corrupt": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#non-rm-a4-square_corrupt": {
+            "scaleInDock": 1
+        },
         "matrix.tmj": {
             "scale": 0.6204687499999999,
             "selectedLayer": 0,
@@ -1135,12 +1206,33 @@
             }
         },
         "modul1.tmj": {
-            "scale": 0.6204687499999999,
-            "selectedLayer": 0,
+            "scale": 0.25,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 640.6446738856712,
-                "y": 639.0329891714936
+                "x": 1486,
+                "y": 428
             }
+        },
+        "modul1.tmj#cyber_A1_corrupt_expanded": {
+            "scaleInDock": 3
+        },
+        "modul1.tmj#cyber_A2_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "modul1.tmj#cyber_A4_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "modul1.tmj#cyber_B_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul1.tmj#cyber_C_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul1.tmj#details_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul1.tmj#non-rm-a4-square_corrupt": {
+            "scaleInDock": 1
         },
         "modul2.tmj": {
             "scale": 0.6204687499999999,
@@ -1168,28 +1260,28 @@
         },
         "notlog.tmj": {
             "expandedGroupLayers": [
-                19,
+                5,
                 11,
-                7,
                 3,
-                9,
-                12,
-                8,
-                2,
                 4,
-                5
+                19,
+                9,
+                7,
+                12,
+                2,
+                8
             ],
             "expandedObjectLayers": [
-                44,
                 6,
-                2,
-                4
+                4,
+                44,
+                2
             ],
-            "scale": 0.1138,
+            "scale": 0.33,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 1120.3866432337431,
-                "y": 1115.9929701230226
+                "x": 431.81818181818176,
+                "y": 433.33333333333337
             }
         },
         "notlog.tmj#!$Big_drawbridge_animated": {
@@ -1471,29 +1563,29 @@
         },
         "templates.tmj": {
             "expandedGroupLayers": [
-                2,
-                11,
-                8,
-                19,
-                5,
-                9,
                 7,
-                12,
-                45,
+                19,
+                3,
+                5,
                 4,
-                3
+                12,
+                11,
+                45,
+                8,
+                9,
+                2
             ],
             "expandedObjectLayers": [
-                2,
-                6,
-                19,
                 20,
-                4
+                19,
+                4,
+                6,
+                2
             ],
             "scale": 0.6838,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 400.7019596373209,
+                "x": 399.97075168177827,
                 "y": 320.2690845276396
             }
         },
@@ -2000,30 +2092,31 @@
     "map.fixedSize": false,
     "map.lastUsedFormat": "json",
     "openFiles": [
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj",
         "/Users/kos/Documents/Pixel/the-office.tmj",
-        "templates.tmj",
-        "/Users/kos/Documents/Pixel/untitled.tmj",
         "/Users/kos/Documents/GitHub/stepFX/office.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj"
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj",
+        "modul1.tmj",
+        "matrix-hub.tmj"
     ],
     "project": "",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj",
-        "/Users/kos/Documents/GitHub/stepFX/office.tmj",
-        "/Users/kos/Documents/Pixel/untitled.tmj",
-        "templates.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj",
         "/Users/kos/Documents/Pixel/the-office.tmj",
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj",
+        "modul1.tmj",
+        "matrix-hub.tmj",
+        "/Users/kos/Documents/Pixel/untitled.tmj",
+        "notlog.tmj",
         "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj",
         "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj",
-        "/Users/kos/Github/commitcircle/commit-map.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/tilesets/the-office/the-office.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/workhub.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj"
+        "templates.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj"
     ],
+    "resizeMap.removeObjects": false,
+    "textEdit.monospace": false,
     "tileset.embedInMap": true,
     "tileset.type": 0
 }
