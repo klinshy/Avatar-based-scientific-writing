@@ -1,0 +1,188 @@
+{
+    "activeFile": "feature-templates.tmj",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "feature-templates.tmj": {
+            "scale": 0.5649107142857143,
+            "selectedLayer": 32,
+            "viewCenter": {
+                "x": 1120.5310573731626,
+                "y": 319.5195195195195
+            }
+        },
+        "feature-templates.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 768,
+                "y": 592.5
+            }
+        },
+        "matrix-hub.tmj#cyber_A1_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#cyber_A2_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#cyber_A4_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#cyber_B_corrupt": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#cyber_C_corrupt": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#details_corrupt": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj#non-rm-a4-square_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 320,
+                "y": 1440.5
+            }
+        },
+        "modul_1.tmj#cyber_A1_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#cyber_A2_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#cyber_A4_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#cyber_B_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#cyber_C_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#details_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#non-rm-a4-square_corrupt": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1120,
+                "y": 1279.5
+            }
+        },
+        "notlog.tmj#!$Gate_Cathedral1_32px_2tiles": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#!$Patreon_Chimney1-30%": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#!Decoration_32px": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#!Flags_banner_snow": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Edit_ComplexStaircase": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_A4": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_A5": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_A5_32px": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_C": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_E": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Graveyard_32px": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_A2": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_A3": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_A4_32px": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_A5": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_B": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_C": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_C_white": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_D": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_E_Cathedral": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_Shops": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_Shops3_32px": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#cyber_A1_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#cyber_A2_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#cyber_A4_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#cyber_B_corrupt": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#cyber_C_corrupt": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#details_corrupt": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#non-rm-a4-square_corrupt": {
+            "scaleInDock": 1
+        }
+    },
+    "openFiles": [
+        "notlog.tmj",
+        "matrix-hub.tmj",
+        "modul_1.tmj",
+        "feature-templates.tmj"
+    ],
+    "project": "Tiled Project.tiled-project",
+    "recentFiles": [
+        "notlog.tmj",
+        "matrix-hub.tmj",
+        "modul_1.tmj",
+        "feature-templates.tmj"
+    ]
+}
