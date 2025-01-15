@@ -2715,7 +2715,7 @@
         {
          "columns":6,
          "firstgid":1,
-         "image":"..\/new map starter kit\/tilesets\/WA_Special_Zones.png",
+         "image":"tilesets\/WA_Special_Zones.png",
          "imageheight":128,
          "imagewidth":192,
          "margin":0,
