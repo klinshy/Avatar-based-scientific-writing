@@ -77,8 +77,8 @@
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1120,
-                "y": 1279.5
+                "x": 1367,
+                "y": 1690.5
             }
         },
         "notlog.tmj#!$Gate_Cathedral1_32px_2tiles": {
@@ -173,16 +173,16 @@
         }
     },
     "openFiles": [
+        "feature-templates.tmj",
         "notlog.tmj",
         "matrix-hub.tmj",
-        "modul_1.tmj",
-        "feature-templates.tmj"
+        "modul_1.tmj"
     ],
     "project": "Tiled Project.tiled-project",
     "recentFiles": [
-        "notlog.tmj",
-        "matrix-hub.tmj",
         "modul_1.tmj",
+        "matrix-hub.tmj",
+        "notlog.tmj",
         "feature-templates.tmj"
     ]
 }
