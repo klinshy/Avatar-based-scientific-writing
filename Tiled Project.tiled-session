@@ -5,11 +5,21 @@
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "feature-templates.tmj": {
-            "scale": 0.5649107142857143,
-            "selectedLayer": 32,
+            "expandedGroupLayers": [
+                66,
+                59,
+                71
+            ],
+            "expandedObjectLayers": [
+                66,
+                71,
+                64
+            ],
+            "scale": 3,
+            "selectedLayer": 15,
             "viewCenter": {
-                "x": 1120.5310573731626,
-                "y": 319.5195195195195
+                "x": 1363.3333333333333,
+                "y": 84.33333333333334
             }
         },
         "feature-templates.tmj#WA_Special_Zones": {
@@ -20,7 +30,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 768,
-                "y": 592.5
+                "y": 593
             }
         },
         "matrix-hub.tmj#cyber_A1_corrupt_expanded": {
@@ -49,7 +59,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 320,
-                "y": 1440.5
+                "y": 1440
             }
         },
         "modul_1.tmj#cyber_A1_corrupt_expanded": {
@@ -74,11 +84,14 @@
             "scaleInDock": 1
         },
         "notlog.tmj": {
-            "scale": 1,
+            "expandedObjectLayers": [
+                37
+            ],
+            "scale": 1.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1367,
-                "y": 1690.5
+                "x": 1932,
+                "y": 2008.6666666666665
             }
         },
         "notlog.tmj#!$Gate_Cathedral1_32px_2tiles": {
