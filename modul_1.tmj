@@ -1528,6 +1528,17 @@
          "y":0
         }, 
         {
+         "draworder":"topdown",
+         "id":21,
+         "name":"floorLayer",
+         "objects":[],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1628,11 +1639,37 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":21,
+ "nextlayerid":22,
  "nextobjectid":1,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"mapCopyright",
+         "type":"string",
+         "value":"tbd"
+        }, 
+        {
+         "name":"mapDescription",
+         "type":"string",
+         "value":"Modul 1"
+        }, 
+        {
+         "name":"mapImage",
+         "type":"string",
+         "value":"module_1.png"
+        }, 
+        {
+         "name":"mapName",
+         "type":"string",
+         "value":"Modul 1"
+        }, 
+        {
+         "name":"script",
+         "type":"string",
+         "value":"src\/main.ts"
+        }],
  "renderorder":"right-down",
- "tiledversion":"1.10.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {

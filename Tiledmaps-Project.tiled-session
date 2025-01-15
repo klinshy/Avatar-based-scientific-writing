@@ -1,19 +1,15 @@
 {
-    "Map/SizeTest": {
-        "height": 4300,
-        "width": 2
-    },
-    "activeFile": "matrix-hub.tmj",
+    "activeFile": "grand-hall.tmj",
     "expandedProjectPaths": [
-        "tilesets/WinLu/exterior",
-        "tilesets/WinLu",
         ".",
+        "tilesets/WinLu",
+        "tilesets/WinLu/exterior",
         "tilesets"
     ],
     "fileStates": {
         "": {
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 0.5
         },
         "/Users/kos/Documents/GitHub/Hub/map.tmj": {
             "expandedObjectLayers": [
@@ -212,44 +208,63 @@
         "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#tileset_first_walls": {
             "scaleInDock": 1
         },
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj": {
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/blank_map.tmj": {
             "expandedGroupLayers": [
-                10,
-                59,
-                15,
-                83,
-                70,
-                6,
-                14,
-                9,
-                88,
-                71,
-                5,
-                76,
                 12,
-                69,
-                73,
-                4,
                 66,
+                13,
+                6,
                 7
             ],
-            "expandedObjectLayers": [
-                10,
-                64,
-                2,
-                86,
+            "scale": 0.2822,
+            "selectedLayer": 23,
+            "viewCenter": {
+                "x": 1504.2523033309706,
+                "y": 712.2608079376329
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/blank_map.tmj#WA_Special_Zones": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj": {
+            "expandedGroupLayers": [
+                14,
+                4,
+                5,
                 9,
-                71,
-                11,
+                10,
                 12,
+                66,
+                59,
+                83,
+                76,
+                6,
                 73,
-                66
+                70,
+                7,
+                71,
+                88,
+                69,
+                15
             ],
-            "scale": 1.5,
+            "expandedObjectLayers": [
+                9,
+                11,
+                2,
+                10,
+                12,
+                66,
+                64,
+                73,
+                71,
+                86
+            ],
+            "scale": 2,
             "selectedLayer": 11,
             "viewCenter": {
-                "x": 801,
-                "y": 195.33333333333334
+                "x": 371.25,
+                "y": 411
             }
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj#WA_Special_Zones": {
@@ -264,7 +279,7 @@
             "selectedLayer": 25,
             "viewCenter": {
                 "x": 880.25,
-                "y": 960
+                "y": 960.5
             }
         },
         "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj#!$Spaceship_gate2": {
@@ -738,12 +753,126 @@
         "/Users/kos/Documents/GitHub/escape/jumping.tmj#weather effects, cloud cover autotile 16x16": {
             "scaleInDock": 1
         },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj": {
+            "scale": 1.0275705645161288,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 495.82969539412375,
+                "y": 335.74336587040773
+            }
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Decoration": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Exterior": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Logo_Long": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Miscellaneous": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Room_Builder": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Seats": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_Tables": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj#WA_User_Interface": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/feature-templates.tmj": {
+            "scale": 0.4550669642857143,
+            "selectedLayer": 32,
+            "viewCenter": {
+                "x": 1119.6154412125375,
+                "y": 320.83190268308226
+            }
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/feature-templates.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj": {
+            "expandedGroupLayers": [
+                9,
+                10,
+                66,
+                59,
+                83,
+                76,
+                6,
+                68,
+                73,
+                70,
+                71,
+                88,
+                69
+            ],
+            "expandedObjectLayers": [
+                9,
+                11,
+                2,
+                10,
+                66,
+                6,
+                64,
+                73,
+                71,
+                86
+            ],
+            "scale": 1,
+            "selectedLayer": 11,
+            "viewCenter": {
+                "x": 338.5,
+                "y": 88
+            }
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Decoration": {
+            "scaleInDock": 1.3287
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Exterior": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Logo_Long": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Miscellaneous": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Room_Builder": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Seats": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Special_Zones": {
+            "scaleInDock": 0.5
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_Tables": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj#WA_User_Interface": {
+            "scaleInDock": 1
+        },
         "/Users/kos/Documents/GitHub/stepFX/office.tmj": {
             "scale": 0.33,
             "selectedLayer": 4,
             "viewCenter": {
                 "x": 495.4545454545455,
-                "y": 336.3636363636364
+                "y": 333.33333333333337
             }
         },
         "/Users/kos/Documents/GitHub/stepFX/office.tmj#WA_Decoration": {
@@ -785,16 +914,16 @@
         },
         "/Users/kos/Documents/Pixel/the-office.tmj": {
             "expandedGroupLayers": [
-                10,
-                43,
                 34,
+                43,
+                10,
                 12
             ],
             "expandedObjectLayers": [
-                28,
                 12,
+                32,
                 30,
-                32
+                28
             ],
             "scale": 1.0012,
             "selectedLayer": 29,
@@ -1168,16 +1297,114 @@
         "/Users/kos/Github/commitcircle/commit-map.tmj#schrift": {
             "scaleInDock": 1
         },
-        "matrix-hub.tmj": {
-            "scale": 1.0015,
+        "grand-hall.tmj": {
+            "scale": 0.8151,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 981.0284573140289,
-                "y": 531.2031952071891
+                "x": 843.454790823212,
+                "y": 1436.6335418966999
+            }
+        },
+        "grand-hall.tmj#!$Gate_Cathedral1_32px_2tiles": {
+            "scaleInDock": 0.33
+        },
+        "grand-hall.tmj#!$Patreon_Chimney1-30%": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#!Decoration_32px": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#!Flags_banner_snow": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Edit_ComplexStaircase": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Dungeon_A4": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Dungeon_A5": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Dungeon_A5_32px": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Dungeon_C": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Dungeon_E": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Graveyard_32px": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_A2": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_A3": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_A4_32px": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_A5": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_B": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_C": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_C_white": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_D": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_E_Cathedral": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_Shops": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#Fantasy_Inside_Shops3_32px": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#cyber_A1_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#cyber_A2_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#cyber_A4_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#cyber_B_corrupt": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#cyber_C_corrupt": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#details_corrupt": {
+            "scaleInDock": 1
+        },
+        "grand-hall.tmj#non-rm-a4-square_corrupt": {
+            "scaleInDock": 1
+        },
+        "matrix-hub.tmj": {
+            "scale": 0.4408,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 1110.480943738657,
+                "y": 626.1343012704175
             }
         },
         "matrix-hub.tmj#cyber_A1_corrupt_expanded": {
-            "scaleInDock": 1
+            "scaleInDock": 0.125
         },
         "matrix-hub.tmj#cyber_A2_corrupt_expanded": {
             "scaleInDock": 1
@@ -1206,15 +1433,15 @@
             }
         },
         "modul1.tmj": {
-            "scale": 0.25,
-            "selectedLayer": 9,
+            "scale": 0.1477,
+            "selectedLayer": 16,
             "viewCenter": {
-                "x": 1486,
-                "y": 428
+                "x": 23.69668246445508,
+                "y": 1902.5050778605284
             }
         },
         "modul1.tmj#cyber_A1_corrupt_expanded": {
-            "scaleInDock": 3
+            "scaleInDock": 1.2156
         },
         "modul1.tmj#cyber_A2_corrupt_expanded": {
             "scaleInDock": 1
@@ -1258,30 +1485,53 @@
                 "y": 639.0329891714936
             }
         },
+        "modul_1.tmj": {
+            "scale": 0.2757638888888889,
+            "selectedLayer": 16,
+            "viewCenter": {
+                "x": 320.92671871065227,
+                "y": 1439.63737093931
+            }
+        },
+        "modul_1.tmj#cyber_A1_corrupt_expanded": {
+            "scaleInDock": 0.25
+        },
+        "modul_1.tmj#cyber_A2_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#cyber_A4_corrupt_expanded": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#cyber_B_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#cyber_C_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#details_corrupt": {
+            "scaleInDock": 1
+        },
+        "modul_1.tmj#non-rm-a4-square_corrupt": {
+            "scaleInDock": 1
+        },
         "notlog.tmj": {
             "expandedGroupLayers": [
+                4,
                 5,
-                11,
-                3,
-                4,
-                19,
                 9,
-                7,
-                12,
+                11,
                 2,
-                8
-            ],
-            "expandedObjectLayers": [
-                6,
-                4,
-                44,
-                2
+                12,
+                19,
+                3,
+                8,
+                7
             ],
             "scale": 0.33,
-            "selectedLayer": 9,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 431.81818181818176,
-                "y": 433.33333333333337
+                "x": 204.5454545454545,
+                "y": 230.30303030303037
             }
         },
         "notlog.tmj#!$Big_drawbridge_animated": {
@@ -1290,8 +1540,12 @@
         "notlog.tmj#!$Big_forrest": {
             "scaleInDock": 1
         },
-        "notlog.tmj#!$Patreon_Chimney1-30%": {
+        "notlog.tmj#!$Gate_Cathedral1_32px_2tiles": {
             "scaleInDock": 1
+        },
+        "notlog.tmj#!$Patreon_Chimney1-30%": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "notlog.tmj#!$Patreon_well_fountain": {
             "scaleInDock": 1
@@ -1305,7 +1559,13 @@
         "notlog.tmj#!Decoration": {
             "scaleInDock": 1
         },
+        "notlog.tmj#!Decoration_32px": {
+            "scaleInDock": 1
+        },
         "notlog.tmj#!Decoration_vegetation": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#!Flags_banner_snow": {
             "scaleInDock": 1
         },
         "notlog.tmj#!waterfall_animation": {
@@ -1323,10 +1583,31 @@
         "notlog.tmj#Chunk 1": {
             "scaleInDock": 1
         },
+        "notlog.tmj#Edit_ComplexStaircase": {
+            "scaleInDock": 1
+        },
         "notlog.tmj#Fantasy Roof Tileset": {
             "scaleInDock": 1
         },
         "notlog.tmj#Fantasy Wall Tileset": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_A4": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_A5": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_A5_32px": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_C": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Dungeon_E": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Graveyard_32px": {
             "scaleInDock": 1
         },
         "notlog.tmj#Fantasy_Inside_A2": {
@@ -1336,6 +1617,9 @@
             "scaleInDock": 1
         },
         "notlog.tmj#Fantasy_Inside_A4": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_A4_32px": {
             "scaleInDock": 1
         },
         "notlog.tmj#Fantasy_Inside_A5": {
@@ -1357,6 +1641,9 @@
             "scaleInDock": 1
         },
         "notlog.tmj#Fantasy_Inside_Shops": {
+            "scaleInDock": 1
+        },
+        "notlog.tmj#Fantasy_Inside_Shops3_32px": {
             "scaleInDock": 1
         },
         "notlog.tmj#Fantasy_Militarycamp_2": {
@@ -1528,7 +1815,7 @@
             "selectedLayer": 12,
             "viewCenter": {
                 "x": 260.6060606060606,
-                "y": 522.943722943723
+                "y": 772.2943722943724
             }
         },
         "office.tmj#WA_Decoration": {
@@ -2088,35 +2375,27 @@
             "scaleInEditor": 1
         }
     },
-    "last.imagePath": "/Users/kos/Documents",
-    "map.fixedSize": false,
-    "map.lastUsedFormat": "json",
     "openFiles": [
         "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj",
         "/Users/kos/Documents/Pixel/the-office.tmj",
         "/Users/kos/Documents/GitHub/stepFX/office.tmj",
         "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj",
         "modul1.tmj",
-        "matrix-hub.tmj"
+        "grand-hall.tmj"
     ],
     "project": "",
-    "property.type": "string",
     "recentFiles": [
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj",
-        "/Users/kos/Documents/Pixel/the-office.tmj",
-        "/Users/kos/Documents/GitHub/stepFX/office.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj",
-        "modul1.tmj",
+        "modul_1.tmj",
         "matrix-hub.tmj",
-        "/Users/kos/Documents/Pixel/untitled.tmj",
-        "notlog.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office-actual.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/templates.tmj",
-        "templates.tmj",
-        "/Users/kos/Documents/GitHub/WA-KW_Templates/the-office.tmj"
-    ],
-    "resizeMap.removeObjects": false,
-    "textEdit.monospace": false,
-    "tileset.embedInMap": true,
-    "tileset.type": 0
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/feature-templates.tmj",
+        "/Users/kos/Documents/GitHub/new map starter kit/template.tmj",
+        "grand-hall.tmj",
+        "/Users/kos/Documents/GitHub/map-starter-kit/office.tmj",
+        "modul1.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/smallOffice_scifi.tmj",
+        "/Users/kos/Documents/GitHub/stepFX/office.tmj",
+        "/Users/kos/Documents/Pixel/the-office.tmj",
+        "office.tmj",
+        "/Users/kos/Documents/Pixel/untitled.tmj"
+    ]
 }

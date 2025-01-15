@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template>
- <object name="focus" type="area" width="32" height="32">
-  <properties>
-   <property name="focusable" type="bool" value="true"/>
-   <property name="zoom_margin" type="float" value="1"/>
-  </properties>
- </object>
-</template>
