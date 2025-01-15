@@ -2686,7 +2686,7 @@
         {
          "name":"mapCopyright",
          "type":"string",
-         "value":""
+         "value":"tba"
         }, 
         {
          "name":"mapDescription",
@@ -2696,7 +2696,7 @@
         {
          "name":"mapImage",
          "type":"string",
-         "value":""
+         "value":"empty.png"
         }, 
         {
          "name":"mapName",
@@ -2715,7 +2715,7 @@
         {
          "columns":6,
          "firstgid":1,
-         "image":"tilesets\/WA_Special_Zones.png",
+         "image":"..\/new map starter kit\/tilesets\/WA_Special_Zones.png",
          "imageheight":128,
          "imagewidth":192,
          "margin":0,
