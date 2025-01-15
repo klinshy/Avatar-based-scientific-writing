@@ -2657,7 +2657,7 @@
         {
          "name":"mapImage",
          "type":"string",
-         "value":""
+         "value":"empty.png"
         }, 
         {
          "name":"mapName",
