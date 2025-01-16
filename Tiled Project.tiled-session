@@ -1,10 +1,105 @@
 {
-    "activeFile": "feature-templates.tmj",
+    "activeFile": "modul_1.tmj",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj": {
+            "scale": 0.31505859375,
+            "selectedLayer": 40,
+            "viewCenter": {
+                "x": 879.2015374124355,
+                "y": 1280.7141528733493
+            }
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#CWT v2 Tileset": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Fantasy_Outside_A1&A2_32x32_green": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#God ray linear 45 tall": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Hackaton-Remaster-Spritesheet": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Aurora_Borealis": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Aurora_Borealis_2": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Black": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Blue": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Green": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Orange": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Overlays_1": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Overlays_2": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Pink": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Purple": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Rainbow": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Red": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_White": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#Lighting_Kit_Yellow": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#LimeZu_24_User_Interface_32x32_edited": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#WA_User_Interface": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#cooliobot": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#cuckoo full sprite": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#holoflickr": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#info": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#posters": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#smoke texture": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#tileset1": {
+            "scaleInDock": 1
+        },
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj#tileset_first_walls": {
             "scaleInDock": 1
         },
         "feature-templates.tmj": {
@@ -20,8 +115,8 @@
             "scale": 1.5,
             "selectedLayer": 28,
             "viewCenter": {
-                "x": 350.66666666666663,
-                "y": 275.33333333333326
+                "x": 342,
+                "y": 361.33333333333326
             }
         },
         "feature-templates.tmj#WA_Special_Zones": {
@@ -37,8 +132,8 @@
             "scale": 0.75,
             "selectedLayer": 10,
             "viewCenter": {
-                "x": 181.33333333333326,
-                "y": 470.6666666666666
+                "x": 767.9999999999999,
+                "y": 592.6666666666666
             }
         },
         "matrix-hub.tmj#WA_Special_Zones": {
@@ -77,8 +172,8 @@
             "scale": 2,
             "selectedLayer": 17,
             "viewCenter": {
-                "x": 399,
-                "y": 2835.5
+                "x": 337.6666666666667,
+                "y": 2401.6666666666665
             }
         },
         "modul_1.tmj#WA_Special_Zones": {
@@ -116,8 +211,8 @@
             "scale": 1.5,
             "selectedLayer": 31,
             "viewCenter": {
-                "x": 658,
-                "y": 354.6666666666667
+                "x": 1495.5,
+                "y": 2289.5
             }
         },
         "notlog.tmj#!$Gate_Cathedral1_32px_2tiles": {
@@ -229,10 +324,11 @@
     "project": "Tiled Project.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "modul_1.tmj",
-        "matrix-hub.tmj",
-        "notlog.tmj",
         "feature-templates.tmj",
+        "notlog.tmj",
+        "matrix-hub.tmj",
+        "modul_1.tmj",
+        "/Users/kos/Documents/GitHub/WA-KW_Templates/Hackathon.tmj",
         "tilesets/WA_Special_Zones..tsx"
     ],
     "tileset.embedInMap": true,
