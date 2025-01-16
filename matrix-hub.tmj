@@ -390,7 +390,151 @@
          "draworder":"topdown",
          "id":14,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":64.5454545454546,
+                 "id":1,
+                 "name":"labToMatrix",
+                 "properties":[
+                        {
+                         "name":"start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":64.7386363636364,
+                 "x":719.873106060606,
+                 "y":591.484848484848
+                }, 
+                {
+                 "height":32,
+                 "id":2,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":".\/matrix-hub.tmj#labToMatrix"
+                        }, 
+                        {
+                         "name":"\u2139\ufe0f",
+                         "type":"string",
+                         "value":"this one is a exit defined by an area-Object"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96.5,
+                 "x":702.113636363636,
+                 "y":192.727272727273
+                }, 
+                {
+                 "height":32,
+                 "id":3,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":".\/matrix-hub.tmj#labToMatrix"
+                        }, 
+                        {
+                         "name":"\u2139\ufe0f",
+                         "type":"string",
+                         "value":"this one is a exit defined by an area-Object"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96.5,
+                 "x":406.416666666667,
+                 "y":193.333333333333
+                }, 
+                {
+                 "height":32,
+                 "id":4,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":".\/matrix-hub.tmj#labToMatrix"
+                        }, 
+                        {
+                         "name":"\u2139\ufe0f",
+                         "type":"string",
+                         "value":"this one is a exit defined by an area-Object"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96.5,
+                 "x":990.416666666667,
+                 "y":202.666666666667
+                }, 
+                {
+                 "height":32,
+                 "id":5,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":".\/matrix-hub.tmj#labToMatrix"
+                        }, 
+                        {
+                         "name":"\u2139\ufe0f",
+                         "type":"string",
+                         "value":"this one is a exit defined by an area-Object"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96.5,
+                 "x":1279.75,
+                 "y":289.333333333333
+                }, 
+                {
+                 "height":32,
+                 "id":7,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":".\/modul_1.tmj#fromMatrix"
+                        }, 
+                        {
+                         "name":"\u2139\ufe0f",
+                         "type":"string",
+                         "value":"this one is a exit defined by an area-Object"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96.5,
+                 "x":127.5,
+                 "y":257.25
+                }, 
+                {
+                 "height":30.5455,
+                 "id":8,
+                 "name":"modul1ToMatrix",
+                 "properties":[
+                        {
+                         "name":"start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96.4886,
+                 "x":127.3807,
+                 "y":289.72725
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -494,7 +638,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":1,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "properties":[
         {

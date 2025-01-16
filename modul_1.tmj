@@ -1531,7 +1531,24 @@
          "draworder":"topdown",
          "id":21,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":30.5455,
+                 "id":1,
+                 "name":"fromMatrix",
+                 "properties":[
+                        {
+                         "name":"start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96.4886,
+                 "x":270.0057,
+                 "y":2686.22725
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1640,7 +1657,7 @@
          "y":0
         }],
  "nextlayerid":22,
- "nextobjectid":1,
+ "nextobjectid":2,
  "orientation":"orthogonal",
  "properties":[
         {

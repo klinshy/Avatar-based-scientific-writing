@@ -4,35 +4,38 @@
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
         "feature-templates.tmj": {
             "expandedGroupLayers": [
-                59,
                 66,
-                76,
+                59,
                 71
             ],
             "expandedObjectLayers": [
-                64,
                 66,
-                71
+                64
             ],
-            "scale": 0.5,
-            "selectedLayer": 15,
+            "scale": 3,
+            "selectedLayer": 28,
             "viewCenter": {
-                "x": 858,
-                "y": 79
+                "x": 837,
+                "y": 127.33333333333334
             }
         },
         "feature-templates.tmj#WA_Special_Zones": {
-            "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInDock": 1
         },
         "matrix-hub.tmj": {
-            "scale": 1,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                14
+            ],
+            "scale": 0.5,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 768,
-                "y": 592.5
+                "x": 1288,
+                "y": 454
             }
         },
         "matrix-hub.tmj#cyber_A1_corrupt_expanded": {
@@ -57,11 +60,14 @@
             "scaleInDock": 1
         },
         "modul_1.tmj": {
-            "scale": 1,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                21
+            ],
+            "scale": 4,
+            "selectedLayer": 16,
             "viewCenter": {
-                "x": 320,
-                "y": 1440.5
+                "x": 305.75,
+                "y": 2669.25
             }
         },
         "modul_1.tmj#cyber_A1_corrupt_expanded": {
@@ -86,14 +92,17 @@
             "scaleInDock": 1
         },
         "notlog.tmj": {
+            "expandedGroupLayers": [
+                30
+            ],
             "expandedObjectLayers": [
                 37
             ],
-            "scale": 0.5,
-            "selectedLayer": 0,
+            "scale": 4,
+            "selectedLayer": 25,
             "viewCenter": {
-                "x": 1494,
-                "y": 1525
+                "x": 2050,
+                "y": 1672.25
             }
         },
         "notlog.tmj#!$Gate_Cathedral1_32px_2tiles": {
@@ -195,9 +204,9 @@
     ],
     "project": "Tiled Project.tiled-project",
     "recentFiles": [
-        "feature-templates.tmj",
         "modul_1.tmj",
         "matrix-hub.tmj",
-        "notlog.tmj"
+        "notlog.tmj",
+        "feature-templates.tmj"
     ]
 }
