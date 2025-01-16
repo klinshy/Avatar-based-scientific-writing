@@ -9,34 +9,41 @@
         },
         "feature-templates.tmj": {
             "expandedGroupLayers": [
-                66,
                 59,
+                66,
                 71
             ],
             "expandedObjectLayers": [
-                66,
-                64
+                64,
+                66
             ],
-            "scale": 3,
+            "scale": 1.5,
             "selectedLayer": 28,
             "viewCenter": {
-                "x": 837,
-                "y": 127.33333333333334
+                "x": 342,
+                "y": 361.33333333333326
             }
         },
         "feature-templates.tmj#WA_Special_Zones": {
             "scaleInDock": 1
         },
         "matrix-hub.tmj": {
+            "expandedGroupLayers": [
+                16
+            ],
             "expandedObjectLayers": [
                 14
             ],
-            "scale": 0.5,
-            "selectedLayer": 8,
+            "scale": 0.75,
+            "selectedLayer": 10,
             "viewCenter": {
-                "x": 1288,
-                "y": 454
+                "x": 181.33333333333326,
+                "y": 470.6666666666666
             }
+        },
+        "matrix-hub.tmj#WA_Special_Zones": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "matrix-hub.tmj#cyber_A1_corrupt_expanded": {
             "scaleInDock": 1
@@ -60,15 +67,22 @@
             "scaleInDock": 1
         },
         "modul_1.tmj": {
+            "expandedGroupLayers": [
+                23
+            ],
             "expandedObjectLayers": [
                 21
             ],
-            "scale": 4,
+            "scale": 3,
             "selectedLayer": 16,
             "viewCenter": {
-                "x": 305.75,
-                "y": 2669.25
+                "x": 337.6666666666667,
+                "y": 2401.6666666666665
             }
+        },
+        "modul_1.tmj#WA_Special_Zones": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "modul_1.tmj#cyber_A1_corrupt_expanded": {
             "scaleInDock": 1
@@ -93,16 +107,16 @@
         },
         "notlog.tmj": {
             "expandedGroupLayers": [
-                30
+                47
             ],
             "expandedObjectLayers": [
                 37
             ],
-            "scale": 4,
-            "selectedLayer": 25,
+            "scale": 2,
+            "selectedLayer": 31,
             "viewCenter": {
-                "x": 2050,
-                "y": 1672.25
+                "x": 1495.5,
+                "y": 2289.5
             }
         },
         "notlog.tmj#!$Gate_Cathedral1_32px_2tiles": {
@@ -172,7 +186,8 @@
             "scaleInDock": 1
         },
         "notlog.tmj#WA_Special_Zones": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "notlog.tmj#cyber_A1_corrupt_expanded": {
             "scaleInDock": 1
@@ -194,8 +209,16 @@
         },
         "notlog.tmj#non-rm-a4-square_corrupt": {
             "scaleInDock": 1
+        },
+        "tilesets/WA_Special_Zones..tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         }
     },
+    "last.exportedFilePath": "C:/Users/Till_I_Die/Documents/GitHub/Avatar-based-scientific-writing/tilesets",
+    "last.externalTilesetPath": "C:/Users/Till_I_Die/Documents/GitHub/Avatar-based-scientific-writing/tilesets",
+    "last.imagePath": "C:/Users/Till_I_Die/Documents/GitHub/Avatar-based-scientific-writing/tilesets",
+    "lastUsedTilesetExportFilter": "Tiled-Kachelsatzdateien (*.tsx *.xml)",
     "openFiles": [
         "feature-templates.tmj",
         "notlog.tmj",
@@ -203,10 +226,14 @@
         "modul_1.tmj"
     ],
     "project": "Tiled Project.tiled-project",
+    "property.type": "bool",
     "recentFiles": [
         "modul_1.tmj",
         "matrix-hub.tmj",
         "notlog.tmj",
-        "feature-templates.tmj"
-    ]
+        "feature-templates.tmj",
+        "tilesets/WA_Special_Zones..tsx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFilter": "Tiled-Kachelsatzdateien (*.tsx *.xml)"
 }

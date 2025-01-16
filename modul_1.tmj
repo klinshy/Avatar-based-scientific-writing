@@ -1548,6 +1548,65 @@
                  "width":96.4886,
                  "x":270.0057,
                  "y":2686.22725
+                }, 
+                {
+                 "height":32.1818181818182,
+                 "id":2,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":".\/matrix-hub.tmj#toMatrix"
+                        }, 
+                        {
+                         "name":"\u2139\ufe0f",
+                         "type":"string",
+                         "value":"this one is a exit defined by an area-Object"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":126.681818181818,
+                 "x":257.75,
+                 "y":232.727272727273
+                }, 
+                {
+                 "height":91.6666666666665,
+                 "id":3,
+                 "name":"website_onAction",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/Modul_2.3.html"
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"press SPACE to open Website"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":25
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":64.6666666666667,
+                 "x":384,
+                 "y":2371
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1657,7 +1716,7 @@
          "y":0
         }],
  "nextlayerid":22,
- "nextobjectid":2,
+ "nextobjectid":4,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1819,6 +1878,29 @@
          "spacing":0,
          "tilecount":3577,
          "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":6,
+         "firstgid":9158,
+         "image":"tilesets\/WA_Special_Zones.png",
+         "imageheight":128,
+         "imagewidth":192,
+         "margin":0,
+         "name":"WA_Special_Zones",
+         "spacing":0,
+         "tilecount":24,
+         "tileheight":32,
+         "tiles":[
+                {
+                 "id":2,
+                 "properties":[
+                        {
+                         "name":"colides",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }],
          "tilewidth":32
         }],
  "tilewidth":32,
