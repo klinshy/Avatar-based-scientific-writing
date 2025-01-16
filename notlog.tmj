@@ -2514,6 +2514,11 @@
                          "value":".\/H5P\/Einf\u00fchrungsvideo.html"
                         }, 
                         {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
                          "name":"openWebsiteClosable",
                          "type":"bool",
                          "value":false
@@ -2531,7 +2536,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":25
+                         "value":50
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2539,6 +2544,35 @@
                  "width":90.5,
                  "x":1476.5,
                  "y":2175
+                }, 
+                {
+                 "height":119,
+                 "id":9,
+                 "name":"mumbelcore_1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":644.5,
+                 "y":306.5
+                }, 
+                {
+                 "height":0,
+                 "id":10,
+                 "name":"mumbelcore_1",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":793.333333333333,
+                 "y":362.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3408,7 +3442,7 @@
          "y":0
         }],
  "nextlayerid":50,
- "nextobjectid":9,
+ "nextobjectid":11,
  "orientation":"orthogonal",
  "properties":[
         {

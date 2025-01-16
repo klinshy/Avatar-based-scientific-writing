@@ -9,19 +9,19 @@
         },
         "feature-templates.tmj": {
             "expandedGroupLayers": [
-                59,
                 66,
-                71
+                71,
+                59
             ],
             "expandedObjectLayers": [
-                64,
-                66
+                66,
+                64
             ],
             "scale": 1.5,
             "selectedLayer": 28,
             "viewCenter": {
-                "x": 342,
-                "y": 361.33333333333326
+                "x": 350.66666666666663,
+                "y": 275.33333333333326
             }
         },
         "feature-templates.tmj#WA_Special_Zones": {
@@ -68,16 +68,17 @@
         },
         "modul_1.tmj": {
             "expandedGroupLayers": [
+                12,
                 23
             ],
             "expandedObjectLayers": [
                 21
             ],
-            "scale": 3,
-            "selectedLayer": 16,
+            "scale": 2,
+            "selectedLayer": 17,
             "viewCenter": {
-                "x": 337.6666666666667,
-                "y": 2401.6666666666665
+                "x": 399,
+                "y": 2835.5
             }
         },
         "modul_1.tmj#WA_Special_Zones": {
@@ -112,11 +113,11 @@
             "expandedObjectLayers": [
                 37
             ],
-            "scale": 2,
+            "scale": 1.5,
             "selectedLayer": 31,
             "viewCenter": {
-                "x": 1495.5,
-                "y": 2289.5
+                "x": 658,
+                "y": 354.6666666666667
             }
         },
         "notlog.tmj#!$Gate_Cathedral1_32px_2tiles": {
@@ -226,7 +227,7 @@
         "modul_1.tmj"
     ],
     "project": "Tiled Project.tiled-project",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
         "modul_1.tmj",
         "matrix-hub.tmj",
