@@ -1612,6 +1612,151 @@
                  "width":64.6666666666667,
                  "x":384,
                  "y":2371
+                }, 
+                {
+                 "height":0,
+                 "id":4,
+                 "name":"zirze_2",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":381,
+                 "y":2552
+                }, 
+                {
+                 "height":0,
+                 "id":5,
+                 "name":"zirze_3",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":377.5,
+                 "y":2068.5
+                }, 
+                {
+                 "height":0,
+                 "id":6,
+                 "name":"zirze_4",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":378,
+                 "y":1575.5
+                }, 
+                {
+                 "height":0,
+                 "id":7,
+                 "name":"zirze_5",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":378.5,
+                 "y":1086
+                }, 
+                {
+                 "height":0,
+                 "id":8,
+                 "name":"zirze_1_5",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":378,
+                 "y":673
+                }, 
+                {
+                 "height":84.3333,
+                 "id":9,
+                 "name":"zirze_1_5",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":232.25,
+                 "y":592.83335
+                }, 
+                {
+                 "height":84.3333,
+                 "id":10,
+                 "name":"zirze_5",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":212.75,
+                 "y":1080.33335
+                }, 
+                {
+                 "height":84.3333,
+                 "id":11,
+                 "name":"zirze_4",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":221.75,
+                 "y":1594.33335
+                }, 
+                {
+                 "height":84.3333,
+                 "id":12,
+                 "name":"zirze_3",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":224.25,
+                 "y":2052.83335
+                }, 
+                {
+                 "height":84.3333,
+                 "id":13,
+                 "name":"zirze_2",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":224.25,
+                 "y":2506.83335
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1721,7 +1866,7 @@
          "y":0
         }],
  "nextlayerid":22,
- "nextobjectid":4,
+ "nextobjectid":14,
  "orientation":"orthogonal",
  "properties":[
         {

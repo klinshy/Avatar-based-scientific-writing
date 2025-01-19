@@ -2573,6 +2573,122 @@
                  "width":0,
                  "x":793.333333333333,
                  "y":362.666666666667
+                }, 
+                {
+                 "height":84.3333333333333,
+                 "id":11,
+                 "name":"mcdongle_1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":638.25,
+                 "y":1304.5
+                }, 
+                {
+                 "height":0,
+                 "id":12,
+                 "name":"mcdongle_1",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":785.333333333333,
+                 "y":1342.66666666667
+                }, 
+                {
+                 "height":84.3333,
+                 "id":13,
+                 "name":"grid_1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":1262.91666666667,
+                 "y":1108.50001666667
+                }, 
+                {
+                 "height":0,
+                 "id":14,
+                 "name":"grid_1",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":1417.33333333333,
+                 "y":1154.66666666667
+                }, 
+                {
+                 "height":84.3333,
+                 "id":15,
+                 "name":"progger_1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":1461.58333333333,
+                 "y":1302.50001666667
+                }, 
+                {
+                 "height":0,
+                 "id":16,
+                 "name":"progger_1",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":1618,
+                 "y":1346
+                }, 
+                {
+                 "height":84.3333,
+                 "id":17,
+                 "name":"sake_1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":1458.91666666667,
+                 "y":2061.16668333333
+                }, 
+                {
+                 "height":0,
+                 "id":18,
+                 "name":"sake_1",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":1616,
+                 "y":2088.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3442,7 +3558,7 @@
          "y":0
         }],
  "nextlayerid":50,
- "nextobjectid":11,
+ "nextobjectid":19,
  "orientation":"orthogonal",
  "properties":[
         {

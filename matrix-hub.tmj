@@ -554,6 +554,35 @@
                  "width":96.4886,
                  "x":127.3807,
                  "y":289.72725
+                }, 
+                {
+                 "height":84.3333,
+                 "id":9,
+                 "name":"zirze_1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":547.583333333333,
+                 "y":524.500016666667
+                }, 
+                {
+                 "height":0,
+                 "id":10,
+                 "name":"zirze_1",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"Hallo liebe kinder wo ist mein Boot"
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":834.666666666667,
+                 "y":590.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -658,7 +687,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":9,
+ "nextobjectid":11,
  "orientation":"orthogonal",
  "properties":[
         {
