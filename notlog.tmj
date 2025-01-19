@@ -2548,7 +2548,7 @@
                 {
                  "height":119,
                  "id":9,
-                 "name":"mumbelcore_1",
+                 "name":"mumblecore_1",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -2559,7 +2559,7 @@
                 {
                  "height":0,
                  "id":10,
-                 "name":"mumbelcore_1",
+                 "name":"mumblecore_1",
                  "point":true,
                  "properties":[
                         {
