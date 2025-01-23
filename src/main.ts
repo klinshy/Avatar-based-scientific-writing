@@ -13,8 +13,21 @@ WA.onInit().then(() => {
 WA.onInit().then(async () => {
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
+        let triggerMessage: any;
+
         WA.room.area.onEnter(area.name).subscribe(() => {
-            WA.chat.sendChatMessage(area.chatText, area.npcName);
+            triggerMessage = WA.ui.displayActionMessage({
+                message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
+                callback: () => {
+                    WA.chat.sendChatMessage(area.chatText, area.npcName);
+                }
+            });
+        });
+
+        WA.room.area.onLeave(area.name).subscribe(() => {
+            if (triggerMessage) {
+                triggerMessage.remove();
+            }
         });
     }
 });
