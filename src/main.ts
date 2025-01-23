@@ -113,7 +113,7 @@ WA.onInit().then(async () => {
     // Check if the player has solved the notlog quest and is not an admin
     const solvedNotlog = WA.player.state.solvedNotlog;
     const isAdmin = WA.player.tags.includes('admin');
-    if (solvedNotlog && !isAdmin) {
+    if (solvedNotlog === true && !isAdmin) {
         console.log("Map URL: ", WA.room.mapURL);
         if (!WA.room.mapURL.includes('localhost')) {
             // Teleport the player to the entry named "matrix-hub"
@@ -123,7 +123,7 @@ WA.onInit().then(async () => {
 
     // Event listener for leaving the notlog area
     WA.room.area.onEnter('leaveNotlog').subscribe(() => {
-        WA.player.state.solvedNotlog = false;
+        WA.player.state.solvedNotlog = true;
     });
 
     // Display the current quest banner if a quest is active

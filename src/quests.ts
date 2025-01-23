@@ -43,23 +43,39 @@ const quests = [
         questKey: 'notlog'
     },
     // Matrix Hub
-    {
-        questName: 'Einführung in den Matrix-Hub',
-        questId: 'quest6',
-        questDescription: 'Interagiere mit dem Hologramm.',
-        questXp: 250,
-        requireQuest: 'quest5',
-        questKey: 'notlog'
-    },
-    {
-        questName: 'Die erste Herausforderung',
-        questId: 'quest6',
-        questDescription: 'Betrete den ersten Raum und löse die Aufgabe.',
-        questXp: 250,
-        requireQuest: 'quest5',
-        questKey: 'notlog'
-    },
-// Modul 2
+
+{
+    questName: "Durch das Chaos im Labor navigieren",
+    questId: "modul2_quest1",
+    questDescription: "Komm mit der Unordnung im Farblabor zurecht und finde heraus, wer das Chaos angerichtet hat.",
+    questXp: 10,
+    requireQuest: "quest5",
+    questKey: "modul2"
+},
+{
+    questName: "materialien ordnen",
+    questId: "modul2_quest2",
+    questDescription: "Bringe die Materialien von Alex in Ordnung und erhalte mehr Einblicke in den Kurs 'Wissenschaftliches Arbeiten'.",
+    questXp: 10,
+    requireQuest: "modul2_quest1",
+    questKey: "modul2"
+},
+{
+    questName: "Meistere 3.2",
+    questId: "modul2_quest3",
+    questDescription: "Schaffe es, 3.2 zu bewältigen, und erhalte Respekt für deinen Einsatz.",
+    questXp: 10,
+    requireQuest: "modul2_quest2",
+    questKey: "modul2"
+},
+{
+    questName: "Überwinde 3.3",
+    questId: "modul2_quest4",
+    questDescription: "Meistere das nächste Kapitel, 3.3, und lerne noch mehr von Alex' Materialien.",
+    questXp: 10,
+    requireQuest: "modul2_quest3",
+    questKey: "modul2"
+},
 
 // Modul 3
 ];
