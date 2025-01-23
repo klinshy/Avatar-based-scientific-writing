@@ -569,7 +569,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":".\/modul_1.tmj#fromMatrix"
+                         "value":".\/modul_1.tmj"
                         }, 
                         {
                          "name":"\u2139\ufe0f",

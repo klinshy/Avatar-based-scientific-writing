@@ -8,6 +8,7 @@ interface ChatArea {
   height: number;
   chatText: string;
   npcName: string;
+  triggerQuest: string;
 }
 
 
@@ -33,7 +34,11 @@ async function getChatAreas(): Promise<ChatArea[]> {
               (prop) => prop.name === "npcName"
             )?.value;
 
-            if (chatText && npcName) {
+            const triggerQuest = object.properties.find(
+              (prop) => prop.name === "triggerQuest"
+            )?.value ?? "";
+
+            if (chatText && npcName && triggerQuest) {
               areas.push({
                 name: object.name,
                 x: object.x,
@@ -42,6 +47,7 @@ async function getChatAreas(): Promise<ChatArea[]> {
                 height: object.height ?? 0,
                 chatText: String(chatText),
                 npcName: String(npcName),
+                triggerQuest: String(triggerQuest),
               });
             }
           }

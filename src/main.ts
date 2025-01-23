@@ -2,6 +2,16 @@
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { checkPlayerMaterial, mySound, playRandomSound } from "./footstep";
 import { getChatAreas , } from "./chatArea";
+import { quests, levelUp } from "./quests";
+
+WA.onInit().then(() => {
+    if (!WA.player.state.currentQuest) {
+        WA.player.state.currentQuest = 'quest1'; //initialize the first quest
+    }
+    levelUp("notlog",0);
+});
+
+
 
 WA.onInit().then(() => {console.log('loading main.ts')});
 WA.onInit().then(() => {
@@ -20,6 +30,13 @@ WA.onInit().then(async () => {
                 message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
                 callback: () => {
                     WA.chat.sendChatMessage(area.chatText, area.npcName);
+                    if (area.triggerQuest) {
+                        const currentQuest = WA.player.state.currentQuest;
+                        const requiredQuest = quests.find((q: { questId: string }) => q.questId === area.triggerQuest)?.requireQuest;
+                        if (currentQuest === requiredQuest) {
+                            WA.player.state.currentQuest = area.triggerQuest;
+                        }
+                    }
                 }
             });
         });
@@ -31,7 +48,7 @@ WA.onInit().then(async () => {
         });
     }
 });
-
+//stepFX related stuff
 WA.onInit().then(async () => {
     WA.player.onPlayerMove(async ({ x, y, moving }) => {
         const material = await checkPlayerMaterial({ x, y });
@@ -54,6 +71,7 @@ WA.onInit().then(async () => {
 
 let isAutoMoving = false;
 
+//misc stuff
 WA.onInit().then(() => {
     WA.room.area.onEnter('downstairs_toLab').subscribe(async () => {
         WA.room.hideLayer('fg-objects/stair-2');
@@ -98,68 +116,6 @@ WA.onInit().then(() => {
     });
 });
 
-let currentTask = 0;
-
-const tasks = [
-    {
-        id: 'task1',
-        text: 'Sprich mit Prof. McDongle',
-        area: 'mcdongle_1'
-    },
-    {
-        id: 'task2',
-        text: 'Sprich mit Prof. Mumblecore am nördlichen Ende der großen Halle.',
-        area: 'mumblecore_1'
-    },
-    {
-        id: 'task3',
-        text: 'Gehe runter ins Labor und sprechen Sie mit Prof. Sake',
-        area: 'sake_1'
-    },
-    {
-        id: 'task4',
-        text: 'Schau dir das Video im Labor an',
-        area: 'leaveNotlog'
-    },
-    {
-        id: 'task5',
-        text: 'Verlasse Notlog und betrete den Matrix Hub',
-        area: 'leaveNotlog'
-    }
-
-];
-
-function showTask(taskIndex: number) {
-    const task = tasks[taskIndex];
-    WA.ui.banner.openBanner({
-        id: task.id,
-        text: task.text,
-        bgColor: '#1B1B29',
-        textColor: '#FFFFFF',
-        closable: false
-    });
-}
-
-function completeTask(taskIndex: number) {
-    if (taskIndex < tasks.length - 1) {
-        currentTask++;
-        showTask(currentTask);
-    } else {
-        WA.ui.banner.closeBanner();
-    }
-}
-
-WA.onInit().then(() => {
-    showTask(currentTask);
-
-    for (const task of tasks) {
-        WA.room.area.onLeave(task.area).subscribe(() => {
-            if (tasks[currentTask].area === task.area) {
-                completeTask(currentTask);
-            }
-        });
-    }
-});
 
 WA.onInit().then(async () => {
     const solvedNotlog = WA.player.state.solvedNotlog;
@@ -180,4 +136,35 @@ WA.onInit().then(() => {
         WA.player.state.solvedNotlog = false;
     });
 });
+
+// Quests
+WA.onInit().then(() => {
+    const currentQuestId = WA.player.state.currentQuest;
+    const currentQuest = quests.find((q: { questId: string }) => q.questId === currentQuestId);
+    if (currentQuest) {
+       createQuestBanner(currentQuest.questId);
+    }
+
+    WA.player.state.onVariableChange('currentQuest').subscribe((newQuestId) => {
+        const newQuest = quests.find((q: { questId: string }) => q.questId === newQuestId);
+        if (newQuest) {createQuestBanner(newQuest.questId);
+        }
+    });
+
+    function createQuestBanner(questId: string) {
+        const quest = quests.find((q: { questId: string }) => q.questId === questId);
+        if (quest) {
+            WA.ui.banner.openBanner({
+                id: quest.questId,
+                text: quest.questDescription,
+                bgColor: '#1B1B29',
+                textColor: '#FFFFFF',
+                closable: false
+            });
+        }
+    }
+
+});
+
+
 export {};

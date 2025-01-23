@@ -3195,6 +3195,11 @@
                          "name":"npcName",
                          "type":"string",
                          "value":"Mumblecore"
+                        }, 
+                        {
+                         "name":"triggerQuest",
+                         "type":"string",
+                         "value":"quest3"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3222,6 +3227,11 @@
                          "name":"npcName",
                          "type":"string",
                          "value":"Prof. McDongle"
+                        }, 
+                        {
+                         "name":"triggerQuest",
+                         "type":"string",
+                         "value":"quest2"
                         }],
                  "rotation":0,
                  "type":"area",
