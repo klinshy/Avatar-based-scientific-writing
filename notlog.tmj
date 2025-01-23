@@ -3162,7 +3162,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"[SPACE] um das Video abzuspielen"
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
                         }, 
                         {
                          "name":"openWebsiteWidth",
@@ -3292,7 +3292,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"\u201eDu hast also den Weg in mein Labor gefunden. Ich bin Professorin Sebora Sake. Das Kondensatorium liegt prim\u00e4r in meiner Verantwortung. \n\nDaher solltest du verstehen k\u00f6nnen, dass ich nicht einfach alle in unser digitales Labor spazieren lassen werde.  Um sicher zu stellen, dass du nicht einer von Lord  Modrevolt Spionagebots bist, werde ich dich testen. Sieh dir das digitale Tutorium zum Thema wissenschaftliches Arbeiten an, welches die au\u00dfergew\u00f6hnliche Alex, im Kondensatorium entwickelt hat. Du findest hinter mir, in der Mitte des Raumes. Pr\u00e4g dir ihre Arbeit ein, davon kannst du viel lernen! \n\nBeantwortest du die Frage im Video korrekt, so wird dir ein Code mitgeteilt, mit dem du Zutritt zum Kondensatorium erh\u00e4ltst. Der Eingang verbirgt sich hier im Raum, hinter einem B\u00fccherregal.\u201d "
+                         "value":"\u201eDu hast also den Weg in mein Labor gefunden. Ich bin Professorin Sebora Sake. Das Kondensatorium liegt prim\u00e4r in meiner Verantwortung. \n\nDaher solltest du verstehen k\u00f6nnen, dass ich nicht einfach alle in unser digitales Labor spazieren lassen werde.  Um sicher zu stellen, dass du nicht einer von Lord  Modrevolt Spionagebots bist, werde ich dich testen. Sieh dir das digitale Tutorium zum Thema wissenschaftliches Arbeiten an, welches die au\u00dfergew\u00f6hnliche Alex, im Kondensatorium entwickelt hat. Du findest es hinter mir, in der Mitte des Raumes. Pr\u00e4g dir ihre Arbeit ein, davon kannst du viel lernen! \n\nBeantwortest du die Frage im Video korrekt, so wird dir ein Code mitgeteilt, mit dem du Zutritt zum Kondensatorium erh\u00e4ltst. Der Eingang verbirgt sich hier im Raum, hinter einem B\u00fccherregal.\u201d "
                         }, 
                         {
                          "name":"isNpc",
