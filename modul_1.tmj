@@ -898,7 +898,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"press SPACE to open Website"
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
                         }, 
                         {
                          "name":"openWebsiteWidth",
@@ -911,96 +911,6 @@
                  "width":64.6666666666667,
                  "x":174,
                  "y":2613.66666666667
-                }, 
-                {
-                 "height":0,
-                 "id":4,
-                 "name":"zirze_2",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"Hallo liebe kinder wo ist mein Boot"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":381,
-                 "y":2552
-                }, 
-                {
-                 "height":0,
-                 "id":5,
-                 "name":"zirze_3",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"Hallo liebe kinder wo ist mein Boot"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":377.5,
-                 "y":2068.5
-                }, 
-                {
-                 "height":0,
-                 "id":6,
-                 "name":"zirze_4",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"Hallo liebe kinder wo ist mein Boot"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":378,
-                 "y":1575.5
-                }, 
-                {
-                 "height":0,
-                 "id":7,
-                 "name":"zirze_5",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"Hallo liebe kinder wo ist mein Boot"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":378.5,
-                 "y":1086
-                }, 
-                {
-                 "height":0,
-                 "id":8,
-                 "name":"zirze_1_5",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"Hallo liebe kinder wo ist mein Boot"
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":378,
-                 "y":673
                 }, 
                 {
                  "height":84.3333,
@@ -1134,8 +1044,8 @@
                  "type":"area",
                  "visible":true,
                  "width":123.5,
-                 "x":247.583333333333,
-                 "y":2565.50001666667
+                 "x":244.916666666666,
+                 "y":2586.16668333334
                 }, 
                 {
                  "height":32.1818,
@@ -1187,7 +1097,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"press SPACE to open Website"
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
                         }, 
                         {
                          "name":"openWebsiteWidth",
@@ -1229,7 +1139,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"press SPACE to open Website"
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
                         }, 
                         {
                          "name":"openWebsiteWidth",
@@ -1271,7 +1181,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"press SPACE to open Website"
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
                         }, 
                         {
                          "name":"openWebsiteWidth",
