@@ -436,7 +436,7 @@
                 {
                  "name":"bindVariable",
                  "type":"string",
-                 "value":"actionLayer_matrix"
+                 "value":"hideShow_matrix"
                 }, 
                 {
                  "name":"enterValue",
@@ -2969,7 +2969,7 @@
                 {
                  "name":"visible",
                  "type":"string",
-                 "value":"{{{ actionLayer_matrix }}}"
+                 "value":"{{hideShow_matrix}}"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -3411,7 +3411,7 @@
                 {
                  "height":0,
                  "id":30,
-                 "name":"actionLayer_matrix",
+                 "name":"hideShow_matrix",
                  "point":true,
                  "properties":[
                         {
@@ -3422,7 +3422,7 @@
                         {
                          "name":"persist",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"variable",
@@ -4197,7 +4197,7 @@
          "y":0
         }],
  "nextlayerid":63,
- "nextobjectid":32,
+ "nextobjectid":33,
  "orientation":"orthogonal",
  "properties":[
         {
