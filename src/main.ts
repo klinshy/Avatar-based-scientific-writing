@@ -56,6 +56,7 @@ let isAutoMoving = false;
 
 WA.onInit().then(() => {
     WA.room.area.onEnter('downstairs_toLab').subscribe(async () => {
+        WA.room.hideLayer('fg-objects/stair-2');
         if (isAutoMoving) return;
         isAutoMoving = true;
         let result = await WA.player.moveTo(1300, 1728);
@@ -66,6 +67,7 @@ WA.onInit().then(() => {
         while (result.cancelled) {
             result = await WA.player.moveTo(1325, 1643);
         }
+        WA.room.showLayer('fg-objects/stair-2');
         result = await WA.player.moveTo(1503, 1754);
         while (result.cancelled) {
             result = await WA.player.moveTo(1503, 1754);
@@ -76,6 +78,7 @@ WA.onInit().then(() => {
 
 WA.onInit().then(() => {
     WA.room.area.onEnter('upstairs_fromLab').subscribe(async () => {
+        WA.room.showLayer('fg-objects/stair-2');
         if (isAutoMoving) return;
         isAutoMoving = true;
         let result = await WA.player.moveTo(1325, 1643);
@@ -86,6 +89,7 @@ WA.onInit().then(() => {
         while (result.cancelled) {
             result = await WA.player.moveTo(1300, 1728);
         }
+        WA.room.hideLayer('fg-objects/stair-2');
         result = await WA.player.moveTo(1513, 1568);
         while (result.cancelled) {
             result = await WA.player.moveTo(1513, 1568);
