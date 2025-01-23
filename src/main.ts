@@ -1,30 +1,32 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { checkPlayerMaterial, mySound, playRandomSound } from "./footstep";
-import { getChatAreas , } from "./chatArea";
+import { getChatAreas } from "./chatArea";
 import { quests, levelUp } from "./quests";
 
-WA.onInit().then(() => {
-    if (!WA.player.state.currentQuest) {
-        WA.player.state.currentQuest = 'quest1'; //initialize the first quest
-    }
-    levelUp("notlog",0);
-});
-
-
-
-WA.onInit().then(() => {console.log('loading main.ts')});
-WA.onInit().then(() => {
-    bootstrapExtra().then(() => {
-        console.log('Scripting API Extra ready');
-    }).catch(e => console.error(e));
-}).catch(e => console.error(e));
-
 WA.onInit().then(async () => {
+    console.log('loading main.ts');
+
+    // Initialize the first quest if not already set
+    if (!WA.player.state.currentQuest) {
+        WA.player.state.currentQuest = 'quest1';
+    }
+    levelUp("notlog", 0);
+
+    try {
+        // Initialize the Scripting API Extra
+        await bootstrapExtra();
+        console.log('Scripting API Extra ready');
+    } catch (e) {
+        console.error(e);
+    }
+
+    // Get chat areas and set up event listeners for entering and leaving them
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
         let triggerMessage: any;
 
+        // When player enters a chat area
         WA.room.area.onEnter(area.name).subscribe(() => {
             triggerMessage = WA.ui.displayActionMessage({
                 message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
@@ -41,19 +43,17 @@ WA.onInit().then(async () => {
             });
         });
 
+        // When player leaves a chat area
         WA.room.area.onLeave(area.name).subscribe(() => {
             if (triggerMessage) {
                 triggerMessage.remove();
             }
         });
     }
-});
-//stepFX related stuff
-WA.onInit().then(async () => {
+
+    // Event listener for player movement to play footstep sounds
     WA.player.onPlayerMove(async ({ x, y, moving }) => {
         const material = await checkPlayerMaterial({ x, y });
-        console.log(material);
-
         if (!material) {
             mySound?.stop();
             return;
@@ -67,12 +67,8 @@ WA.onInit().then(async () => {
             playRandomSound(material);
         }
     });
-});
 
-let isAutoMoving = false;
-
-//misc stuff
-WA.onInit().then(() => {
+    // Event listener for entering the downstairs area to the lab
     WA.room.area.onEnter('downstairs_toLab').subscribe(async () => {
         WA.room.hideLayer('fg-objects/stair-2');
         if (isAutoMoving) return;
@@ -92,9 +88,8 @@ WA.onInit().then(() => {
         }
         isAutoMoving = false;
     });
-});
 
-WA.onInit().then(() => {
+    // Event listener for entering the upstairs area from the lab
     WA.room.area.onEnter('upstairs_fromLab').subscribe(async () => {
         WA.room.showLayer('fg-objects/stair-2');
         if (isAutoMoving) return;
@@ -114,43 +109,39 @@ WA.onInit().then(() => {
         }
         isAutoMoving = false;
     });
-});
 
-
-WA.onInit().then(async () => {
+    // Check if the player has solved the notlog quest and is not an admin
     const solvedNotlog = WA.player.state.solvedNotlog;
     const isAdmin = WA.player.tags.includes('admin');
     if (solvedNotlog && !isAdmin) {
-        WA.onInit().then(() => {
-            console.log("Map URL: ", WA.room.mapURL);
-            if (!WA.room.mapURL.includes('localhost')) {
-                // Let's teleport the player to the entry named "matrix-hub"
-                WA.nav.goToRoom("./matrix-hub.tmj");
-            }
-        });
+        console.log("Map URL: ", WA.room.mapURL);
+        if (!WA.room.mapURL.includes('localhost')) {
+            // Teleport the player to the entry named "matrix-hub"
+            WA.nav.goToRoom("./matrix-hub.tmj");
+        }
     }
-});
 
-WA.onInit().then(() => {
+    // Event listener for leaving the notlog area
     WA.room.area.onEnter('leaveNotlog').subscribe(() => {
         WA.player.state.solvedNotlog = false;
     });
-});
 
-// Quests
-WA.onInit().then(() => {
+    // Display the current quest banner if a quest is active
     const currentQuestId = WA.player.state.currentQuest;
     const currentQuest = quests.find((q: { questId: string }) => q.questId === currentQuestId);
     if (currentQuest) {
-       createQuestBanner(currentQuest.questId);
+        createQuestBanner(currentQuest.questId);
     }
 
+    // Event listener for changes in the current quest
     WA.player.state.onVariableChange('currentQuest').subscribe((newQuestId) => {
         const newQuest = quests.find((q: { questId: string }) => q.questId === newQuestId);
-        if (newQuest) {createQuestBanner(newQuest.questId);
+        if (newQuest) {
+            createQuestBanner(newQuest.questId);
         }
     });
 
+    // Function to create a quest banner
     function createQuestBanner(questId: string) {
         const quest = quests.find((q: { questId: string }) => q.questId === questId);
         if (quest) {
@@ -163,8 +154,9 @@ WA.onInit().then(() => {
             });
         }
     }
-
 });
 
+// Variable to track if the player is auto-moving
+let isAutoMoving = false;
 
 export {};

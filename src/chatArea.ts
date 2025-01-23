@@ -11,8 +11,6 @@ interface ChatArea {
   triggerQuest: string;
 }
 
-
-
 async function getChatAreas(): Promise<ChatArea[]> {
   try {
     const layers = await getLayersMap();
@@ -38,7 +36,7 @@ async function getChatAreas(): Promise<ChatArea[]> {
               (prop) => prop.name === "triggerQuest"
             )?.value ?? "";
 
-            if (chatText && npcName && triggerQuest) {
+            if (chatText && npcName) {
               areas.push({
                 name: object.name,
                 x: object.x,
@@ -61,6 +59,5 @@ async function getChatAreas(): Promise<ChatArea[]> {
     return [];
   }
 }
-
 
 export { getChatAreas };
