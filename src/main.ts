@@ -98,5 +98,86 @@ WA.onInit().then(() => {
     });
 });
 
+let currentTask = 0;
 
+const tasks = [
+    {
+        id: 'task1',
+        text: 'Sprich mit Prof. McDongle',
+        area: 'mcdongle_1'
+    },
+    {
+        id: 'task2',
+        text: 'Sprich mit Prof. Mumblecore am nördlichen Ende der großen Halle.',
+        area: 'mumblecore_1'
+    },
+    {
+        id: 'task3',
+        text: 'Gehe runter ins Labor und sprechen Sie mit Prof. Sake',
+        area: 'sake_1'
+    },
+    {
+        id: 'task4',
+        text: 'Schau dir das Video im Labor an',
+        area: 'leaveNotlog'
+    },
+    {
+        id: 'task5',
+        text: 'Verlasse Notlog und betrete den Matrix Hub',
+        area: 'leaveNotlog'
+    }
+
+];
+
+function showTask(taskIndex: number) {
+    const task = tasks[taskIndex];
+    WA.ui.banner.openBanner({
+        id: task.id,
+        text: task.text,
+        bgColor: '#1B1B29',
+        textColor: '#FFFFFF',
+        closable: false
+    });
+}
+
+function completeTask(taskIndex: number) {
+    if (taskIndex < tasks.length - 1) {
+        currentTask++;
+        showTask(currentTask);
+    } else {
+        WA.ui.banner.closeBanner();
+    }
+}
+
+WA.onInit().then(() => {
+    showTask(currentTask);
+
+    for (const task of tasks) {
+        WA.room.area.onLeave(task.area).subscribe(() => {
+            if (tasks[currentTask].area === task.area) {
+                completeTask(currentTask);
+            }
+        });
+    }
+});
+
+WA.onInit().then(async () => {
+    const solvedNotlog = WA.player.state.solvedNotlog;
+    const isAdmin = WA.player.tags.includes('admin');
+    if (solvedNotlog && !isAdmin) {
+        WA.onInit().then(() => {
+            console.log("Map URL: ", WA.room.mapURL);
+            if (!WA.room.mapURL.includes('localhost')) {
+                // Let's teleport the player to the entry named "matrix-hub"
+                WA.nav.goToRoom("./matrix-hub.tmj");
+            }
+        });
+    }
+});
+
+WA.onInit().then(() => {
+    WA.room.area.onEnter('leaveNotlog').subscribe(() => {
+        WA.player.state.solvedNotlog = false;
+    });
+});
 export {};
