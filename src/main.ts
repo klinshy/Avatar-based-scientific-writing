@@ -28,13 +28,4 @@ WA.onInit().then(async () => {
     });
 
 
-    WA.onInit().then(() => {
-        WA.room.area.onEnter('mumblecore_1').subscribe(() => {
-            const chatText = WA.state.mumblecore_1 as string; 
-            WA.chat.sendChatMessage(chatText,"Mumblecore");
-        });
-    });
-
-
-
 export {};

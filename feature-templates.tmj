@@ -667,7 +667,7 @@
                          "height":20,
                          "id":92,
                          "name":"\u2139\ufe0finfo_general",
-                         "opacity":1,
+                         "opacity":0,
                          "properties":[
                                 {
                                  "name":"bindVariable",
@@ -678,6 +678,11 @@
                                  "name":"enterValue",
                                  "type":"string",
                                  "value":"# Entry and Exit Points in Tiled Editor\n\nIn WorkAdventure, entry and exit points are essential for defining how players move between different areas of your map. Using the Tiled Editor, you can set up these points to create seamless transitions between maps or rooms. This feature allows you to specify where players enter or exit, enhancing the navigation experience in your virtual world.\n\nFor more details, click [\ud83d\udc49HERE\ud83d\udc48](https:\/\/docs.workadventu.re\/map-building\/tiled-editor\/entry-exit) to read the full guide on Entry and Exit Points."
+                                }, 
+                                {
+                                 "name":"leaveValue",
+                                 "type":"string",
+                                 "value":""
                                 }],
                          "type":"tilelayer",
                          "visible":true,
