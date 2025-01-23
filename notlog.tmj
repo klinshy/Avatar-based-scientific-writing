@@ -2766,29 +2766,6 @@
                  "y":1563.5
                 }, 
                 {
-                 "height":0,
-                 "id":5,
-                 "name":"actionLayerVariable",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"1"
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":2029.33333333333,
-                 "y":1879.33333333333
-                }, 
-                {
                  "height":32,
                  "id":6,
                  "name":"labportal",
