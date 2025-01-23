@@ -1108,7 +1108,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2Video.html"
+                         "value":".\/H5P\/3_2Video_link.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
