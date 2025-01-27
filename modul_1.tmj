@@ -1080,7 +1080,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":".\/matrix-hub.tmj#modul_1_toMatrixPortal_1"
+                         "value":".\/matrix-hub.tmj"
                         }, 
                         {
                          "name":"\u2139\ufe0f",
@@ -1091,8 +1091,8 @@
                  "type":"area",
                  "visible":true,
                  "width":126.682,
-                 "x":23.9923333333333,
-                 "y":2843.24243333333
+                 "x":256,
+                 "y":2816
                 }, 
                 {
                  "height":147.6667,

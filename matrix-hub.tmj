@@ -631,6 +631,23 @@
                  "width":150.166666666667,
                  "x":547.583333333333,
                  "y":524.500016666667
+                }, 
+                {
+                 "height":64.5455,
+                 "id":11,
+                 "name":"labToMatrix",
+                 "properties":[
+                        {
+                         "name":"start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":64.7386,
+                 "x":1008,
+                 "y":432
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -713,7 +730,7 @@
          "y":0
         }],
  "nextlayerid":20,
- "nextobjectid":11,
+ "nextobjectid":12,
  "orientation":"orthogonal",
  "properties":[
         {
