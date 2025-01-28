@@ -113,16 +113,33 @@ WA.onInit().then(async () => {
     // Check if the player has solved the notlog quest and is not an admin
     const solvedNotlog = WA.player.state.solvedNotlog;
     const isAdmin = WA.player.tags.includes('admin');
-    if (solvedNotlog === true && !isAdmin) {
-        console.log("Map URL: ", WA.room.mapURL);
-        if (!WA.room.mapURL.includes('localhost')) {
-            // Teleport the player to the entry named "matrix-hub"
-            WA.nav.goToRoom("./matrix-hub.tmj");
-        }
+    const mapURL = WA.room.mapURL;
+
+    console.log("solvedNotlog:", solvedNotlog);
+    console.log("isAdmin:", isAdmin);
+    console.log("mapURL:", mapURL);
+
+    if (solvedNotlog === true && !isAdmin && mapURL.includes('notlog') && !mapURL.includes('localhost')) {
+        console.log("Map URL: ", mapURL);
+        // Teleport the player to the entry named "matrix-hub"
+        WA.nav.goToRoom("./matrix-hub.tmj");
     }
+
+    // Event listener for entering the notlog area
+    WA.room.area.onEnter('notlog').subscribe(() => {
+        console.log("Entered notlog area");
+        if (solvedNotlog === true && !isAdmin) {
+            console.log("Map URL: ", mapURL);
+            if (!mapURL.includes('localhost')) {
+                // Teleport the player to the entry named "matrix-hub"
+                WA.nav.goToRoom("./matrix-hub.tmj");
+            }
+        }
+    });
 
     // Event listener for leaving the notlog area
     WA.room.area.onEnter('leaveNotlog').subscribe(() => {
+        console.log("Leaving notlog area");
         WA.player.state.solvedNotlog = true;
     });
 
