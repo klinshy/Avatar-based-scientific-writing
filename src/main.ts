@@ -20,6 +20,23 @@ WA.onInit().then(async () => {
                 message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
                 callback: () => {
                     WA.chat.sendChatMessage(area.chatText, area.npcName);
+<<<<<<< Updated upstream
+=======
+                    if (area.triggerQuest) {
+                        // Get the current quest before updating it
+                        const currentQuestId = WA.player.state.currentQuest;
+                        const currentQuest = quests.find((q: { questId: string; questXp: number }) => q.questId === currentQuestId);
+                        if (currentQuest) {
+                            // Award the XP for the quest that was solved
+                            levelUp(currentQuest.questId, currentQuest.questXp);
+                        }
+                        // Update the current quest only if the requirement is met
+                        const requiredQuest = quests.find(q => q.questId === area.triggerQuest)?.requireQuest;
+                        if (currentQuestId === requiredQuest) {
+                            WA.player.state.currentQuest = area.triggerQuest;
+                        }
+                    }
+>>>>>>> Stashed changes
                 }
             });
         });
@@ -157,7 +174,47 @@ WA.onInit().then(() => {
             if (tasks[currentTask].area === task.area) {
                 completeTask(currentTask);
             }
+<<<<<<< Updated upstream
         });
+=======
+        }
+    });
+
+    // Event listener for leaving the notlog area
+    WA.room.area.onEnter('leaveNotlog').subscribe(() => {
+        console.log("Leaving notlog area");
+        WA.player.state.solvedNotlog = true;
+    });
+
+    // Display the current quest banner if a quest is active
+    const currentQuestId = WA.player.state.currentQuest;
+    const currentQuest = quests.find((q: { questId: string }) => q.questId === currentQuestId);
+    if (currentQuest) {
+        createQuestBanner(currentQuest.questId);
+    }
+
+    // Event listener for changes in the current quest
+    WA.player.state.onVariableChange('currentQuest').subscribe((newQuestId) => {
+        const newQuest = quests.find((q: { questId: string }) => q.questId === newQuestId);
+        if (newQuest) {
+            createQuestBanner(newQuest.questId);
+        }
+     
+    });
+
+    // Function to create a quest banner
+    function createQuestBanner(questId: string) {
+        const quest = quests.find((q: { questId: string }) => q.questId === questId);
+        if (quest) {
+            WA.ui.banner.openBanner({
+                id: quest.questId,
+                text: quest.questDescription,
+                bgColor: '#1B1B29',
+                textColor: '#FFFFFF',
+                closable: false
+            });
+        }
+>>>>>>> Stashed changes
     }
 });
 
