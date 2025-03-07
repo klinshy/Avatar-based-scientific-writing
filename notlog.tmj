@@ -3478,6 +3478,48 @@
                  "width":96.5,
                  "x":1982.75,
                  "y":1662
+                }, 
+                {
+                 "height":211.333,
+                 "id":35,
+                 "name":"test",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/Super_simple.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":143.333,
+                 "x":518.33,
+                 "y":1108.67
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4234,7 +4276,7 @@
          "y":0
         }],
  "nextlayerid":63,
- "nextobjectid":35,
+ "nextobjectid":36,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -4263,7 +4305,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.0",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tilesets":[
         {

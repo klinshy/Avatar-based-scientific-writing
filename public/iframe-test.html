@@ -17,6 +17,12 @@
             console.log("WA ready");
             WA.chat.sendChatMessage("Test", "Test");
         </script>
+<script>H5P.externalDispatcher.on('xAPI', function(event){
+  if (event.getScore() === event.getMaxScore() && event.getMaxScore() > 0){
+    console.log('do something useful here');
+  WA.chat.sendChatMessage("do something useful here", "Test");
+  }
+});</script>
     </head>
     <body>
         <h1>Willkommen in WorkAdventure</h1>
