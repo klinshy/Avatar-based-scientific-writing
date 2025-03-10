@@ -3478,6 +3478,147 @@
                  "width":96.5,
                  "x":1855.75,
                  "y":1662
+                }, 
+                {
+                 "height":84.3333,
+                 "id":36,
+                 "name":"quest1",
+                 "properties":[
+                        {
+                         "name":"isQuest",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"questDescription",
+                         "type":"string",
+                         "value":"Triff Prof. McDongle am Eingang von Notlog."
+                        }, 
+                        {
+                         "name":"questId",
+                         "type":"string",
+                         "value":"quest1"
+                        }, 
+                        {
+                         "name":"questKey",
+                         "type":"string",
+                         "value":"notlog"
+                        }, 
+                        {
+                         "name":"questName",
+                         "type":"string",
+                         "value":"Einf\u00fchrung in Notlog"
+                        }, 
+                        {
+                         "name":"questXp",
+                         "type":"string",
+                         "value":"100"
+                        }, 
+                        {
+                         "name":"requireQuest",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":512,
+                 "y":1224
+                }, 
+                {
+                 "height":84.3333,
+                 "id":37,
+                 "name":"quest2",
+                 "properties":[
+                        {
+                         "name":"isQuest",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"questDescription",
+                         "type":"string",
+                         "value":"Sprich mit Prof. Mumblecore am n\u00f6rdlichen Ende der gro\u00dfen Halle."
+                        }, 
+                        {
+                         "name":"questId",
+                         "type":"string",
+                         "value":"quest2"
+                        }, 
+                        {
+                         "name":"questKey",
+                         "type":"string",
+                         "value":"notlog"
+                        }, 
+                        {
+                         "name":"questName",
+                         "type":"string",
+                         "value":"Erkundung des Saals"
+                        }, 
+                        {
+                         "name":"questXp",
+                         "type":"string",
+                         "value":"150"
+                        }, 
+                        {
+                         "name":"requireQuest",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":744,
+                 "y":1232
+                }, 
+                {
+                 "height":84.3333,
+                 "id":38,
+                 "name":"quest3",
+                 "properties":[
+                        {
+                         "name":"isQuest",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"questDescription",
+                         "type":"string",
+                         "value":"Geh runter ins Labor und sprich mit Prof. Sake."
+                        }, 
+                        {
+                         "name":"questId",
+                         "type":"string",
+                         "value":"quest3"
+                        }, 
+                        {
+                         "name":"questKey",
+                         "type":"string",
+                         "value":"notlog"
+                        }, 
+                        {
+                         "name":"questName",
+                         "type":"string",
+                         "value":"Laborbesuch"
+                        }, 
+                        {
+                         "name":"questXp",
+                         "type":"string",
+                         "value":"200"
+                        }, 
+                        {
+                         "name":"requireQuest",
+                         "type":"string",
+                         "value":"quest2"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":123.5,
+                 "x":648,
+                 "y":424
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4234,7 +4375,7 @@
          "y":0
         }],
  "nextlayerid":63,
- "nextobjectid":35,
+ "nextobjectid":39,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -4263,7 +4404,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.0",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tilesets":[
         {

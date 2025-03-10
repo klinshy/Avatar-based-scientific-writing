@@ -107,14 +107,23 @@ function createQuestBanner(questId: string, quests: QuestArea[]) {
 
 async function initQuests() {
     const quests = await getQuestAreas();
-    const currentQuestId = WA.player.state.currentQuest;
-    const currentQuest = quests.find((q) => q.questId === currentQuestId);
-    if (currentQuest) {
+    // Store the current quest as the last quest for comparison on changes.
+    let lastQuestId = String(WA.player.state.currentQuest);
+    const currentQuest = quests.find((q) => q.questId === lastQuestId);
+    
+    // Only show banner if either no prerequisite is required, or the prerequisite matches lastQuestId.
+    if (currentQuest && (!currentQuest.requireQuest || currentQuest.requireQuest === lastQuestId)) {
         createQuestBanner(currentQuest.questId, quests);
     }
     
-    WA.player.state.onVariableChange('currentQuest').subscribe((newQuestId) => {
-        createQuestBanner(String(newQuestId), quests);
+    WA.player.state.onVariableChange("currentQuest").subscribe((newQuestIdRaw) => {
+        const newQuestId = String(newQuestIdRaw);
+        const quest = quests.find((q) => q.questId === newQuestId);
+        // Only update if there's no prerequisite or if the prerequisite matches the previous quest.
+        if (quest && (!quest.requireQuest || quest.requireQuest === lastQuestId)) {
+            createQuestBanner(quest.questId, quests);
+        }
+        lastQuestId = newQuestId;
     });
 }
 
