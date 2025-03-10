@@ -1,27 +1,159 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
-import { checkPlayerMaterial, mySound, playRandomSound } from "./footstep";
 import { getChatAreas } from "./chatArea";
-import { quests, levelUp } from "./quests";
+import { getLayersMap } from "@workadventure/scripting-api-extra/dist";
 
-WA.onInit().then(async () => {
-    console.log('loading main.ts');
+try {
+    await bootstrapExtra();
+    console.log('Scripting API Extra ready');
+} catch (e) {
+    console.error(e);
+}
 
-    // Initialize the first quest if not already set
-    if (!WA.player.state.currentQuest) {
-        WA.player.state.currentQuest = 'quest1';
-    }
-    levelUp("notlog", 0);
+// QUESTS:
+interface QuestArea {
+    name: string;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    questId: string;
+    questKey: string;
+    questName: string;
+    questXp: number;
+    requireQuest: string;
+    triggerQuest: string;
+    questDescription: string;
+}
 
+async function getQuestAreas(): Promise<QuestArea[]> {
     try {
-        // Initialize the Scripting API Extra
-        await bootstrapExtra();
-        console.log('Scripting API Extra ready');
-    } catch (e) {
-        console.error(e);
+        const layers = await getLayersMap();
+        const questAreas: QuestArea[] = [];
+        for (const layer of layers.values()) {
+            if (layer.type === "objectgroup") {
+                for (const object of layer.objects) {
+                    if (!object.properties) continue;
+                    if (
+                        object.properties.some(
+                            (prop) => prop.name === "isQuest" && prop.value === true
+                        )
+                    ) {
+                        const questId = object.properties.find(
+                            (prop) => prop.name === "questId"
+                        )?.value;
+                        const questKey = object.properties.find(
+                            (prop) => prop.name === "questKey"
+                        )?.value;
+                        const questName = object.properties.find(
+                            (prop) => prop.name === "questName"
+                        )?.value;
+                        const questXpProp = object.properties.find(
+                            (prop) => prop.name === "questXp"
+                        );
+                        const requireQuest = object.properties.find(
+                            (prop) => prop.name === "requireQuest"
+                        )?.value;
+                        const triggerQuest = object.properties.find(
+                            (prop) => prop.name === "triggerQuest"
+                        )?.value ?? "";
+                        const questDescription = object.properties.find(
+                            (prop) => prop.name === "questDescription"
+                        )?.value;
+    
+                        if (questId && questName) {
+                            const xpValue = questXpProp?.value;
+                            const questXp = xpValue ? parseInt(String(xpValue), 10) : 0;
+                            questAreas.push({
+                                name: object.name,
+                                x: object.x,
+                                y: object.y,
+                                width: object.width ?? 0,
+                                height: object.height ?? 0,
+                                questId: String(questId),
+                                questKey: String(questKey ?? ""),
+                                questName: String(questName),
+                                questXp,
+                                requireQuest: String(requireQuest ?? ""),
+                                triggerQuest: String(triggerQuest),
+                                questDescription: String(questDescription ?? ""),
+                            });
+                        }
+                    }
+                }
+            }
+        }
+        console.log("All retrieved quests:", questAreas);
+        return questAreas;
+  
+    } catch (error) {
+        console.error("Error while getting quest areas:", error);
+        return [];
     }
+}
 
-    // Get chat areas and set up event listeners for entering and leaving them
+function createQuestBanner(questId: string, quests: QuestArea[]) {
+    const quest = quests.find((q) => q.questId === questId);
+    if (quest) {
+        WA.ui.banner.openBanner({
+            id: quest.questId,
+            text: quest.questDescription,
+            bgColor: '#1B1B29',
+            textColor: '#FFFFFF',
+            closable: false
+        });
+    }
+}
+
+async function initQuests() {
+    const quests = await getQuestAreas();
+    const currentQuestId = WA.player.state.currentQuest;
+    const currentQuest = quests.find((q) => q.questId === currentQuestId);
+    if (currentQuest) {
+        createQuestBanner(currentQuest.questId, quests);
+    }
+    
+    WA.player.state.onVariableChange('currentQuest').subscribe((newQuestId) => {
+        createQuestBanner(String(newQuestId), quests);
+    });
+}
+
+const mapURL = WA.room.mapURL;
+(async () => {
+    // Map of map identifiers to their corresponding dynamic import functions.
+    const mapActions: { [key: string]: () => Promise<void> } = {
+        'notlog': async () => {
+            const initNotlogScript = (await import('./notlog')).default;
+            initNotlogScript();
+        },
+        'modules': async () => {
+            const initModulesScript = (await import('./modules')).default;
+            initModulesScript();
+        },
+        'finalChallenge': async () => {
+            const initFinalChallengeScript = (await import('./finalChallenge')).default;
+            initFinalChallengeScript();
+        },
+        'matrix': async () => {
+            const initMatrixScript = (await import('./matrix')).default;
+            initMatrixScript();
+        }
+    };
+
+    // Loop through mapActions to dynamically load the appropriate script.
+    for (const key in mapActions) {
+        if (mapURL.includes(key)) {
+            await mapActions[key]();
+            return;
+        }
+    }
+})();
+
+// Get chat areas and set up event listeners for entering and leaving them
+initQuests();
+
+// Get chat areas and set up event listeners for entering and leaving them
+(async () => {
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
         let triggerMessage: any;
@@ -32,12 +164,9 @@ WA.onInit().then(async () => {
                 message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
                 callback: () => {
                     WA.chat.sendChatMessage(area.chatText, area.npcName);
+                    // If the area triggers a quest, update the current quest state
                     if (area.triggerQuest) {
-                        const currentQuest = WA.player.state.currentQuest;
-                        const requiredQuest = quests.find((q: { questId: string }) => q.questId === area.triggerQuest)?.requireQuest;
-                        if (currentQuest === requiredQuest) {
-                            WA.player.state.currentQuest = area.triggerQuest;
-                        }
+                        WA.player.state.currentQuest = area.triggerQuest;
                     }
                 }
             });
@@ -45,135 +174,7 @@ WA.onInit().then(async () => {
 
         // When player leaves a chat area
         WA.room.area.onLeave(area.name).subscribe(() => {
-            if (triggerMessage) {
-                triggerMessage.remove();
-            }
+            triggerMessage?.remove();
         });
     }
-
-    // Event listener for player movement to play footstep sounds
-    WA.player.onPlayerMove(async ({ x, y, moving }) => {
-        const material = await checkPlayerMaterial({ x, y });
-        if (!material) {
-            mySound?.stop();
-            return;
-        }
-
-        if (!moving && !material) {
-            mySound?.stop();
-            return;
-        } else {
-            mySound?.stop();
-            playRandomSound(material);
-        }
-    });
-
-    // Event listener for entering the downstairs area to the lab
-    WA.room.area.onEnter('downstairs_toLab').subscribe(async () => {
-        WA.room.hideLayer('fg-objects/stair-2');
-        if (isAutoMoving) return;
-        isAutoMoving = true;
-        let result = await WA.player.moveTo(1300, 1728);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1300, 1728);
-        }
-        result = await WA.player.moveTo(1325, 1643);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1325, 1643);
-        }
-        WA.room.showLayer('fg-objects/stair-2');
-        result = await WA.player.moveTo(1503, 1754);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1503, 1754);
-        }
-        isAutoMoving = false;
-    });
-
-    // Event listener for entering the upstairs area from the lab
-    WA.room.area.onEnter('upstairs_fromLab').subscribe(async () => {
-        WA.room.showLayer('fg-objects/stair-2');
-        if (isAutoMoving) return;
-        isAutoMoving = true;
-        let result = await WA.player.moveTo(1325, 1643);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1325, 1643);
-        }
-        result = await WA.player.moveTo(1300, 1728);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1300, 1728);
-        }
-        WA.room.hideLayer('fg-objects/stair-2');
-        result = await WA.player.moveTo(1513, 1568);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1513, 1568);
-        }
-        isAutoMoving = false;
-    });
-
-    // Check if the player has solved the notlog quest and is not an admin
-    const solvedNotlog = WA.player.state.solvedNotlog;
-    const isAdmin = WA.player.tags.includes('admin');
-    const mapURL = WA.room.mapURL;
-
-    console.log("solvedNotlog:", solvedNotlog);
-    console.log("isAdmin:", isAdmin);
-    console.log("mapURL:", mapURL);
-
-    if (solvedNotlog === true && !isAdmin && mapURL.includes('notlog') && !mapURL.includes('localhost')) {
-        console.log("Map URL: ", mapURL);
-        // Teleport the player to the entry named "matrix-hub"
-        WA.nav.goToRoom("./matrix-hub.tmj");
-    }
-
-    // Event listener for entering the notlog area
-    WA.room.area.onEnter('notlog').subscribe(() => {
-        console.log("Entered notlog area");
-        if (solvedNotlog === true && !isAdmin) {
-            console.log("Map URL: ", mapURL);
-            if (!mapURL.includes('localhost')) {
-                // Teleport the player to the entry named "matrix-hub"
-                WA.nav.goToRoom("./matrix-hub.tmj");
-            }
-        }
-    });
-
-    // Event listener for leaving the notlog area
-    WA.room.area.onEnter('leaveNotlog').subscribe(() => {
-        console.log("Leaving notlog area");
-        WA.player.state.solvedNotlog = true;
-    });
-
-    // Display the current quest banner if a quest is active
-    const currentQuestId = WA.player.state.currentQuest;
-    const currentQuest = quests.find((q: { questId: string }) => q.questId === currentQuestId);
-    if (currentQuest) {
-        createQuestBanner(currentQuest.questId);
-    }
-
-    // Event listener for changes in the current quest
-    WA.player.state.onVariableChange('currentQuest').subscribe((newQuestId) => {
-        const newQuest = quests.find((q: { questId: string }) => q.questId === newQuestId);
-        if (newQuest) {
-            createQuestBanner(newQuest.questId);
-        }
-    });
-
-    // Function to create a quest banner
-    function createQuestBanner(questId: string) {
-        const quest = quests.find((q: { questId: string }) => q.questId === questId);
-        if (quest) {
-            WA.ui.banner.openBanner({
-                id: quest.questId,
-                text: quest.questDescription,
-                bgColor: '#1B1B29',
-                textColor: '#FFFFFF',
-                closable: false
-            });
-        }
-    }
-});
-
-// Variable to track if the player is auto-moving
-let isAutoMoving = false;
-
-export {};
+})();
