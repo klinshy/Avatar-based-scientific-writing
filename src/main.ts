@@ -46,6 +46,7 @@ WA.onInit().then(async () => {
         WA.room.area.onLeave(area.name).subscribe(() => {
             if (triggerMessage) {
                 triggerMessage.remove();
+                WA.chat.close();
             }
         });
     }
@@ -174,5 +175,20 @@ WA.onInit().then(async () => {
 
 // Variable to track if the player is auto-moving
 let isAutoMoving = false;
+
+WA.player.state.onVariableChange("moduleSolved").subscribe((newValue) => {
+    if (newValue === "solved") {
+        const greenTiles = [];
+        const redTiles = [];
+        for (let x = 4; x <= 15; x++) {
+            for (let y = 74; y <= 85; y++) {
+                greenTiles.push({ x, y, tile: "green", layer: "green" });
+                redTiles.push({ x, y, tile: null, layer: "red" });
+            }
+        }
+        WA.room.setTiles(greenTiles);
+        WA.room.setTiles(redTiles);
+    }
+});
 
 export {};
