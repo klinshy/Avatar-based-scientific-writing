@@ -20,7 +20,6 @@ WA.onInit().then(async () => {
     } catch (e) {
         console.error(e);
     }
-
     // Get chat areas and set up event listeners for entering and leaving them
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
