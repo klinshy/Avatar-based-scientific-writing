@@ -1902,7 +1902,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/Modul_2_3.html"
+                         "value":".\/H5P\/Modul_3_1.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2126,7 +2126,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/Modul_3_1.html"
+                         "value":".\/H5P\/Modul_3_2.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
