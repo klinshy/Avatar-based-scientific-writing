@@ -177,8 +177,9 @@ WA.onInit().then(async () => {
 let isAutoMoving = false;
 
 WA.onInit().then(() => {
-    const Module_3_1: any = {}; // initialize Module_1_1 with a default value
-    WA.player.state.module_3_1 = Module_3_1;
+
+    const currentModule3_1 = WA.player.state.module_3_1;
+    WA.player.state.module_3_1 = currentModule3_1;
 });
 
 WA.player.state.onVariableChange("module_3_1").subscribe((newValue) => {
@@ -214,4 +215,5 @@ WA.player.state.onVariableChange("module_3_2").subscribe((newValue) => {
         WA.room.setTiles(redTiles);
     }
 });
+
 export {};
