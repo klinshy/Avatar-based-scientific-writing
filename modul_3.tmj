@@ -2077,12 +2077,12 @@
                 {
                  "height":117,
                  "id":3,
-                 "name":"3_1_2_AllgemeineRegeln",
+                 "name":"3_1_2AllgemeineRegeln",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_1_2_AllgemeineRegeln.html"
+                         "value":".\/H5P\/3_1_2AllgemeineRegeln.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2173,12 +2173,12 @@
                 {
                  "height":99.6667,
                  "id":15,
-                 "name":"3_2_2_ZitierenImText",
+                 "name":"3_2_2ZitierenImText",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_2_ZitierenImText.html"
+                         "value":".\/H5P\/3_2_2ZitierenImText.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2247,12 +2247,12 @@
                 {
                  "height":117,
                  "id":23,
-                 "name":"3_1_1_Textarten",
+                 "name":"3_1_1Textarten",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_1_1_Textarten.html"
+                         "value":".\/H5P\/3_1_1Textarten.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2289,12 +2289,12 @@
                 {
                  "height":117,
                  "id":24,
-                 "name":"3_1_3_Sprache",
+                 "name":"3_1_3Sprache",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_1_3_Sprache.html"
+                         "value":".\/H5P\/3_1_3Sprache.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2331,12 +2331,12 @@
                 {
                  "height":99.6667,
                  "id":25,
-                 "name":"3_2_1_Zitieren",
+                 "name":"3_2_1Zitieren",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_1_Zitieren.html"
+                         "value":".\/H5P\/3_2_1Zitieren.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2373,12 +2373,12 @@
                 {
                  "height":99.6667,
                  "id":26,
-                 "name":"3_2_3_Literaturverzeichnis",
+                 "name":"3_2_3Literaturverzeichnis",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_3_Literaturverzeichnis.html"
+                         "value":".\/H5P\/3_2_3Literaturverzeichnis.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2415,12 +2415,12 @@
                 {
                  "height":99.6667,
                  "id":27,
-                 "name":"3_3_Literaturverwaltung",
+                 "name":"3_3Literaturverwaltung",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_3_Literaturverwaltung.html"
+                         "value":".\/H5P\/3_3Literaturverwaltung.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
