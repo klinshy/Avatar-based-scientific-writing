@@ -2082,7 +2082,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_1_2A.html"
+                         "value":".\/H5P\/3_1_2AllgemeineRegeln.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2107,7 +2107,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2277,7 +2277,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2319,7 +2319,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2361,7 +2361,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2403,7 +2403,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2445,7 +2445,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
