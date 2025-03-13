@@ -2082,7 +2082,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_1_2AllgemeineRegeln.html"
+                         "value":".\/H5P\/3_1_2A.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
