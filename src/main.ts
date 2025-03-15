@@ -216,4 +216,27 @@ WA.player.state.onVariableChange("module_3_2").subscribe((newValue) => {
     }
 });
 
+//todo make reusable function that parses modulesConfig data-structure
+// setupTileChangeSubscriptions()
+
+// function setupTileChangeSubscriptions() {
+
+//   Object.entries(modulesConfig).forEach(([moduleName, moduleData]) => {
+//     WA.player.state.onVariableChange(moduleName).subscribe((newValue) => {
+//       if (newValue === moduleData.max) {
+//         const greenTiles = [];
+//         const redTiles = [];
+//         for (let x = 4; x <= 15; x++) {
+//           for (let y = 71; y <= 89; y++) {
+//             greenTiles.push({ x, y, tile: "green", layer: "green" });
+//             redTiles.push({ x, y, tile: null, layer: "red" });
+//           }
+//         }
+//         WA.room.setTiles(greenTiles);
+//         WA.room.setTiles(redTiles);
+//       }
+//     });
+//   });
+// }
+
 export {};
