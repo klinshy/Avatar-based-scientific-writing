@@ -183,8 +183,8 @@ async function getWorkbookAreas(): Promise<WorkbookArea[]> {
                                 title: area.moduleName,
                                 src: area.h5pPath,
                                 allowApi: true,
-                                position: "right"
-                                
+                                position: "right",
+                                allow: null
                             });
                         }
                     });
