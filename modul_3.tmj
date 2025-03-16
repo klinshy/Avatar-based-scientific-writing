@@ -2247,7 +2247,7 @@
                 {
                  "height":117,
                  "id":23,
-                 "name":"3_1_1_Textarten",
+                 "name":"3_1_1_Textarten(o)",
                  "properties":[
                         {
                          "name":"openWebsite",
@@ -2283,8 +2283,8 @@
                  "type":"area",
                  "visible":true,
                  "width":106,
-                 "x":160,
-                 "y":2592
+                 "x":496,
+                 "y":2424
                 }, 
                 {
                  "height":117,
@@ -2475,6 +2475,53 @@
                  "width":126.682,
                  "x":256,
                  "y":1728
+                }, 
+                {
+                 "height":117,
+                 "id":29,
+                 "name":"workbook_3_1_1_Textarten",
+                 "properties":[
+                        {
+                         "name":"XP",
+                         "type":"string",
+                         "value":"0"
+                        }, 
+                        {
+                         "name":"completionMessage",
+                         "type":"string",
+                         "value":"Gl\u00fcckwunsch"
+                        }, 
+                        {
+                         "name":"h5pPath",
+                         "type":"string",
+                         "value":".\/H5P\/3_1_1_Textarten.html"
+                        }, 
+                        {
+                         "name":"isWorkbook",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"messageNpc",
+                         "type":"string",
+                         "value":"Zirze"
+                        }, 
+                        {
+                         "name":"moduleMax",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"moduleName",
+                         "type":"string",
+                         "value":"3.1 Textarten"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":106,
+                 "x":152,
+                 "y":2592
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2584,7 +2631,7 @@
          "y":0
         }],
  "nextlayerid":30,
- "nextobjectid":29,
+ "nextobjectid":30,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2610,7 +2657,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/main.ts"
+         "value":"src\/modules-main.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
