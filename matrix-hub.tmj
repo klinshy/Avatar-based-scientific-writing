@@ -1493,6 +1493,19 @@
                         }]
                 }],
          "tilewidth":32
+        }, 
+        {
+         "columns":33,
+         "firstgid":11162,
+         "image":"tilesets\/Cruising the Circuits\/cyber_object_whiteRGB.png",
+         "imageheight":448,
+         "imagewidth":1056,
+         "margin":0,
+         "name":"cyber_object_whiteRGB",
+         "spacing":0,
+         "tilecount":462,
+         "tileheight":32,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",
