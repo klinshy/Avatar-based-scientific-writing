@@ -2107,7 +2107,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2173,12 +2173,12 @@
                 {
                  "height":99.6667,
                  "id":15,
-                 "name":"3_2_2Zitieren",
+                 "name":"3_2_2ZitierenImText",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_2Zitieren.html"
+                         "value":".\/H5P\/3_2_2ZitierenImText.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2252,7 +2252,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_1_1_Textarten.html"
+                         "value":".\/H5P\/3_1_1Textarten.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2277,7 +2277,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2289,12 +2289,12 @@
                 {
                  "height":117,
                  "id":24,
-                 "name":"3_1_3Gender",
+                 "name":"3_1_3Sprache",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_1_3Gender.html"
+                         "value":".\/H5P\/3_1_3Sprache.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2319,7 +2319,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2331,12 +2331,12 @@
                 {
                  "height":99.6667,
                  "id":25,
-                 "name":"3_2_1Zitieren_Quellenangabe",
+                 "name":"3_2_1Zitieren",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_1Zitieren_Quellenangabe.html"
+                         "value":".\/H5P\/3_2_1Zitieren.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2361,7 +2361,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2373,12 +2373,12 @@
                 {
                  "height":99.6667,
                  "id":26,
-                 "name":"3_2_3ZitierenImText",
+                 "name":"3_2_3Literaturverzeichnis",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_3ZitierenImText.html"
+                         "value":".\/H5P\/3_2_3Literaturverzeichnis.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2403,7 +2403,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2415,12 +2415,12 @@
                 {
                  "height":99.6667,
                  "id":27,
-                 "name":"3_2_4Literaturverzeichnis",
+                 "name":"3_3Literaturverwaltung",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_4Literaturverzeichnis.html"
+                         "value":".\/H5P\/3_3Literaturverwaltung.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2445,7 +2445,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":70
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2660,7 +2660,7 @@
          "value":"src\/modules-main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {

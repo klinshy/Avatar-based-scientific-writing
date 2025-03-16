@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Beispiel</title>
+</head>
+<body>
+   
+    <html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Embed Page</title>
+        <script src="https://play.workadventu.re/iframe_api.js"></script>
+        <script>
+            console.log("WA ready");
+            WA.chat.sendChatMessage("Test", "Test");
+        </script>
+<script>H5P.externalDispatcher.on('xAPI', function(event){
+  if (event.getScore() === event.getMaxScore() && event.getMaxScore() > 0){
+    console.log('do something useful here');
+  WA.chat.sendChatMessage("do something useful here", "Test");
+  }
+});</script>
+    </head>
+    <body>
+        <h1>Willkommen in WorkAdventure</h1>
+    </body>
+    </html>' width="600" height="400" style="border:1px solid black;"></iframe>
+</body>
+</html>
