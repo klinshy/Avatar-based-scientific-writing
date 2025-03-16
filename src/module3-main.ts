@@ -175,100 +175,101 @@ async function getWorkbookAreas(): Promise<WorkbookArea[]> {
 
    
         
-        // Get workbook areas and set up event listeners for entering and leaving them
-        const workbookAreas = await getWorkbookAreas();
-        for (const area of workbookAreas) {
-                let messagePrompt: any;
-
-                WA.room.area.onEnter(area.name).subscribe({ next: () => {
-                    messagePrompt = WA.ui.displayActionMessage({
-                        message: "Drücke LEERTASTE zum Öffnen des Workbooks",
-                        callback: () => {
-                            WA.ui.modal.openModal({
-                                title: area.moduleName,
-                                src: area.h5pPath,
-                                allowApi: true,
-                                position: "left",
-                                allow: null
-                            });
-                        }
+        (async () => {
+            // Get workbook areas and set up event listeners for entering and leaving them
+            const workbookAreas = await getWorkbookAreas();
+            for (const area of workbookAreas) {
+                    let messagePrompt: any;
+        
+                    WA.room.area.onEnter(area.name).subscribe({ next: () => {
+                        messagePrompt = WA.ui.displayActionMessage({
+                            message: "Drücke LEERTASTE zum Öffnen des Workbooks",
+                            callback: () => {
+                                WA.ui.modal.openModal({
+                                    title: area.moduleName,
+                                    src: area.h5pPath,
+                                    allowApi: true,
+                                    position: "left",
+                                    allow: null
+                                });
+                            }
+                        });
+                    
+                       
+                    }});
+        
+                    // When player leaves a workbook area
+                    WA.room.area.onLeave(area.moduleName).subscribe(() => {
+                            if (messagePrompt) {
+                                    messagePrompt.remove();
+                                    WA.chat.close();
+                            }
                     });
+            }
+            // Single dynamic tile update system
+            interface ModuleTileConfig {
+                moduleKey: string;
+                triggerValue: string;
+                startX: number;
+                endX: number;
+                startY: number;
+                endY: number;
+            }
+        
+            const moduleConfigs: ModuleTileConfig[] = [
+                { moduleKey: "module_3_1", triggerValue: "3", startX: 4, endX: 15, startY: 71, endY: 89 },
+                { moduleKey: "module_3_2", triggerValue: "4", startX: 4, endX: 15, startY: 47, endY: 85 }
+            ];
+        
+            function updateTiles(config: ModuleTileConfig) {
+                const { moduleKey, triggerValue, startX, endX, startY, endY } = config;
+                if (WA.player.state[moduleKey] !== triggerValue) return;
+                const green: any[] = [], red: any[] = [];
+                for (let x = startX; x <= endX; x++) {
+                for (let y = startY; y <= endY; y++) {
+                    green.push({ x, y, tile: "green", layer: "green" });
+                    red.push({ x, y, tile: null, layer: "red" });
+                }
+                }
+                WA.room.setTiles(green);
+                WA.room.setTiles(red);
+            }
+        
+            WA.onInit().then(() => {
+                // Prepare module_3_2 state
+                WA.player.state.module_1_1 = {};
                 
-                   
-                }});
-
-                // When player leaves a workbook area
-                WA.room.area.onLeave(area.moduleName).subscribe(() => {
-                        if (messagePrompt) {
-                                messagePrompt.remove();
-                                WA.chat.close();
-                        }
+                // Initial updates
+                moduleConfigs.forEach(config => updateTiles(config));
+            });
+        
+            // Subscribe to changes
+            moduleConfigs.forEach(config => {
+                WA.player.state.onVariableChange(config.moduleKey).subscribe((newValue) => {
+                if (newValue === config.triggerValue) updateTiles(config);
                 });
-        }
-        // Single dynamic tile update system
-        interface ModuleTileConfig {
-            moduleKey: string;
-            triggerValue: string;
-            startX: number;
-            endX: number;
-            startY: number;
-            endY: number;
-        }
-
-        const moduleConfigs: ModuleTileConfig[] = [
-            { moduleKey: "module_3_1", triggerValue: "3", startX: 4, endX: 15, startY: 71, endY: 89 },
-            { moduleKey: "module_3_2", triggerValue: "4", startX: 4, endX: 15, startY: 47, endY: 85 }
-        ];
-
-        function updateTiles(config: ModuleTileConfig) {
-            const { moduleKey, triggerValue, startX, endX, startY, endY } = config;
-            if (WA.player.state[moduleKey] !== triggerValue) return;
-            const green: any[] = [], red: any[] = [];
-            for (let x = startX; x <= endX; x++) {
-            for (let y = startY; y <= endY; y++) {
-                green.push({ x, y, tile: "green", layer: "green" });
-                red.push({ x, y, tile: null, layer: "red" });
-            }
-            }
-            WA.room.setTiles(green);
-            WA.room.setTiles(red);
-        }
-
-        WA.onInit().then(() => {
-            // Prepare module_3_2 state
-            WA.player.state.module_1_1 = {};
-            
-            // Initial updates
-            moduleConfigs.forEach(config => updateTiles(config));
-        });
-
-        // Subscribe to changes
-        moduleConfigs.forEach(config => {
-            WA.player.state.onVariableChange(config.moduleKey).subscribe((newValue) => {
-            if (newValue === config.triggerValue) updateTiles(config);
             });
-        });
-        // List of variable keys that trigger events to do something (tbd)
-        const eventVariableKeys = [
-            'Textarten',
-            'allgemeineRegeln',
-            'Sprache',
-            'Zitiren',
-            'ZitierenImText',
-            'Literaturverzeichnis',
-            'Literaturverwaltung'
-             // The key used to track the current quest state
-            // Add additional keys here when needed
-        ];
-
-        // Subscribe to changes for each variable key
-        for (const key of eventVariableKeys) {
-            WA.player.state.onVariableChange(key).subscribe((newValue) => {
-                
-                levelUp("modul_3",10)
-                console.log(`Variable "${key}" changed to:`, newValue, "Level up, +10XP");
-            });
-        }
-
+            // List of variable keys that trigger events to do something (tbd)
+            const eventVariableKeys = [
+                'Textarten',
+                'allgemeineRegeln',
+                'Sprache',
+                'Zitiren',
+                'ZitierenImText',
+                'Literaturverzeichnis',
+                'Literaturverwaltung'
+                 // The key used to track the current quest state
+                // Add additional keys here when needed
+            ];
+        
+            // Subscribe to changes for each variable key
+            for (const key of eventVariableKeys) {
+                WA.player.state.onVariableChange(key).subscribe((newValue) => {
+                    
+                    levelUp("modul_3",10)
+                    console.log(`Variable "${key}" changed to:`, newValue, "Level up, +10XP");
+                });
+            }
+        })();
 export {};
 
