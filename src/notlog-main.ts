@@ -176,45 +176,7 @@ WA.onInit().then(async () => {
 // Variable to track if the player is auto-moving
 let isAutoMoving = false;
 
-WA.onInit().then(() => {
 
-    const currentModule3_1 = WA.player.state.module_3_1;
-    WA.player.state.module_3_1 = currentModule3_1;
-});
-
-WA.player.state.onVariableChange("module_3_1").subscribe((newValue) => {
-    if (newValue === "3") {
-        const greenTiles = [];
-        const redTiles = [];
-        for (let x = 4; x <= 15; x++) {
-            for (let y = 71; y <= 89; y++) {
-                greenTiles.push({ x, y, tile: "green", layer: "green" });
-                redTiles.push({ x, y, tile: null, layer: "red" });
-            }
-        }
-        WA.room.setTiles(greenTiles);
-        WA.room.setTiles(redTiles);
-    }
-});
-WA.onInit().then(() => {
-    const Module_3_2: any = {}; // initialize Module_1_1 with a default value
-    WA.player.state.module_1_1 = Module_3_2;
-});
-
-WA.player.state.onVariableChange("module_3_2").subscribe((newValue) => {
-    if (newValue === "4") {
-        const greenTiles = [];
-        const redTiles = [];
-        for (let x = 4; x <= 15; x++) {
-            for (let y = 47; y <= 85; y++) {
-                greenTiles.push({ x, y, tile: "green", layer: "green" });
-                redTiles.push({ x, y, tile: null, layer: "red" });
-            }
-        }
-        WA.room.setTiles(greenTiles);
-        WA.room.setTiles(redTiles);
-    }
-});
 
 
 export {};

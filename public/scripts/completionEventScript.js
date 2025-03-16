@@ -7,10 +7,14 @@ function handleModuleCompletionEvents(
   completionMessage,
   messageNpc,
   moduleName,
-  moduleMax
-) {
-  let instance;
+  moduleMax,
+  workbookName
+) 
 
+{
+  if (WA.player.state[workbookName] === "solved") {
+  let instance;
+  console.log("🚩 Workbook:",workbookName," loaded");
   H5P.externalDispatcher.on("initialized", () => {
     //assuming there's only one relevant instance here
     instance = H5P.instances[0];
@@ -22,11 +26,16 @@ function handleModuleCompletionEvents(
 
     //only triggers on completion
     if (instance.getScore() === instance.getMaxScore()) {
-      console.log(
-        `🚩 COMPLETED: Player has reached ${instance.getScore()} out of ${instance.getMaxScore()} points`
-      );
-
+      console.log(`🚩 COMPLETED: Player has reached ${instance.getScore()} out of ${instance.getMaxScore()} points at ${workbookName}`);
+ 
       WA.chat.sendChatMessage(completionMessage, messageNpc);
+
+      try {
+        WA.player.state[workbookName]="solved";
+        console.log("🚩 Workbook:",workbookName," updated to solved");
+      } catch (error) {
+        console.error("Error updating workbookName to solved:", error);
+      }
 
       // Get the current state, increment by 1, and don't exceed 3.
       let currentState = Number(WA.player.state[moduleName]) || 0;
@@ -39,4 +48,6 @@ function handleModuleCompletionEvents(
       WA.player.state[moduleName] = newState.toString();
     }
   });
+  }
+else {WA.chat.sendChatMessage("You have already completed this workbook.", messageNpc);}
 }
