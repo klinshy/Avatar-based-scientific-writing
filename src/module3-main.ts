@@ -187,9 +187,9 @@ async function getWorkbookAreas(): Promise<WorkbookArea[]> {
                             callback: () => {
                                 WA.ui.modal.openModal({
                                     title: area.moduleName,
-                                    src: area.h5pPath,
+                                    src: `https://komponentab.github.io/Avatar-based-scientific-writing${area.h5pPath}`,
                                     allowApi: true,
-                                    position: "left",
+                                    position: "right",
                                     allow: null
                                 });
                             }
