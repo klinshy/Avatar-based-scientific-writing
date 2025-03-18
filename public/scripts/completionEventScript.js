@@ -1,61 +1,62 @@
+/// <reference types="@workadventure/iframe-api-typings" />
 (function () {
+  // Dynamically load the external script
+  const script = document.createElement("script");
+  script.src = "https://play.workadventu.re/iframe_api.js";
+  script.onload = () => {
+    console.log("External iframe API loaded.");
+  };
+  document.head.appendChild(script);
+
   function handleModuleCompletionEvents(
-    message,
+    completionMessage,
     messageNpc,
     moduleName,
     moduleMax,
     workbookName
   ) {
-    console.log("🚩 Okay, Completion Event Script loaded");
+    console.log("🚩 Completion Event Script loaded");
 
     // Validate H5P and externalDispatcher
     if (!window.H5P || !H5P.externalDispatcher) {
-      console.error("H5P or its externalDispatcher is not available.");
+      console.error("H5P or externalDispatcher is not available.");
       return;
     }
 
-    // Check if workbook is unsolved
-    if (WA.player.state[workbookName] === "unsolved") {
-      let instance;
-      console.log("🚩 Workbook:", workbookName, "loaded");
+    let instance;
 
-      H5P.externalDispatcher.on("initialized", () => {
-        // Safely get H5P instance
-        instance = H5P.instances && H5P.instances[0] ? H5P.instances[0] : null;
-        if (!instance) {
-          console.warn("No H5P instance found.");
-          return;
-        }
+    // Wait for H5P to initialize and grab the instance
+    H5P.externalDispatcher.on("initialized", () => {
+      instance = H5P.instances && H5P.instances[0] ? H5P.instances[0] : null;
+    });
 
-        // Listen for xAPI events
-        H5P.externalDispatcher.on("xAPI", (event) => {
-          console.log("👁️👁️ H5P xAPI EventListener:", event.data.statement);
-          if (instance.getScore() !== instance.getMaxScore()) return;
+    // Listen to xAPI events
+    H5P.externalDispatcher.on("xAPI", (event) => {
+      if (!instance) return;
 
-          console.log(
-            `🚩 COMPLETED: ${instance.getScore()} out of ${instance.getMaxScore()} at ${workbookName}`,
-            WA.chat.sendChatMessage(message, messageNpc)
-          );
-          try {
-            WA.player.state[workbookName] = "solved";
-          } catch (error) {
-            console.error("Error updating workbook state to solved:", error);
-          }
-
-          // Update module state, ensuring we don't exceed moduleMax
+      // Trigger only on full completion
+      if (instance.getScore() === instance.getMaxScore()) {
+        console.log(
+          `🚩 COMPLETED: ${instance.getScore()} / ${instance.getMaxScore()} for ${workbookName}`
+        );
+        if (WA.player.state[workbookName] !== "solved") {
           const currentState = Number(WA.player.state[moduleName]) || 0;
           const newState = Math.min(currentState + 1, moduleMax);
           WA.player.state[moduleName] = newState.toString();
-        });
-      });
-    } else if (WA.player.state[workbookName] === "solved") {
-      WA.chat.sendChatMessage(
-        "AHA! You have already completed this workbook!",
-        messageNpc
-      );
-    }
+        }
+        // Send completion message if not already solved
+        if (WA.player.state[workbookName] !== "solved") {
+          WA.chat.sendChatMessage(completionMessage, messageNpc);
+          WA.player.state[workbookName] = "solved";
+          setTimeout(async () => {
+            const cowebsites = await WA.nav.getCoWebSites();
+            for (const cowebsite of cowebsites) {
+              cowebsite.close();
+            }
+          }, 5000);
+        }
+      }
+    });
   }
-
-  // Expose function if needed
   window.handleModuleCompletionEvents = handleModuleCompletionEvents;
 })();

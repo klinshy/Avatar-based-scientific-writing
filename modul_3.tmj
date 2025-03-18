@@ -1561,48 +1561,6 @@
                 }, 
                 {
                  "height":72,
-                 "id":3,
-                 "name":"3_1_2AllgemeineRegeln",
-                 "properties":[
-                        {
-                         "name":"XP",
-                         "type":"string",
-                         "value":"10"
-                        }, 
-                        {
-                         "name":"completionMessage",
-                         "type":"string",
-                         "value":"\u2705 **Allgemeine Regeln gemeistert!**  \nDu hast die grundlegenden **allgemeinen Regeln** des wissenschaftlichen Arbeitens verstanden. Ordnung, Struktur und Klarheit sind jetzt deine Verb\u00fcndeten! \ud83d\udcda\u2714\ufe0f  "
-                        }, 
-                        {
-                         "name":"h5pPath",
-                         "type":"string",
-                         "value":"\/H5P\/3_1_2AllgemeineRegeln.html"
-                        }, 
-                        {
-                         "name":"isWorkbook",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"messageNpc",
-                         "type":"string",
-                         "value":"Zirze"
-                        }, 
-                        {
-                         "name":"moduleName",
-                         "type":"string",
-                         "value":"3.1 Textarten"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":88,
-                 "x":200,
-                 "y":2456
-                }, 
-                {
-                 "height":72,
                  "id":13,
                  "name":"zirze_2",
                  "properties":[
@@ -1661,34 +1619,34 @@
                  "name":"3_2_2ZitierenImText",
                  "properties":[
                         {
-                         "name":"XP",
+                         "name":"openWebsite",
                          "type":"string",
-                         "value":"10"
+                         "value":".\/H5P\/3_2_2ZitierenImText.html"
                         }, 
                         {
-                         "name":"completionMessage",
-                         "type":"string",
-                         "value":"\u2705 **Zitieren im Text abgeschlossen!**  \nDu beherrschst jetzt das Einf\u00fcgen von **Zitaten im Text**. Deine Arbeiten sind nun klar nachvollziehbar und pr\u00e4zise belegt! \u270d\ufe0f\ud83d\udcd6  "
-                        }, 
-                        {
-                         "name":"h5pPath",
-                         "type":"string",
-                         "value":"\/H5P\/3_2_2ZitierenImText.html"
-                        }, 
-                        {
-                         "name":"isWorkbook",
+                         "name":"openWebsiteAllowApi",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"messageNpc",
-                         "type":"string",
-                         "value":"Zirze"
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
-                         "name":"moduleName",
+                         "name":"openWebsiteTrigger",
                          "type":"string",
-                         "value":"3.2"
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1735,34 +1693,34 @@
                  "name":"3_1_3Sprache",
                  "properties":[
                         {
-                         "name":"XP",
+                         "name":"openWebsite",
                          "type":"string",
-                         "value":"10"
+                         "value":".\/H5P\/3_1_3Sprache.html"
                         }, 
                         {
-                         "name":"completionMessage",
-                         "type":"string",
-                         "value":"\u2705 **Sprache erfolgreich gelernt!**  \nDu wei\u00dft jetzt, wie du mit der richtigen **Sprache** wissenschaftlich pr\u00e4zise und verst\u00e4ndlich kommunizieren kannst. Ausdruck und Stil \u2013 Check! \ud83d\udcdd\ud83d\udcac  "
-                        }, 
-                        {
-                         "name":"h5pPath",
-                         "type":"string",
-                         "value":"\/H5P\/3_1_3Sprache.html"
-                        }, 
-                        {
-                         "name":"isWorkbook",
+                         "name":"openWebsiteAllowApi",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"messageNpc",
-                         "type":"string",
-                         "value":"Zirze"
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
-                         "name":"moduleName",
+                         "name":"openWebsiteTrigger",
                          "type":"string",
-                         "value":"3.1 Textarten"
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1777,34 +1735,34 @@
                  "name":"3_2_1Zitieren",
                  "properties":[
                         {
-                         "name":"XP",
+                         "name":"openWebsite",
                          "type":"string",
-                         "value":"10"
+                         "value":".\/H5P\/3_2_1Zitieren.html"
                         }, 
                         {
-                         "name":"completionMessage",
-                         "type":"string",
-                         "value":"\u2705 **Zitieren gemeistert!**  \nDu hast das **Zitieren** perfektioniert und wei\u00dft nun, wie du Quellen korrekt angibst. Ein essenzieller Schritt f\u00fcr sauberes wissenschaftliches Arbeiten! \ud83d\udcd1\ud83d\udd0d  "
-                        }, 
-                        {
-                         "name":"h5pPath",
-                         "type":"string",
-                         "value":"\/H5P\/3_2_1Zitieren.html"
-                        }, 
-                        {
-                         "name":"isWorkbook",
+                         "name":"openWebsiteAllowApi",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"messageNpc",
-                         "type":"string",
-                         "value":"Zirze"
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
-                         "name":"moduleName",
+                         "name":"openWebsiteTrigger",
                          "type":"string",
-                         "value":"3.2"
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1819,34 +1777,34 @@
                  "name":"3_2_3Literaturverzeichnis",
                  "properties":[
                         {
-                         "name":"XP",
+                         "name":"openWebsite",
                          "type":"string",
-                         "value":"10"
+                         "value":".\/H5P\/3_2_3Literaturverzeichnis.html"
                         }, 
                         {
-                         "name":"completionMessage",
-                         "type":"string",
-                         "value":"\u2705 **Literaturverzeichnis erfolgreich erstellt!**  \nDu hast gelernt, ein vollst\u00e4ndiges und korrektes **Literaturverzeichnis** zu erstellen. Deine Quellen sind nun sauber aufgelistet und leicht auffindbar! \ud83d\udcda\ud83d\uddc2\ufe0f  "
-                        }, 
-                        {
-                         "name":"h5pPath",
-                         "type":"string",
-                         "value":"\/H5P\/3_2_3Literaturverzeichnis.html"
-                        }, 
-                        {
-                         "name":"isWorkbook",
+                         "name":"openWebsiteAllowApi",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"messageNpc",
-                         "type":"string",
-                         "value":"Zirze"
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
-                         "name":"moduleName",
+                         "name":"openWebsiteTrigger",
                          "type":"string",
-                         "value":"3.2"
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1861,34 +1819,34 @@
                  "name":"3_3Literaturverwaltung",
                  "properties":[
                         {
-                         "name":"XP",
+                         "name":"openWebsite",
                          "type":"string",
-                         "value":"10"
+                         "value":".\/H5P\/3_3Literaturverwaltung.html"
                         }, 
                         {
-                         "name":"completionMessage",
-                         "type":"string",
-                         "value":"\u2705 **Literaturverwaltung erfolgreich gelernt!**  \nDu wei\u00dft jetzt, wie du deine Quellen mithilfe von **Literaturverwaltungsprogrammen** effektiv organisierst und verwaltest. Ordnung schafft Klarheit! \ud83d\udcda\ud83d\udccb  "
-                        }, 
-                        {
-                         "name":"h5pPath",
-                         "type":"string",
-                         "value":"\/H5P\/3_3Literaturverwaltung.html"
-                        }, 
-                        {
-                         "name":"isWorkbook",
+                         "name":"openWebsiteAllowApi",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"messageNpc",
-                         "type":"string",
-                         "value":"Zirze"
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
-                         "name":"moduleName",
+                         "name":"openWebsiteTrigger",
                          "type":"string",
-                         "value":"3.2"
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1922,49 +1880,86 @@
                 {
                  "height":80,
                  "id":29,
-                 "name":"3_1_1_Textarten",
+                 "name":"3_1_1Textarten",
                  "properties":[
                         {
-                         "name":"XP",
+                         "name":"openWebsite",
                          "type":"string",
-                         "value":"10"
+                         "value":".\/H5P\/3_1_1Textarten.html"
                         }, 
                         {
-                         "name":"completionMessage",
-                         "type":"string",
-                         "value":"\u2705 **Textarten abgeschlossen!**  \nDu hast erfolgreich die verschiedenen **Textarten** kennengelernt und verstehst nun, wie sie sich unterscheiden und wof\u00fcr sie verwendet werden. Ein wichtiger Grundstein ist gelegt! \ud83d\udcd6\u2728  "
-                        }, 
-                        {
-                         "name":"h5pPath",
-                         "type":"string",
-                         "value":"\/H5P\/3_1_1Textarten.html"
-                        }, 
-                        {
-                         "name":"isWorkbook",
+                         "name":"openWebsiteAllowApi",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"messageNpc",
-                         "type":"string",
-                         "value":"Zirze"
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
-                         "name":"moduleName",
+                         "name":"openWebsiteTrigger",
                          "type":"string",
-                         "value":"3"
+                         "value":"onaction"
                         }, 
                         {
-                         "name":"workbookName",
+                         "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"textarten"
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
                  "width":80,
-                 "x":168,
+                 "x":176,
                  "y":2608
+                }, 
+                {
+                 "height":117,
+                 "id":30,
+                 "name":"3_1_2AllgemeineRegeln",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/3_1_2AllgemeineRegeln.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":106,
+                 "x":192,
+                 "y":2432
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2074,7 +2069,7 @@
          "y":0
         }],
  "nextlayerid":30,
- "nextobjectid":30,
+ "nextobjectid":31,
  "orientation":"orthogonal",
  "properties":[
         {

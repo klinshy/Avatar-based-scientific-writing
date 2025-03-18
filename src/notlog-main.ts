@@ -73,18 +73,18 @@ WA.onInit().then(async () => {
         WA.room.hideLayer('fg-objects/stair-2');
         if (isAutoMoving) return;
         isAutoMoving = true;
-        let result = await WA.player.moveTo(1300, 1728);
+        let result = await WA.player.moveTo(1198, 1735);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1300, 1728);
+            result = await WA.player.moveTo(1198, 1735);
         }
-        result = await WA.player.moveTo(1325, 1643);
+        result = await WA.player.moveTo(1198, 1636);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1325, 1643);
+            result = await WA.player.moveTo(1198, 1636);
         }
         WA.room.showLayer('fg-objects/stair-2');
-        result = await WA.player.moveTo(1503, 1754);
+        result = await WA.player.moveTo(1360, 1770);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1503, 1754);
+            result = await WA.player.moveTo(1360, 1770);
         }
         isAutoMoving = false;
     });
@@ -94,18 +94,18 @@ WA.onInit().then(async () => {
         WA.room.showLayer('fg-objects/stair-2');
         if (isAutoMoving) return;
         isAutoMoving = true;
-        let result = await WA.player.moveTo(1325, 1643);
+        let result = await WA.player.moveTo(1200, 1650);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1325, 1643);
+            result = await WA.player.moveTo(1200, 1650);
         }
-        result = await WA.player.moveTo(1300, 1728);
+        result = await WA.player.moveTo(1200, 1750);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1300, 1728);
+            result = await WA.player.moveTo(1200, 1750);
         }
         WA.room.hideLayer('fg-objects/stair-2');
-        result = await WA.player.moveTo(1513, 1568);
+        result = await WA.player.moveTo(1360, 1615);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1513, 1568);
+            result = await WA.player.moveTo(1360, 1615);
         }
         isAutoMoving = false;
     });
@@ -141,6 +141,7 @@ WA.onInit().then(async () => {
     WA.room.area.onEnter('leaveNotlog').subscribe(() => {
         console.log("Leaving notlog area");
         WA.player.state.solvedNotlog = true;
+        WA.player.state.currentQuest = 'quest6';
     });
 
     // Display the current quest banner if a quest is active
@@ -177,7 +178,10 @@ WA.onInit().then(async () => {
 let isAutoMoving = false;
 
 
-
+WA.room.area.onEnter('H5P_video_1').subscribe(() => {
+    console.log("Entered H5P_video_1 area, triggering quest5");
+    WA.player.state.currentQuest = 'quest5';
+});
 
 export {};
 

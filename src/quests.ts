@@ -35,11 +35,19 @@ const quests = [
         questKey: 'notlog'
     },
     {
-        questName: 'Betreten Sie den Matrix Hub',
+        questName: 'Finde den geheimen Eingang',
         questId: 'quest5',
-        questDescription: 'Verlasse Notlog und betrete den Matrix Hub.',
+        questDescription: 'Finde den geheimen Eingang zum Matrix Hub.',
         questXp: 250,
         requireQuest: 'quest4',
+        questKey: 'notlog'
+    },
+    {
+        questName: 'Löse die Aufgaben im Matrix Hub',
+        questId: 'quest6',
+        questDescription: 'Löse die Aufgaben im Matrix Hub',
+        questXp: 250,
+        requireQuest: 'quest5',
         questKey: 'notlog'
     },
     // Matrix Hub
