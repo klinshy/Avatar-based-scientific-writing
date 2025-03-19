@@ -1794,7 +1794,7 @@
                         {
                          "name":"openWebsiteTrigger",
                          "type":"string",
-                         "value":"onicon"
+                         "value":"onaction"
                         }, 
                         {
                          "name":"openWebsiteTriggerMessage",
