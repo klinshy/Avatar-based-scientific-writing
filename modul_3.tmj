@@ -1730,7 +1730,7 @@
                  "y":2416
                 }, 
                 {
-                 "height":99.6667,
+                 "height":80,
                  "id":25,
                  "name":"3_2_1Zitieren",
                  "properties":[
@@ -1767,12 +1767,12 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":88,
-                 "x":160,
-                 "y":2120
+                 "width":72,
+                 "x":200,
+                 "y":1936
                 }, 
                 {
-                 "height":99.6667,
+                 "height":96,
                  "id":26,
                  "name":"3_2_3Literaturverzeichnis",
                  "properties":[
@@ -1794,7 +1794,7 @@
                         {
                          "name":"openWebsiteTrigger",
                          "type":"string",
-                         "value":"onaction"
+                         "value":"onicon"
                         }, 
                         {
                          "name":"openWebsiteTriggerMessage",
@@ -1809,12 +1809,12 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":88,
-                 "x":200,
-                 "y":1936
+                 "width":72,
+                 "x":176,
+                 "y":2120
                 }, 
                 {
-                 "height":99.6667,
+                 "height":80,
                  "id":27,
                  "name":"3_3Literaturverwaltung",
                  "properties":[
@@ -1851,8 +1851,8 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":88,
-                 "x":384,
+                 "width":72,
+                 "x":400,
                  "y":1936
                 }, 
                 {
