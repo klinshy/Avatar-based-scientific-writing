@@ -1087,8 +1087,8 @@
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11414, 0, 0, 0, 0,
                     0, 0, 0, 0, 11348, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11447, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 11340, 0, 0, 0, 0, 0, 11340, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 11373, 0, 0, 0, 0, 0, 11373, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 11340, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 11373, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1188,7 +1188,7 @@
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 11211, 0, 0, 0, 0, 0, 11211, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 11211, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1498,7 +1498,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 5299, 5300, 0, 0, 0, 0, 5323, 5324, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 5299, 5300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1614,14 +1614,14 @@
                  "y":2816
                 }, 
                 {
-                 "height":99.6667,
+                 "height":86.1667000000002,
                  "id":15,
-                 "name":"3_2_2ZitierenImText",
+                 "name":"3_2_3Literaturverzeichnis",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_2ZitierenImText.html"
+                         "value":".\/H5P\/3_2_3Literaturverzeichnis.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1651,9 +1651,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":88,
-                 "x":384,
-                 "y":2096
+                 "width":80.5,
+                 "x":394,
+                 "y":2092.5
                 }, 
                 {
                  "height":72.8335000000002,
@@ -1768,8 +1768,8 @@
                  "type":"area",
                  "visible":true,
                  "width":72,
-                 "x":176,
-                 "y":2128
+                 "x":174.5,
+                 "y":2122.5
                 }, 
                 {
                  "height":80,
@@ -1810,8 +1810,8 @@
                  "type":"area",
                  "visible":true,
                  "width":72,
-                 "x":176,
-                 "y":2128
+                 "x":175.5,
+                 "y":2125.5
                 }, 
                 {
                  "height":80,
@@ -1852,8 +1852,8 @@
                  "type":"area",
                  "visible":true,
                  "width":72,
-                 "x":400,
-                 "y":1936
+                 "x":205.5,
+                 "y":1943.5
                 }, 
                 {
                  "height":32.1818,
@@ -1960,6 +1960,90 @@
                  "width":106,
                  "x":192,
                  "y":2432
+                }, 
+                {
+                 "height":92.5,
+                 "id":31,
+                 "name":"3_2_2Video",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/3_2_3Video.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":81,
+                 "x":394,
+                 "y":2088
+                }, 
+                {
+                 "height":87,
+                 "id":32,
+                 "name":"3_3Video",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/3_3Video.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":76,
+                 "x":203.5,
+                 "y":1938.25
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2069,7 +2153,7 @@
          "y":0
         }],
  "nextlayerid":30,
- "nextobjectid":31,
+ "nextobjectid":33,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2098,7 +2182,7 @@
          "value":"src\/module3-main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {

@@ -29,7 +29,7 @@ const quests = [
     {
         questName: 'Das Video im Labor ansehen',
         questId: 'quest4',
-        questDescription: 'Sehen dir das Video im Labor an.',
+        questDescription: 'Sieh dir das Video im Labor an.',
         questXp: 50,
         requireQuest: 'quest3',
         questKey: 'notlog'
