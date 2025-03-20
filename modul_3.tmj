@@ -1768,18 +1768,18 @@
                  "type":"area",
                  "visible":true,
                  "width":72,
-                 "x":200,
-                 "y":1936
+                 "x":176,
+                 "y":2128
                 }, 
                 {
-                 "height":96,
+                 "height":80,
                  "id":26,
-                 "name":"3_2_3Literaturverzeichnis",
+                 "name":"3_2_1Video",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_3Literaturverzeichnis.html"
+                         "value":".\/H5P\/3_2_1Video.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1811,7 +1811,7 @@
                  "visible":true,
                  "width":72,
                  "x":176,
-                 "y":2120
+                 "y":2128
                 }, 
                 {
                  "height":80,
