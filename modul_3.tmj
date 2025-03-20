@@ -1614,48 +1614,6 @@
                  "y":2816
                 }, 
                 {
-                 "height":86.1667000000002,
-                 "id":15,
-                 "name":"3_2_3Literaturverzeichnis",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":".\/H5P\/3_2_3Literaturverzeichnis.html"
-                        }, 
-                        {
-                         "name":"openWebsiteAllowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsiteClosable",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
-                        {
-                         "name":"openWebsiteTriggerMessage",
-                         "type":"string",
-                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
-                        }, 
-                        {
-                         "name":"openWebsiteWidth",
-                         "type":"int",
-                         "value":50
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":80.5,
-                 "x":394,
-                 "y":2092.5
-                }, 
-                {
                  "height":72.8335000000002,
                  "id":19,
                  "name":"zirze_1",
@@ -1814,48 +1772,6 @@
                  "y":2125.5
                 }, 
                 {
-                 "height":80,
-                 "id":27,
-                 "name":"3_3Literaturverwaltung",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":".\/H5P\/3_3Literaturverwaltung.html"
-                        }, 
-                        {
-                         "name":"openWebsiteAllowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsiteClosable",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
-                        {
-                         "name":"openWebsiteTriggerMessage",
-                         "type":"string",
-                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
-                        }, 
-                        {
-                         "name":"openWebsiteWidth",
-                         "type":"int",
-                         "value":50
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":72,
-                 "x":205.5,
-                 "y":1943.5
-                }, 
-                {
                  "height":32.1818,
                  "id":28,
                  "name":"exit",
@@ -1962,6 +1878,48 @@
                  "y":2432
                 }, 
                 {
+                 "height":86.1667000000002,
+                 "id":15,
+                 "name":"3_2_2Literaturverzeichnis",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/3_2_2Literaturverzeichnis.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":80.5,
+                 "x":394,
+                 "y":2092.5
+                }, 
+                {
                  "height":92.5,
                  "id":31,
                  "name":"3_2_2Video",
@@ -1969,7 +1927,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/3_2_3Video.html"
+                         "value":".\/H5P\/3_2_2Video.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2002,6 +1960,48 @@
                  "width":81,
                  "x":394,
                  "y":2088
+                }, 
+                {
+                 "height":80,
+                 "id":27,
+                 "name":"3_3Literaturverwaltung",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/3_3Literaturverwaltung.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":72,
+                 "x":205.5,
+                 "y":1943.5
                 }, 
                 {
                  "height":87,
