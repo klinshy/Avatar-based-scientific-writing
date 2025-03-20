@@ -1665,11 +1665,7 @@
                          "type":"bool",
                          "value":true
                         }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
+                 
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
@@ -1708,11 +1704,6 @@
                          "value":true
                         }, 
                         {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
-                        {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
@@ -1726,8 +1717,8 @@
                  "type":"area",
                  "visible":true,
                  "width":72,
-                 "x":174.5,
-                 "y":2122.5
+                 "x":175,
+                 "y":2122
                 }, 
                 {
                  "height":80,
@@ -1750,11 +1741,6 @@
                          "value":true
                         }, 
                         {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
-                        {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
@@ -1769,7 +1755,7 @@
                  "visible":true,
                  "width":72,
                  "x":175.5,
-                 "y":2125.5
+                 "y":2121.5
                 }, 
                 {
                  "height":32.1818,
@@ -1813,11 +1799,7 @@
                          "type":"bool",
                          "value":true
                         }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
+                 
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
@@ -1855,11 +1837,7 @@
                          "type":"bool",
                          "value":true
                         }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
+                 
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
@@ -1897,11 +1875,7 @@
                          "type":"bool",
                          "value":true
                         }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
+                 
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
@@ -1939,11 +1913,7 @@
                          "type":"bool",
                          "value":true
                         }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
+                 
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
@@ -1981,11 +1951,7 @@
                          "type":"bool",
                          "value":true
                         }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
+                 
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
@@ -2023,11 +1989,7 @@
                          "type":"bool",
                          "value":true
                         }, 
-                        {
-                         "name":"openWebsiteTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
+                 
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
@@ -2182,7 +2144,7 @@
          "value":"src\/module3-main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.0",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tilesets":[
         {
