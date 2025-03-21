@@ -73,18 +73,18 @@ WA.onInit().then(async () => {
         WA.room.hideLayer('fg-objects/stair-2');
         if (isAutoMoving) return;
         isAutoMoving = true;
-        let result = await WA.player.moveTo(1198, 1735);
+        let result = await WA.player.moveTo(1199, 996);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1198, 1735);
+            result = await WA.player.moveTo(1199, 996);
         }
-        result = await WA.player.moveTo(1198, 1636);
+        result = await WA.player.moveTo(1200, 900);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1198, 1636);
+            result = await WA.player.moveTo(1200, 900);
         }
         WA.room.showLayer('fg-objects/stair-2');
-        result = await WA.player.moveTo(1360, 1770);
+        result = await WA.player.moveTo(1355, 1035);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1360, 1770);
+            result = await WA.player.moveTo(1355, 1035);
         }
         isAutoMoving = false;
     });
@@ -94,18 +94,18 @@ WA.onInit().then(async () => {
         WA.room.showLayer('fg-objects/stair-2');
         if (isAutoMoving) return;
         isAutoMoving = true;
-        let result = await WA.player.moveTo(1200, 1650);
+        let result = await WA.player.moveTo(1200, 900);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1200, 1650);
+            result = await WA.player.moveTo(1200, 900);
         }
-        result = await WA.player.moveTo(1200, 1750);
+        result = await WA.player.moveTo(1199, 996);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1200, 1750);
+            result = await WA.player.moveTo(1199, 996);
         }
         WA.room.hideLayer('fg-objects/stair-2');
-        result = await WA.player.moveTo(1360, 1615);
+        result = await WA.player.moveTo(1355, 871);
         while (result.cancelled) {
-            result = await WA.player.moveTo(1360, 1615);
+            result = await WA.player.moveTo(1355, 871);
         }
         isAutoMoving = false;
     });
