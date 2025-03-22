@@ -3465,7 +3465,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":".\/modul_1.tmj"
+                         "value":".\/matrix-hub.tmj"
                         }, 
                         {
                          "name":"\u2139\ufe0f",
