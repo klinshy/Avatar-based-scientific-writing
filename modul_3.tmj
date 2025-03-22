@@ -1717,7 +1717,7 @@
                  "visible":true,
                  "width":72,
                  "x":175,
-                 "y":2122
+                 "y":2115.5
                 }, 
                 {
                  "height":80,
@@ -1886,8 +1886,8 @@
                  "type":"area",
                  "visible":true,
                  "width":80.5,
-                 "x":394,
-                 "y":2092.5
+                 "x":393.5,
+                 "y":2094
                 }, 
                 {
                  "height":92.5,
@@ -2137,7 +2137,7 @@
          "value":"src\/module3-main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {
