@@ -193,7 +193,6 @@ WA.onInit().then(async () => {
                 'AllgemeineRegeln',
                 'Sprache',
                 'Zitiren',
-                'ZitierenImText',
                 'Literaturverzeichnis',
                 'Literaturverwaltung'
                  // The key used to track the current quest state

@@ -194,7 +194,7 @@ WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
             }
             // List of variable keys that trigger events to do something (tbd)
             const eventVariableKeys = [
-            'PlanungSelbstmanagement','Themenfindung','Gliederung','Lesen'
+            'PlanungSelbstmanagement','ThemenfindungGliederung', 'Literaturrecherche' ,'Lesen'
                  // The key used to track the current quest state
                 // Add additional keys here when needed
             ];

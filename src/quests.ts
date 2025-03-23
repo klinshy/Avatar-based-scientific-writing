@@ -42,6 +42,7 @@ const quests = [
         requireQuest: 'quest4',
         questKey: 'notlog'
     },
+
     {
         questName: 'Zirze',
         questId: 'quest6',
@@ -50,6 +51,7 @@ const quests = [
         requireQuest: 'quest5',
         questKey: 'notlog'
     },
+ // Matrix Hub
     {
         questName: 'Betritt Modul 2',
         questId: 'quest7',
@@ -58,10 +60,12 @@ const quests = [
         requireQuest: 'quest6',
         questKey: 'matrix'
     },
+
+// Modul 2
     {
-        questName: 'löse das Rätsel',
+        questName: 'löse Modul 2',
         questId: 'quest8',
-        questDescription: 'Löse die Aufgaben in Modul 3, sprich mit Zirze solltest du Hilfe brauchen.',
+        questDescription: 'Löse die Aufgaben in Modul 2, sprich mit Zirze solltest du Hilfe brauchen.',
         
         requireQuest: 'quest7',
         questKey: 'matrix'
@@ -76,20 +80,20 @@ const quests = [
         questKey: 'matrix'
     },
    
-
+// Modul 3
     {
-        questName: 'test',
+        questName: 'löse Modul 3',
         questId: 'quest10',
-        questDescription: 'Test',
+        questDescription: 'Löse die Aufgaben in Modul 3, sprich mit Zirze solltest du Hilfe brauchen.',
         
         requireQuest: 'quest9',
         questKey: 'matrix'
     },
 
-    // Matrix Hub
 
 
-// Modul 3
+
+
 ];
 
 
