@@ -20,6 +20,7 @@ WA.onInit().then(async () => {
     } catch (e) {
         console.error(e);
     }
+    WA.onInit().then(async () => {
     // Get chat areas and set up event listeners for entering and leaving them
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
@@ -50,7 +51,8 @@ WA.onInit().then(async () => {
             }
         });
     }
-
+    });
+    
     // Event listener for player movement to play footstep sounds
     WA.player.onPlayerMove(async ({ x, y, moving }) => {
         const material = await checkPlayerMaterial({ x, y });
