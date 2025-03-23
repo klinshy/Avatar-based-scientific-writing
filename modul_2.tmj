@@ -1851,6 +1851,17 @@
                  "width":72,
                  "x":187.333333333333,
                  "y":2127.33333333333
+                }, 
+                {
+                 "height":49.3333333333335,
+                 "id":38,
+                 "name":"triggerM2Quests",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":196,
+                 "x":219.333333333333,
+                 "y":2686.66666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1960,7 +1971,7 @@
          "y":0
         }],
  "nextlayerid":30,
- "nextobjectid":38,
+ "nextobjectid":40,
  "orientation":"orthogonal",
  "properties":[
         {

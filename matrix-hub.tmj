@@ -584,8 +584,8 @@
                  "type":"area",
                  "visible":true,
                  "width":96.5,
-                 "x":992,
-                 "y":184
+                 "x":1099.26210729273,
+                 "y":38.1404105704888
                 }, 
                 {
                  "height":32,
@@ -606,47 +606,8 @@
                  "type":"area",
                  "visible":true,
                  "width":96.5,
-                 "x":1280.41666666667,
-                 "y":248.666666666666
-                }, 
-                {
-                 "height":32,
-                 "id":7,
-                 "name":"exit",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":".\/modul_1.tmj"
-                        }, 
-                        {
-                         "name":"\u2139\ufe0f",
-                         "type":"string",
-                         "value":"this one is a exit defined by an area-Object"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":96.5,
-                 "x":127.5,
-                 "y":249.25
-                }, 
-                {
-                 "height":30.5455,
-                 "id":8,
-                 "name":"modul_1_toMatrixPortal_1",
-                 "properties":[
-                        {
-                         "name":"start",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":96.4886,
-                 "x":128.047366666667,
-                 "y":282.393916666667
+                 "x":1444.87169672224,
+                 "y":148.859476012248
                 }, 
                 {
                  "height":153.666633333333,
@@ -677,8 +638,8 @@
                  "type":"area",
                  "visible":true,
                  "width":150.166666666667,
-                 "x":510.916666666666,
-                 "y":341.83335
+                 "x":502.249999999999,
+                 "y":341.166683333333
                 }, 
                 {
                  "height":64.5455,
@@ -696,6 +657,102 @@
                  "width":64.7386,
                  "x":1008,
                  "y":432
+                }, 
+                {
+                 "height":153.667,
+                 "id":13,
+                 "name":"zirze_2",
+                 "properties":[
+                        {
+                         "name":"chatText",
+                         "type":"string",
+                         "value":"Modul 1 ist aktuell nicht verbunden."
+                        }, 
+                        {
+                         "name":"isNpc",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"npcName",
+                         "type":"string",
+                         "value":"Zitierende Zirze"
+                        }, 
+                        {
+                         "name":"triggerQuest",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":150.167,
+                 "x":104.249833333333,
+                 "y":267.833166666667
+                }, 
+                {
+                 "height":153.667,
+                 "id":14,
+                 "name":"zirze_3",
+                 "properties":[
+                        {
+                         "name":"chatText",
+                         "type":"string",
+                         "value":"Modul 4 ist aktuell nicht verbunden."
+                        }, 
+                        {
+                         "name":"isNpc",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"npcName",
+                         "type":"string",
+                         "value":"Zitierende Zirze"
+                        }, 
+                        {
+                         "name":"triggerQuest",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":150.167,
+                 "x":964.690119144834,
+                 "y":162.596238006124
+                }, 
+                {
+                 "height":153.667,
+                 "id":15,
+                 "name":"zirze_4",
+                 "properties":[
+                        {
+                         "name":"chatText",
+                         "type":"string",
+                         "value":"Modul 5 ist aktuell nicht verbunden."
+                        }, 
+                        {
+                         "name":"isNpc",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"npcName",
+                         "type":"string",
+                         "value":"Zitierende Zirze"
+                        }, 
+                        {
+                         "name":"triggerQuest",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":150.167,
+                 "x":1248.49594879211,
+                 "y":206.709655268232
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -826,7 +883,7 @@
          "y":0
         }],
  "nextlayerid":22,
- "nextobjectid":12,
+ "nextobjectid":16,
  "orientation":"orthogonal",
  "properties":[
         {
