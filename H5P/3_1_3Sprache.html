@@ -80,13 +80,8 @@ H5P.Blanks=function(c,o){var i="ongoing",a="checking",n="showing-solution",r="fi
 
 <script src="../scripts/completionEventScript.js"></script>
 <script>
-
-    if (WA.player.state[workbookName] !== "solved") {
-        const currentState = Number(WA.player.state[moduleName]) || 0;
-        const newState = Math.min(currentState + 1, moduleMax);
-        WA.player.state[moduleName] = newState.toString();
+    //dont change anything here. just copy/paste
         handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName );
-    }
 </script>
 
 
