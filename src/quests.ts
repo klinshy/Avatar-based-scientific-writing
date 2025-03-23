@@ -6,7 +6,7 @@ const quests = [
         questName: 'Einführung in Notlog',
         questId: 'quest1',
         questDescription: 'Triff Prof. McDongle am Eingang von Notlog.',
-        questXp: 100,
+
         requireQuest: null,
         questKey: 'notlog'
     },
@@ -14,7 +14,7 @@ const quests = [
         questName: 'Erkundung des Saals',
         questId: 'quest2',
         questDescription: 'Sprich mit Prof. Mumblecore am nördlichen Ende der großen Halle.',
-        questXp: 150,
+
         requireQuest: 'quest1',
         questKey: 'notlog'
     },
@@ -22,7 +22,7 @@ const quests = [
         questName: 'Laborbesuch',
         questId: 'quest3',
         questDescription: 'Geh runter ins Labor und sprich mit Prof. Sake.',
-        questXp: 200,
+
         requireQuest: 'quest2',
         questKey: 'notlog'
     },
@@ -30,7 +30,7 @@ const quests = [
         questName: 'Das Video im Labor ansehen',
         questId: 'quest4',
         questDescription: 'Sieh dir das Video im Labor an.',
-        questXp: 50,
+
         requireQuest: 'quest3',
         questKey: 'notlog'
     },
@@ -38,52 +38,56 @@ const quests = [
         questName: 'Finde den geheimen Eingang',
         questId: 'quest5',
         questDescription: 'Finde den geheimen Eingang zum Matrix Hub.',
-        questXp: 250,
+
         requireQuest: 'quest4',
         questKey: 'notlog'
     },
     {
-        questName: 'Löse die Aufgaben im Matrix Hub',
+        questName: 'Zirze',
         questId: 'quest6',
-        questDescription: 'Löse die Aufgaben im Matrix Hub',
-        questXp: 250,
+        questDescription: 'Sprich mit Zirze im Matrix Hub.',
+        
         requireQuest: 'quest5',
         questKey: 'notlog'
     },
+    {
+        questName: 'Betritt Modul 2',
+        questId: 'quest7',
+        questDescription: 'Betrete Modul 2',
+        
+        requireQuest: 'quest6',
+        questKey: 'matrix'
+    },
+    {
+        questName: 'löse das Rätsel',
+        questId: 'quest8',
+        questDescription: 'Löse die Aufgaben in Modul 3, sprich mit Zirze solltest du Hilfe brauchen.',
+        
+        requireQuest: 'quest7',
+        questKey: 'matrix'
+    },
+
+    {
+        questName: 'modul2 solved',
+        questId: 'quest9',
+        questDescription: 'Kehre in den Matrix Hub zurück und fahre mit Modul 3 fort.',
+        
+        requireQuest: 'quest8',
+        questKey: 'matrix'
+    },
+   
+
+    {
+        questName: 'test',
+        questId: 'quest10',
+        questDescription: 'Test',
+        
+        requireQuest: 'quest9',
+        questKey: 'matrix'
+    },
+
     // Matrix Hub
 
-{
-    questName: "Durch das Chaos im Labor navigieren",
-    questId: "modul2_quest1",
-    questDescription: "Komm mit der Unordnung im Farblabor zurecht und finde heraus, wer das Chaos angerichtet hat.",
-    questXp: 10,
-    requireQuest: "quest5",
-    questKey: "modul2"
-},
-{
-    questName: "materialien ordnen",
-    questId: "modul2_quest2",
-    questDescription: "Bringe die Materialien von Alex in Ordnung und erhalte mehr Einblicke in den Kurs 'Wissenschaftliches Arbeiten'.",
-    questXp: 10,
-    requireQuest: "modul2_quest1",
-    questKey: "modul2"
-},
-{
-    questName: "Meistere 3.2",
-    questId: "modul2_quest3",
-    questDescription: "Schaffe es, 3.2 zu bewältigen, und erhalte Respekt für deinen Einsatz.",
-    questXp: 10,
-    requireQuest: "modul2_quest2",
-    questKey: "modul2"
-},
-{
-    questName: "Überwinde 3.3",
-    questId: "modul2_quest4",
-    questDescription: "Meistere das nächste Kapitel, 3.3, und lerne noch mehr von Alex' Materialien.",
-    questXp: 10,
-    requireQuest: "modul2_quest3",
-    questKey: "modul2"
-},
 
 // Modul 3
 ];

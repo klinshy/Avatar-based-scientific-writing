@@ -153,6 +153,7 @@ WA.onInit().then(async () => {
 
     // Event listener for changes in the current quest
     WA.player.state.onVariableChange('currentQuest').subscribe((newQuestId) => {
+        levelUp("notlog", 10);
         const newQuest = quests.find((q: { questId: string }) => q.questId === newQuestId);
         if (newQuest) {
             createQuestBanner(newQuest.questId);
@@ -178,7 +179,7 @@ WA.onInit().then(async () => {
 let isAutoMoving = false;
 
 
-WA.room.area.onEnter('H5P_video_1').subscribe(() => {
+WA.room.area.onLeave('H5P_video_1').subscribe(() => {
     console.log("Entered H5P_video_1 area, triggering quest5");
     WA.player.state.currentQuest = 'quest5';
 });

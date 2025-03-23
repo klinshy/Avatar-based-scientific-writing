@@ -117,17 +117,15 @@ WA.onInit().then(async () => {
                 WA.room.setTiles(red);
             }
 
-            const hardcodedModules: { [key: string]: { max: number; triggerValue: string; startX: number; endX: number; startY: number; endY: number } } = {
-                module_3_1: {
-                    max: 3,
-                    triggerValue: "3",
+            const hardcodedModules: { [key: string]: {triggerValue: string; startX: number; endX: number; startY: number; endY: number } } = {
+                module_1_1: {
+                    triggerValue: "1",
                     startX: 4,
                     endX: 15,
                     startY: 71,
                     endY: 89,
                 },
-                module_3_2: {
-                    max: 4,
+                module_1_2: {
                     triggerValue: "1",
                     startX: 4,
                     endX: 15,

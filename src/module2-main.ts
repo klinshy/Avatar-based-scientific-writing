@@ -4,6 +4,7 @@ import { getChatAreas } from "./chatArea";
 import { levelUp, quests } from "./quests";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
+
 WA.onInit().then(async () => {
     try {
         // Initialize the Scripting API Extra
@@ -90,6 +91,9 @@ WA.onInit().then(async () => {
         }
     }
 });
+WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
+    WA.player.state.currentQuest = 'quest8' ;
+});
 
             
             // Hardcoded module configurations
@@ -117,24 +121,45 @@ WA.onInit().then(async () => {
                 WA.room.setTiles(red);
             }
 
-            const hardcodedModules: { [key: string]: { max: number; triggerValue: string; startX: number; endX: number; startY: number; endY: number } } = {
+            const hardcodedModules: { [key: string]: {triggerValue: string; startX: number; endX: number; startY: number; endY: number } } = {
                 module_2_1: {
-                    max: 1,
-                    triggerValue: "1",
+                    triggerValue: "2",
                     startX: 4,
                     endX: 15,
                     startY: 71,
                     endY: 89,
                 },
                 module_2_2: {
-                    max: 3,
-                    triggerValue: "3",
+                    triggerValue: "2",
                     startX: 4,
                     endX: 15,
                     startY: 47,
                     endY: 70,
                 },
             };
+
+
+            let moduleSumTriggered = false;
+            function checkModuleSumTrigger() {
+                if (moduleSumTriggered) return;
+                const module2_1 = Number(WA.player.state.module_2_1);
+                const module2_2 = Number(WA.player.state.module_2_2);
+                const requiredSum =
+                    Number(hardcodedModules.module_2_1.triggerValue) +
+                    Number(hardcodedModules.module_2_2.triggerValue);
+                if (module2_1 + module2_2 === requiredSum) {
+                    moduleSumTriggered = true;
+                    WA.player.state.currentQuest = 'quest9';
+                }
+            }
+
+            WA.player.state.onVariableChange("module_2_1").subscribe(() => {
+                checkModuleSumTrigger();
+            });
+            WA.player.state.onVariableChange("module_2_2").subscribe(() => {
+                checkModuleSumTrigger();
+            });
+
 
             WA.onInit().then(() => {
                 // Initial updates using hardcodedModules
