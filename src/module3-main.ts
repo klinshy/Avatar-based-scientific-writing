@@ -170,7 +170,7 @@ WA.onInit().then(async () => {
             // List of variable keys that trigger events to do something (tbd)
             const eventVariableKeys = [
                 'Textarten',
-                '3_1_2AllgemeineRegeln',
+                'AllgemeineRegeln',
                 'Sprache',
                 'Zitiren',
                 'ZitierenImText',
