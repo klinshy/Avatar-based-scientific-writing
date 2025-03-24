@@ -5,7 +5,8 @@ import { quests, levelUp } from "./quests";
 
 WA.onInit().then(async () => {
     console.log('loading main.ts');
-
+    WA.controls.disableInviteButton();
+    WA.controls.disableMapEditor();
     // Initialize the first quest if not already set
     if (!WA.player.state.currentQuest) {
         WA.player.state.currentQuest = 'quest6';

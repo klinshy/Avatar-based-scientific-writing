@@ -9,6 +9,8 @@ WA.onInit().then(async () => {
     try {
         // Initialize the Scripting API Extra
         await bootstrapExtra();
+        WA.controls.disableInviteButton();
+        WA.controls.disableMapEditor();
         console.log('Scripting API Extra ready');
     } catch (e) {
         console.error(e);
