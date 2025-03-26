@@ -1567,7 +1567,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"Zirze noch nicht konfiguriert"
+                         "value":"# Ein Chaos im Labor \ud83e\uddea  \n\n**\u201eAch, was f\u00fcr eine Unordnung in diesem Labor!**  \n\n---\n\n### Wer steckt dahinter? \ud83d\udd75\ufe0f\u200d\u2642\ufe0f  \nDiese bl\u00f6de, du-wei\u00dft-schon-wer, muss hier alles durcheinandergebracht haben, als er unsere Lernmaterialien stehlen wollte.  \n\n---\n\n### Ein Ort des Wissens \ud83d\udcda  \nAlex hat hier viele ihrer Materialien f\u00fcr den innovativen Kurs **\u201cWissenschaftliches Arbeiten\u201d** erstellt.  \nSie w\u00fcrde **niemals** so ein Chaos hinterlassen!  \n\n---\n\n**Wir m\u00fcssen dieses Durcheinander schnell in Ordnung bringen. Packen wir es an!**  "
                         }, 
                         {
                          "name":"isNpc",
@@ -1621,7 +1621,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"Zirze noch nicht konfiguriert"
+                         "value":"Wilkommen in Modul 2"
                         }, 
                         {
                          "name":"isNpc",
