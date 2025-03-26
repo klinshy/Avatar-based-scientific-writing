@@ -1387,7 +1387,7 @@
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9384, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1556,8 +1556,8 @@
                  "type":"area",
                  "visible":true,
                  "width":96.4886,
-                 "x":269.339033333333,
-                 "y":2736.22725
+                 "x":265.339033333333,
+                 "y":2754.22725
                 }, 
                 {
                  "height":72,
@@ -1860,8 +1860,40 @@
                  "type":"area",
                  "visible":true,
                  "width":196,
-                 "x":219.333333333333,
-                 "y":2686.66666666667
+                 "x":218.666666666666,
+                 "y":2701.33333333334
+                }, 
+                {
+                 "height":72,
+                 "id":40,
+                 "name":"zirze2_3",
+                 "properties":[
+                        {
+                         "name":"chatText",
+                         "type":"string",
+                         "value":"- Prima, jetzt kannst du mit Modul 3 weiter machen.."
+                        }, 
+                        {
+                         "name":"isNpc",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"npcName",
+                         "type":"string",
+                         "value":"Zitierende Zirze"
+                        }, 
+                        {
+                         "name":"triggerQuest",
+                         "type":"string",
+                         "value":""
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":80,
+                 "x":329.333333333333,
+                 "y":1840.66666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1971,7 +2003,7 @@
          "y":0
         }],
  "nextlayerid":30,
- "nextobjectid":40,
+ "nextobjectid":41,
  "orientation":"orthogonal",
  "properties":[
         {
