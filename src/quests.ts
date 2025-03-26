@@ -37,7 +37,7 @@ const quests = [
     {
         questName: 'Finde den geheimen Eingang',
         questId: 'quest5',
-        questDescription: 'Finde den geheimen Eingang zum Matrix Hub.',
+        questDescription: 'Finde den geheimen Eingang zum Kondesatorium .',
 
         requireQuest: 'quest4',
         questKey: 'notlog'
@@ -46,12 +46,12 @@ const quests = [
     {
         questName: 'Zirze',
         questId: 'quest6',
-        questDescription: 'Sprich mit Zirze im Matrix Hub.',
+        questDescription: 'Sprich mit Zirze im Kondesatorium.',
         
         requireQuest: 'quest5',
         questKey: 'notlog'
     },
- // Matrix Hub
+ // Kondesatorium  Hub
     {
         questName: 'Betritt Modul 2',
         questId: 'quest7',
@@ -74,7 +74,7 @@ const quests = [
     {
         questName: 'modul2 solved',
         questId: 'quest9',
-        questDescription: 'Kehre in den Matrix Hub zurück und fahre mit Modul 3 fort.',
+        questDescription: 'Kehre in den Knotenpunkt des Kondesatoriums zurück und fahre mit Modul 3 fort.',
         
         requireQuest: 'quest8',
         questKey: 'matrix'
