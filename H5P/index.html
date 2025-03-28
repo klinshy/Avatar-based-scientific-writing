@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+            background: #ddd;
+            padding: 10px;
+        }
+        .menu button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        /* Use calc() to occupy the rest of the screen */
+        #iframeContainer {
+            height: calc(100% - 50px); /* Adjust if your menu height differs */
+        }
+        #iframeContainer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <button onclick="changeIframe('2_3Videos.html')">Videos</button>
+        <button onclick="changeIframe('2_3Literaturrecherche copy.html')">Literaturrecherche</button>
+    </div>
+    <div id="iframeContainer">
+        <iframe id="contentFrame" src="2_3Videos.html"></iframe>
+    </div>
+    <script>
+        function changeIframe(page) {
+            document.getElementById('contentFrame').src = page;
+        }
+        window.addEventListener("message", function(event) {
+            if (event.origin !== window.location.origin) return;
+            console.log("Nachricht von iframe erhalten:", event.data);
+        });
+    </script>
+</body>
+</html>
