@@ -46,7 +46,7 @@ const quests = [
     {
         questName: 'Zirze',
         questId: 'quest6',
-        questDescription: 'Sprich mit Zirze im Kondesatorium.',
+        questDescription: 'Schreite durch das Portal ins Kondesatorium ',
         
         requireQuest: 'quest5',
         questKey: 'notlog'
@@ -55,7 +55,7 @@ const quests = [
     {
         questName: 'Betritt Modul 2',
         questId: 'quest7',
-        questDescription: 'Betrete Modul 2',
+        questDescription: 'Sprich mit der zitierenden Zirze',
         
         requireQuest: 'quest6',
         questKey: 'matrix'
@@ -65,7 +65,7 @@ const quests = [
     {
         questName: 'löse Modul 2',
         questId: 'quest8',
-        questDescription: 'Löse die Aufgaben in Modul 2, sprich mit Zirze solltest du Hilfe brauchen.',
+        questDescription: 'Geh durch das Portal mit der Zwei und gelange zu deiner ersten Aufgabe ',
         
         requireQuest: 'quest7',
         questKey: 'matrix'
@@ -74,7 +74,7 @@ const quests = [
     {
         questName: 'modul2 solved',
         questId: 'quest9',
-        questDescription: 'Kehre in den Knotenpunkt des Kondesatoriums zurück und fahre mit Modul 3 fort.',
+        questDescription: 'Löse die Aufgaben in Modul 2, sprich mit Zirze solltest du Hilfe brauchen./Löse Aufgabe 1 in Raum 1 in Modul 2 und dann so weiter ',
         
         requireQuest: 'quest8',
         questKey: 'matrix'
@@ -84,9 +84,41 @@ const quests = [
     {
         questName: 'löse Modul 3',
         questId: 'quest10',
-        questDescription: 'Löse die Aufgaben in Modul 3, sprich mit Zirze solltest du Hilfe brauchen.',
+        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und sprich mit Zirze ',
         
         requireQuest: 'quest9',
+        questKey: 'matrix'
+    },
+    {
+        questName: 'löse Modul 3',
+        questId: 'quest11',
+        questDescription: 'Geh durch das Portal mit der Drei und gelange zu deiner finalen Aufgaben',
+        
+        requireQuest: 'quest10',
+        questKey: 'matrix'
+    },
+    {
+        questName: 'löse Modul 3',
+        questId: 'quest12',
+        questDescription: 'Löse die Aufgaben in Modul 3, sprich mit Zirze solltest du Hilfe brauchen. Oder auch kleinteiliger',
+        
+        requireQuest: 'quest11',
+        questKey: 'matrix'
+    },
+    {
+        questName: 'löse Modul 3',
+        questId: 'quest13',
+        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und sprich mit Zirze',
+        
+        requireQuest: 'quest12',
+        questKey: 'matrix'
+    },
+    {
+        questName: 'löse Modul 3',
+        questId: 'quest14',
+        questDescription: 'Begib dich zum Terminal und befrei das Kondensatorium vom Virus',
+        
+        requireQuest: 'quest13',
         questKey: 'matrix'
     },
 
