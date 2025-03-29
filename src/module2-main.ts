@@ -94,7 +94,7 @@ WA.onInit().then(async () => {
     }
 });
 WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
-    WA.player.state.currentQuest = 'quest8' ;
+    WA.player.state.currentQuest = 'quest9' ;
 });
 
             
@@ -151,7 +151,8 @@ WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
                     Number(hardcodedModules.module_2_2.triggerValue);
                 if (module2_1 + module2_2 === requiredSum) {
                     moduleSumTriggered = true;
-                    WA.player.state.currentQuest = 'quest9';
+                    WA.player.state.currentQuest = 'quest16';
+                    WA.player.state.module2 = 'solved';
                 }
             }
 
@@ -161,7 +162,17 @@ WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
             WA.player.state.onVariableChange("module_2_2").subscribe(() => {
                 checkModuleSumTrigger();
             });
+            WA.player.state.onVariableChange("module_2_1").subscribe((newValue) => {
+                if(newValue === "2"){
+                    WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Codeschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
+                }
+            });
 
+            WA.player.state.onVariableChange("module_2_2").subscribe((newValue) => {
+                if(newValue === "2"){
+                    WA.chat.sendChatMessage("Prima, du hast weitere verlorene Codeschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: eine/ als/ Wissenssammlung", "Zirze");
+                }
+            });
 
             WA.onInit().then(() => {
                 // Initial updates using hardcodedModules
@@ -196,19 +207,36 @@ WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
             }
             // List of variable keys that trigger events to do something (tbd)
             const eventVariableKeys = [
-            'PlanungSelbstmanagement','ThemenfindungGliederung', 'Literaturrecherche' ,'Lesen'
-                 // The key used to track the current quest state
+                'PlanungSelbstmanagement', 'ThemenfindungGliederung', 'Literaturrecherche', 'Lesen'
+                // The key used to track the current quest state
                 // Add additional keys here when needed
             ];
-        
+
+            // Object to track whether each key has been set to "solved"
+            const solvedStatus: { [key: string]: boolean } = {};
+
             // Subscribe to changes for each variable key
             for (const key of eventVariableKeys) {
+                solvedStatus[key] = false;
                 WA.player.state.onVariableChange(key).subscribe((newValue) => {
-                    
-                    levelUp("modul_2",10)
+                    levelUp("modul_2", 10);
                     console.log(`Variable "${key}" changed to:`, newValue, "Level up, +10XP");
+
+                    solvedStatus[key] = newValue === "solved";
+
+                    if (key === "PlanungSelbstmanagement" && newValue === "solved") {
+                        WA.player.state.currentQuest = "quest10";
+                    }
+
+                    // Trigger quest11 only after both PlanungSelbstmanagement and ThemenfindungGliederung are solved
+                    if (solvedStatus["PlanungSelbstmanagement"] && solvedStatus["ThemenfindungGliederung"]) {
+                        WA.player.state.currentQuest = "quest11";
+                    }
+                    
+                    if ((key === "Lesen" || key === "Literaturrecherche") && newValue === "solved") {
+                        WA.player.state.currentQuest = "quest14";
+                    }
                 });
             }
-    
 export {};
 

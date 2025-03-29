@@ -128,5 +128,21 @@ WA.onInit().then(() => {
     // Run once in case both variables are already 'solved'
     updateRoomForSolved();
 });
+WA.onInit().then(() => {
+    if (WA.player.state.module2 === 'solved') {
+        WA.chat.sendChatMessage(
+            "Hervorragend, dich kann man gebrauchen! Du hast Modul 2 gemeistert und schon einiges über die Techniken des wissenschaftlichen Arbeitens gelernt. Vergiss deine Codeschnipsel nicht, diese sind sehr wichtig. Du bist nun bereit mit Raum 3 weiterzumachen, um mehr über das wissenschaftliche Schreiben zu erfahren. Vergiss nicht nach weiteren Codeschnipseln Ausschau zu halten. Viel Erfolg!",
+            "Zirze"
+        );
+    }
+});
+WA.onInit().then(() => {
+    if ((WA.player.state.module2 as string) === 'solved' && WA.player.state.module3 === 'solved') {
+        WA.chat.sendChatMessage(
+            "Wow, das ging schnell! Du hast beide Räume gemeistert. Ich hoffe du kannst dich noch an alle Codeschnipsel erinnern. Diese musst du nun in richtiger Reihenfolge im Sicherheitsterminal eingeben. Falls du Hilfe brauchst, frag doch deine Kolleg*innen, ob ihr diese Aufgabe zusammen lösen könnt. Ich darf nicht zu viel verraten, aber eine gezielte Recherche könnte durchaus hilfreich sein. Wenn du oder ihr es schafft, können wir Lord Modrevolt endlich aus unserem System entfernen und unsere Sicherheitseinstellungen des Kondensatoriums wieder herstellen.",
+            "Zirze"
+        );
+    }
+});
 export {};
 

@@ -128,7 +128,7 @@ WA.onInit().then(async () => {
                     endY: 89,
                 },
                 module_3_2: {
-                    triggerValue: "1",
+                    triggerValue: "3",
                     startX: 4,
                     endX: 15,
                     startY: 47,
@@ -146,6 +146,7 @@ WA.onInit().then(async () => {
                 if (module2_1 + module2_2 === requiredSum) {
                     moduleSumTriggered = true;
                     WA.player.state.currentQuest = 'quest10';
+                    WA.player.state.module3 = 'solved';
                 }
             }
 
@@ -156,7 +157,17 @@ WA.onInit().then(async () => {
                 checkModuleSumTrigger();
             });
 
+            WA.player.state.onVariableChange("module_3_1").subscribe((newValue) => {
+                if(newValue === "3"){
+                    WA.chat.sendChatMessage("Prima, du hast weitere verlorene Codeschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: eine/ ist/ sie", "Zirze");
+                }
+            });
 
+            WA.player.state.onVariableChange("module_3_2").subscribe((newValue) => {
+                if(newValue === "3"){
+                    WA.chat.sendChatMessage("Prima, du hast weitere verlorene Codeschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: zu/ denken/ Art“", "Zirze");
+                }
+            });
             
             WA.onInit().then(() => {
                 // Initial updates using hardcodedModules

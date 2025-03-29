@@ -3142,7 +3142,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"# Herzlich Willkommen an der Digitalen Uni Notlog (DUNO)!\n\nSch\u00f6n, dass du da bist \u2013 wir haben schon auf dich gewartet. \ud83d\ude0a  \nWir hoffen, es gef\u00e4llt dir hier in unserer **digitalen Welt**.\n\n---\n\n## Ich bin Altbus Mumblecore  \n**Leitung der Digitalen Uni Notlog (DUNO).**\n\nWie du sicher wei\u00dft, ist unsere Uni Vorreiter im Bereich der digitalen Lehre.  \nIch habe geh\u00f6rt, dass ihr an eurer Uni die Kampagne _\u201eUnsere Uni soll digitaler werden\u201c_ gestartet habt.  \nWir freuen uns sehr, dass du als Gast unser Angebot nutzt, um von unseren digitalen Lehrmaterialien zu profitieren.\n\n---\n\n### Was macht die DUNO so besonders?  \nUnsere Uni hat eine lange Tradition in der Entwicklung der **innovativsten digitalen Lernmaterialien**.  \nDas Herzst\u00fcck unseres Erfolgs ist das **Kondensatorium**:  \n- Hier verbinden wir modernste Technik wie **k\u00fcnstliche Intelligenz**  \n- mit dem besten Wissen, um bahnbrechende Ergebnisse zu erzielen.\n\n---\n\n## Einbruch und eine neue Herausforderung! \ud83d\udea8  \n\nGestern Nacht mussten wir jedoch feststellen, dass bei uns eingebrochen wurde!  \nUnsere Systeme wurden von einem **Computer-Virus kompromittiert**.  \nDas ist eine Katastrophe \u2013 unsere Existenz steht auf dem Spiel!  \n\n### Der Verdacht f\u00e4llt auf Lord Modrevolt:  \n- Er trachtet schon lange danach, in unser Kondensatorium einzudringen.  \n- Sein Ziel: **die digitalen Lehrmaterialien zu stehlen und sie teuer an seiner Privatuni zu verkaufen.**  \n\nLeider ist es ihm gelungen:  \n- Die **Codes zu stehlen**  \n- und einen Virus einzuschleusen, der ihm immer mehr Zugriff auf unsere Materialien verschafft.\n\n---\n\n## Deine Mission \ud83d\ude80  \nWir brauchen dringend Hilfe, um:  \n1. Unsere Systeme zu kontrollieren  \n2. Mehr \u00fcber den Vorfall zu erfahren  \n3. Die volle Kontrolle \u00fcber unsere Systeme zur\u00fcckzugewinnen  \n\n---\n\n### Was du jetzt tun solltest:  \n1. **Finde das Labor von Professorin Sebora Sake.**  \n2. Sie wird dich zum Eingang des **Kondensatoriums** f\u00fchren.  \n\n---\n\n**Die Zeit dr\u00e4ngt! Viel Erfolg!**  "
+                         "value":"Willkommen zur\u00fcck! Du hast Gro\u00dfes getan f\u00fcr unsere Universit\u00e4t. Du hast den Virus neutralisiert und Lord Modrevolt ein f\u00fcr alle Mal aus unserem System verbannt. Unsere Universit\u00e4t Notlog ist endlich wieder funktionst\u00fcchtig und wir k\u00f6nnen weiter digitale Lehr- und Lernmaterialien im Kondensatorium produzieren. Wir sind dir zutiefst zu Dank verpflichtet."
                         }, 
                         {
                          "name":"isNpc",
@@ -3157,7 +3157,7 @@
                         {
                          "name":"triggerQuest",
                          "type":"string",
-                         "value":"quest3"
+                         "value":""
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3274,53 +3274,6 @@
                  "width":96.5,
                  "x":1855.75,
                  "y":919
-                }, 
-                {
-                 "height":84.3333,
-                 "id":38,
-                 "name":"quest3",
-                 "properties":[
-                        {
-                         "name":"isQuest",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"questDescription",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"questId",
-                         "type":"string",
-                         "value":"quest3"
-                        }, 
-                        {
-                         "name":"questKey",
-                         "type":"string",
-                         "value":"notlog"
-                        }, 
-                        {
-                         "name":"questName",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"questXp",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"requireQuest",
-                         "type":"string",
-                         "value":""
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":123.5,
-                 "x":648,
-                 "y":424
                 }],
          "opacity":1,
          "type":"objectgroup",

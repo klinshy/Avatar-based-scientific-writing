@@ -3,129 +3,146 @@ import { levelUp } from "@workadventure/quests";
 const quests = [
     // Notlog
     {
-        questName: 'Einführung in Notlog',
         questId: 'quest1',
         questDescription: 'Triff Prof. McDongle am Eingang von Notlog.',
-
         requireQuest: null,
-        questKey: 'notlog'
     },
     {
-        questName: 'Erkundung des Saals',
         questId: 'quest2',
         questDescription: 'Sprich mit Prof. Mumblecore am nördlichen Ende der großen Halle.',
-
         requireQuest: 'quest1',
-        questKey: 'notlog'
     },
     {
-        questName: 'Laborbesuch',
         questId: 'quest3',
         questDescription: 'Geh runter ins Labor und sprich mit Prof. Sake.',
-
         requireQuest: 'quest2',
-        questKey: 'notlog'
     },
     {
-        questName: 'Das Video im Labor ansehen',
         questId: 'quest4',
         questDescription: 'Sieh dir das Video im Labor an.',
-
         requireQuest: 'quest3',
-        questKey: 'notlog'
     },
     {
-        questName: 'Finde den geheimen Eingang',
         questId: 'quest5',
-        questDescription: 'Finde den geheimen Eingang zum Kondesatorium .',
-
+        questDescription: 'Finde den geheimen Eingang zum Kondensatorium und gib dort den Zahlencode ein.',
         requireQuest: 'quest4',
-        questKey: 'notlog'
     },
-
     {
-        questName: 'Zirze',
         questId: 'quest6',
-        questDescription: 'Schreite durch das Portal ins Kondesatorium ',
-        
+        questDescription: 'Gehe durch das Portal ins Kondensatorium.',
         requireQuest: 'quest5',
-        questKey: 'notlog'
     },
- // Kondesatorium  Hub
     {
-        questName: 'Betritt Modul 2',
         questId: 'quest7',
-        questDescription: 'Sprich mit der zitierenden Zirze',
-        
+        questDescription: 'Sprich mit der zitierenden Zirze.',
         requireQuest: 'quest6',
-        questKey: 'matrix'
     },
-
-// Modul 2
     {
-        questName: 'löse Modul 2',
         questId: 'quest8',
-        questDescription: 'Geh durch das Portal mit der Zwei und gelange zu deiner ersten Aufgabe ',
-        
+        questDescription: 'Geh durch das erste offene Portal und gelange zu deiner ersten Aufgabe.',
         requireQuest: 'quest7',
-        questKey: 'matrix'
     },
-
     {
-        questName: 'modul2 solved',
         questId: 'quest9',
-        questDescription: 'Löse die Aufgaben in Modul 2, sprich mit Zirze solltest du Hilfe brauchen./Löse Aufgabe 1 in Raum 1 in Modul 2 und dann so weiter ',
-        
+        questDescription: 'Bearbeite das Lernmaterial: H5P Planung & Selbstmanagement abschließen.',
         requireQuest: 'quest8',
-        questKey: 'matrix'
     },
-   
-// Modul 3
     {
-        questName: 'löse Modul 3',
         questId: 'quest10',
-        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und sprich mit Zirze ',
-        
+        questDescription: 'H5P Themenfindung & Gliederung abschließen.',
         requireQuest: 'quest9',
-        questKey: 'matrix'
     },
     {
-        questName: 'löse Modul 3',
         questId: 'quest11',
-        questDescription: 'Geh durch das Portal mit der Drei und gelange zu deiner finalen Aufgaben',
-        
+        questDescription: 'Gebe die Zahlencodes in das Computerterminal ein!',
         requireQuest: 'quest10',
-        questKey: 'matrix'
     },
     {
-        questName: 'löse Modul 3',
         questId: 'quest12',
-        questDescription: 'Löse die Aufgaben in Modul 3, sprich mit Zirze solltest du Hilfe brauchen. Oder auch kleinteiliger',
-        
+        questDescription: 'H5P Literaturrecherche (mit Video Eric/Fachportal) abschließen.',
         requireQuest: 'quest11',
-        questKey: 'matrix'
     },
     {
-        questName: 'löse Modul 3',
         questId: 'quest13',
-        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und sprich mit Zirze',
-        
+        questDescription: 'H5P Wissenschaftliches Lesen abschließen.',
         requireQuest: 'quest12',
-        questKey: 'matrix'
     },
     {
-        questName: 'löse Modul 3',
         questId: 'quest14',
-        questDescription: 'Begib dich zum Terminal und befrei das Kondensatorium vom Virus',
-        
+        questDescription: 'Gebe die Zahlencodes in das Computerterminal ein!',
         requireQuest: 'quest13',
-        questKey: 'matrix'
+    },
+    {
+        questId: 'quest15',
+        questDescription: 'Löse das abschließende Quiz!',
+        requireQuest: 'quest14',
+    },
+    {
+        questId: 'quest16',
+        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und bearbeite das nächste Lernmodul!',
+        requireQuest: 'quest15',
     },
 
+    // Modul 3 - Raum 3.1
+    {
+        questId: 'quest17',
+        questDescription: 'Allgemeine Regeln & Textarten I – Bearbeite das Lernmaterial!',
+        requireQuest: 'quest16',
+    },
+    {
+        questId: 'quest18',
+        questDescription: 'Allgemeine Regeln & Textarten II – Bearbeite das Lernmaterial!',
+        requireQuest: 'quest17',
+    },
+    {
+        questId: 'quest19',
+        questDescription: 'Sprache & Gendern – Bearbeite das Lernmaterial!',
+        requireQuest: 'quest18',
+    },
+    {
+        questId: 'quest20',
+        questDescription: 'Gebe die Zahlencodes in das Computerterminal ein!',
+        requireQuest: 'quest19',
+    },
 
+    // Modul 3 - Raum 3.2
+    {
+        questId: 'quest21',
+        questDescription: 'Zitation und Literaturverzeichnis mit Video I.',
+        requireQuest: 'quest20',
+    },
+    {
+        questId: 'quest22',
+        questDescription: 'Zitation und Literaturverzeichnis mit Video II.',
+        requireQuest: 'quest21',
+    },
+    {
+        questId: 'quest23',
+        questDescription: 'Literaturverwaltung (Video Zotero).',
+        requireQuest: 'quest22',
+    },
+    {
+        questId: 'quest24',
+        questDescription: 'Gebe die Zahlencodes in das Computerterminal ein!',
+        requireQuest: 'quest23',
+    },
 
-
-
+    // Abschluss Modul 3
+    {
+        questId: 'quest25',
+        questDescription: 'Löse das abschließende Quiz!',
+        requireQuest: 'quest24',
+    },
+    {
+        questId: 'quest26',
+        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und gebe dort die gesammelten Worte in der korrekten Reihenfolge ein!',
+        requireQuest: 'quest25',
+    },
+    {
+        questId: 'quest27',
+        questDescription: 'Abschluss des Kondensatoriums – du hast alle Herausforderungen gemeistert!',
+        requireQuest: 'quest26',
+    }
 ];
 
 

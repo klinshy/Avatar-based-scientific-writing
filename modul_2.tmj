@@ -1668,7 +1668,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"# Ein Chaos im Labor \ud83e\uddea  \n\n**\u201eAch, was f\u00fcr eine Unordnung in diesem Labor!**  \n\n---\n\n### Wer steckt dahinter? \ud83d\udd75\ufe0f\u200d\u2642\ufe0f  \nDiese bl\u00f6de, du-wei\u00dft-schon-wer, muss hier alles durcheinandergebracht haben, als er unsere Lernmaterialien stehlen wollte.  \n\n---\n\n### Ein Ort des Wissens \ud83d\udcda  \nAlex hat hier viele ihrer Materialien f\u00fcr den innovativen Kurs **\u201cWissenschaftliches Arbeiten\u201d** erstellt.  \nSie w\u00fcrde **niemals** so ein Chaos hinterlassen!  \n\n---\n\n**Wir m\u00fcssen dieses Durcheinander schnell in Ordnung bringen. Packen wir es an!**  "
+                         "value":"Sch\u00f6n, dass du noch da bist! Starte doch schon mal mit Element eins. Die Elemente bauen aufeinander auf, folge also der Reihenfolge. Plane f\u00fcr den zweiten Raum ca. 50 Minten Zeit ein. Du kannst jederzeit aufh\u00f6ren und wieder zur\u00fcckkommen. Vergiss nicht nach Codeschnipseln Ausschau zu halten und bleibe wachsam, eventuell sind diese durcheinandergeraten. Viel Erfolg!"
                         }, 
                         {
                          "name":"isNpc",
@@ -1722,7 +1722,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"Wilkommen in Modul 2"
+                         "value":"Sch\u00f6n, dass du uns hilfst! Starte doch schon mal mit Element eins. Die Elemente bauen aufeinander auf, folge also der Reihenfolge. Plane f\u00fcr den ersten Raum ca. 20 Minten Zeit ein. Du kannst jederzeit aufh\u00f6ren und wieder zur\u00fcckkommen. Vergiss nicht nach Codeschnipseln Ausschau zu halten und bleibe wachsam, eventuell sind diese durcheinandergeraten. Viel Erfolg!"
                         }, 
                         {
                          "name":"isNpc",

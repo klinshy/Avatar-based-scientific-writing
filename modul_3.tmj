@@ -1722,7 +1722,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"# Willkommen im Modul3 \ud83e\udde9  \n\n**\u201eHerein, herein.**  \n\n\n### Deine Aufgabe \ud83c\udfaf  \n\ud83d\udc49 Arbeite die Lernmaterialien des Kurses **\u201cWissenschaftliches Arbeiten\u201d** mit Sorgfalt durch:  \n- Nur so kannst du die Original-Codes wiederherstellen.  \n- Dadurch entfernst du den Virus und erm\u00f6glichst den Zugriff auf die R\u00e4ume.  \n \n\n---\n\n### Dein erster Schritt \ud83d\udeaa  \n- Beginne mit Arbeitsmaterial mit der 1 und arbeite sich zu n\u00e4chsten Raum vor  \n- Plane hierf\u00fcr etwa **10 Minuten Zeit** f\u00fcr jede Station ein.  \n\n---\n\n** Viel Erfolg!**  "
+                         "value":"Sch\u00f6n, dass du wieder da bist! Beginne mit Element 1. Plane f\u00fcr den ersten Raum ca. 30 Minuten ein. Du kannst jederzeit aufh\u00f6ren und wieder zur\u00fcckkommen. Vergiss nicht nach Codeschnipseln Ausschau zu halten und bleibe wachsam, eventuell sind diese durcheinandergeraten. Viel Erfolg!"
                         }, 
                         {
                          "name":"isNpc",
