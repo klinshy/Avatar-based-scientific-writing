@@ -80,9 +80,53 @@ WA.onInit().then(async () => {
         }
     }
 });
+WA.onInit().then(async () => {
+    if (WA.player.state.module2 === 'solved' && WA.player.state.module3 === 'solved') {
+        // Only display the terminal layers
+        WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
+            WA.chat.sendChatMessage("enter code", "Terminal");
+        });
 
+        WA.chat.onChatMessage((message, event) => {
+            // Check if the message is coming from the local user
+            if (event.authorId === undefined) {
+                if (message.includes("code")) {
+                    WA.chat.sendChatMessage("Your message was correct!", "Zirze");
+                } else {
+                    WA.chat.sendChatMessage("Error: your message did not contain 'code'.", "Terminal");
+                }
+            }
+        }, { scope: 'local' });
+    } else {
+        WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
+        WA.chat.sendChatMessage("Solve module2 and module3 and come back here and enter the correct code to repair the matrix", "Terminal");
+    })
+}
+WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
+    WA.chat.close();
+});});
+WA.onInit().then(() => {
+    function updateRoomForSolved() {
+        if (WA.player.state.module2 === 'solved' && WA.player.state.module3 === 'solved') {
+            const green: any[] = [];
+            const red: any[] = [];
+            for (let x = 0; x <= 47; x++) {
+                for (let y = 0; y <= 36; y++) {
+                    green.push({ x, y, tile: "green", layer: "green" });
+                    red.push({ x, y, tile: null, layer: "red" });
+                }
+            }
+            WA.room.setTiles(green);
+            WA.room.setTiles(red);
+        }
+    }
 
+    // Subscribe to changes on both module2 and module3
+    WA.player.state.onVariableChange("module2").subscribe(updateRoomForSolved);
+    WA.player.state.onVariableChange("module3").subscribe(updateRoomForSolved);
 
-
+    // Run once in case both variables are already 'solved'
+    updateRoomForSolved();
+});
 export {};
 
