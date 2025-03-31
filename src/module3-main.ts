@@ -104,7 +104,7 @@ WA.onInit().then(async () => {
          
     // Listen for terminal-related state changes
     WA.player.state.onVariableChange('m3terminal1').subscribe(async (newValue) => {
-            if (newValue === "correct") {
+        
                     if (newValue === "correct") {
                         WA.player.state.module3 = '1';
                         WA.chat.sendChatMessage("Schön, dass du wieder da bist! Beginne am besten mit Element 1. Plane für den zweiten Raum ca. 40 Minuten ein. Du kannst jederzeit aufhören und wieder zurückkommen. Vergiss nicht weiterhin nach den Zahlencodes in den Materialien Ausschau zu halten und dir diese zu notieren. Neben den Zahlencodes musst du auch wieder Wortschnipsel finden, die durch Lord Modrevolts Angriff durcheinandergeraten sind.  Viel Erfolg!", "Zirze");
@@ -115,7 +115,7 @@ WA.onInit().then(async () => {
                         }
                     }
             }
-    });
+    );
             WA.player.state.onVariableChange('m3terminal2').subscribe(async (newValue) => {
                             if (newValue === "correct") {
                                 WA.player.state.module3 = '2';
