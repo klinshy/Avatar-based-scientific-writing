@@ -92,9 +92,10 @@ WA.onInit().then(async () => {
         }
     }
 });
+WA.onInit().then(async () => {
 WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
     WA.player.state.currentQuest = 'quest9' ;
-});
+});})
 
             
             // Listen for terminal-related state changes

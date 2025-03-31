@@ -1625,7 +1625,7 @@
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9384, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1976,8 +1976,8 @@
                  "type":"area",
                  "visible":true,
                  "width":80,
-                 "x":168,
-                 "y":2609
+                 "x":172.666666666667,
+                 "y":2611.66666666667
                 }, 
                 {
                  "height":80,
@@ -2013,45 +2013,8 @@
                  "type":"area",
                  "visible":true,
                  "width":72,
-                 "x":206.5,
-                 "y":1936.5
-                }, 
-                {
-                 "height":80,
-                 "id":36,
-                 "name":"2_3Videos",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":".\/H5P\/2_3Videos.html"
-                        }, 
-                        {
-                         "name":"openWebsiteAllowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsiteClosable",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsiteTriggerMessage",
-                         "type":"string",
-                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
-                        }, 
-                        {
-                         "name":"openWebsiteWidth",
-                         "type":"int",
-                         "value":50
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":72,
-                 "x":178,
-                 "y":2140
+                 "x":205.833333333333,
+                 "y":1938.5
                 }, 
                 {
                  "height":80,
@@ -2087,8 +2050,8 @@
                  "type":"area",
                  "visible":true,
                  "width":72,
-                 "x":187.333333333333,
-                 "y":2127.33333333333
+                 "x":175.333333333333,
+                 "y":2132.66666666666
                 }, 
                 {
                  "height":49.3333333333335,
@@ -2100,38 +2063,6 @@
                  "width":196,
                  "x":218.666666666666,
                  "y":2701.33333333334
-                }, 
-                {
-                 "height":72,
-                 "id":40,
-                 "name":"zirze2_3",
-                 "properties":[
-                        {
-                         "name":"chatText",
-                         "type":"string",
-                         "value":"- Prima, jetzt kannst du mit Modul 3 weiter machen.."
-                        }, 
-                        {
-                         "name":"isNpc",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"npcName",
-                         "type":"string",
-                         "value":"Zitierende Zirze"
-                        }, 
-                        {
-                         "name":"triggerQuest",
-                         "type":"string",
-                         "value":""
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":80,
-                 "x":329.333333333333,
-                 "y":1840.66666666667
                 }, 
                 {
                  "height":80,
@@ -2167,8 +2098,8 @@
                  "type":"area",
                  "visible":true,
                  "width":72,
-                 "x":387.333333333333,
-                 "y":2414.66666666667
+                 "x":364,
+                 "y":2418
                 }, 
                 {
                  "height":89.999966666667,
@@ -2198,7 +2129,7 @@
                         {
                          "name":"openWebsiteWidth",
                          "type":"int",
-                         "value":50
+                         "value":25
                         }],
                  "rotation":0,
                  "type":"area",

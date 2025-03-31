@@ -84,29 +84,36 @@ WA.onInit().then(async () => {
     if (WA.player.state.module2 === 'solved' && WA.player.state.module3 === 'solved') {
         // Only display the terminal layers
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage("enter code", "Terminal");
+            WA.chat.sendChatMessage("Bitte gib das Lösungswort ein", "Terminal");
         });
 
         WA.chat.onChatMessage(async (message, event) => {
             // Check if the message is coming from the local user
             if (event.authorId === undefined) {
-                if (message.includes("code")) {
-                    WA.chat.sendChatMessage("Your message was correct!", "Zirze");
+                const lowerMsg = message.toLowerCase();
+                if (
+                    lowerMsg.includes("wissenschaft") &&
+                    lowerMsg.includes("wissenssammlung") &&
+                    lowerMsg.includes("art") &&
+                    lowerMsg.includes("denken")
+                ) {
+                    WA.chat.sendChatMessage("Success: Das ist korrekt, ich teleportiere dich zurück zu Prof. Mumblecore!", "Zirze");
                     await new Promise(resolve => setTimeout(resolve, 2000));
                     WA.nav.goToRoom("./notlog-solved.tmj");
                 } else {
-                    WA.chat.sendChatMessage("Error: your message did not contain 'code'.", "Terminal");
+                    WA.chat.sendChatMessage("Error: Das war nicht die korrekte Antwort. Erinnere dich daran was Wissenschaft ist und was nicht.", "Terminal");
                 }
             }
         }, { scope: 'local' });
     } else {
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-        WA.chat.sendChatMessage("Solve module2 and module3 and come back here and enter the correct code to repair the matrix", "Terminal");
-    })
-}
-WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
-    WA.chat.close();
-});});
+            WA.chat.sendChatMessage("Solve module2 and module3 and come back here and enter the correct code to repair the matrix", "Terminal");
+        });
+    }
+    WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
+        WA.chat.close();
+    });
+});
 WA.onInit().then(() => {
     function updateRoomForSolved() {
         if (WA.player.state.module2 === 'solved' && WA.player.state.module3 === 'solved') {
