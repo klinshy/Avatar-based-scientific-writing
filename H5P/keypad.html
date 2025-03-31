@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="de">
-    
 <head>
     <script src="https://play.workadventu.re/iframe_api.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telefontastatur</title>
+    <title>Keypad</title>
     <style>
+        :root {
+            --background-color: #1b3d56;
+            --button-bg: #111;
+            --button-active-bg: #555;
+            --button-color: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         html, body {
-            height: 100%;
             margin: 0;
-            background: transparent;
+            padding: 0;
+            height: 100%;
         }
+
         body {
-            margin: 0;
-            height: 100%;
-            min-height: 100%;
-            background: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--background-color);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            padding: 20px;
         }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
         .keypad {
-            min-height: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            column-gap: 1vh;
-            row-gap: 5vh;
-            width: max-content;
-            margin: 50px auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(60px, auto);
+            gap: 2vh 1vh;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            max-width: 90vw;
         }
+
         button {
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
+            background-color: var(--button-bg);
+            color: var(--button-color);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.5rem;
             cursor: pointer;
+            transition: background-color 0.2s ease;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .keypad > button {
-            background-color: #111111;
-            color: white;
+
+        button:active {
+            background-color: var(--button-active-bg);
         }
-        .keypad > button:active {
-            background-color: #555;
-            color: white;
+
+        @media (min-width: 600px) {
+            .keypad {
+                gap: 4vh 2vh;
+            }
+            button {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <h1>Code Terminal</h1>
+    <p>Gib die richtigen Codes ein, so wie du sie bekommen hast.</p>
+    
     <div class="keypad" id="keypad">
         <button onclick="pressKey(1)">1</button>
         <button onclick="pressKey(2)">2</button>
@@ -74,8 +117,7 @@
                 if (moduleParam && room) {
                     WA.player.state["terminal" + room] = "correct";
                 }
-                
-                inputSequence = ""; // Reset nach der Erkennung
+                inputSequence = "";
             }
         }
     </script>
