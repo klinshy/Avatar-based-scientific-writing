@@ -72,12 +72,9 @@
             if (inputSequence.includes(correctCode)) {
                 console.log(correctCode + " wurde eingegeben!");
                 if (moduleParam && room) {
-                    WA.player.state["module" + moduleParam] = room;
+                    WA.player.state["terminal" + room] = "correct";
                 }
-                const cowebsites = await WA.nav.getCoWebSites();
-                for (const cowebsite of cowebsites) {
-                    cowebsite.close();
-                }
+                
                 inputSequence = ""; // Reset nach der Erkennung
             }
         }
