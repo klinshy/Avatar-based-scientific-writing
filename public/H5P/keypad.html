@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+    
+<head>
+    <script src="https://play.workadventu.re/iframe_api.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefontastatur</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background: transparent;
+        }
+        body {
+            margin: 0;
+            height: 100%;
+            min-height: 100%;
+            background: transparent;
+        }
+        .keypad {
+            min-height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            column-gap: 1vh;
+            row-gap: 5vh;
+            width: max-content;
+            margin: 50px auto;
+        }
+        button {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .keypad > button {
+            background-color: #111111;
+            color: white;
+        }
+        .keypad > button:active {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="keypad" id="keypad">
+        <button onclick="pressKey(1)">1</button>
+        <button onclick="pressKey(2)">2</button>
+        <button onclick="pressKey(3)">3</button>
+        <button onclick="pressKey(4)">4</button>
+        <button onclick="pressKey(5)">5</button>
+        <button onclick="pressKey(6)">6</button>
+        <button onclick="pressKey(7)">7</button>
+        <button onclick="pressKey(8)">8</button>
+        <button onclick="pressKey(9)">9</button>
+        <button></button>
+        <button onclick="pressKey(0)">0</button>
+        <button></button>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const correctCode = urlParams.get('code') || "1337";
+        const moduleParam = urlParams.get('module');
+        const room = urlParams.get('room');
+        let inputSequence = "";
+        
+        async function pressKey(num) {
+            inputSequence += num;
+            if (inputSequence.includes(correctCode)) {
+                console.log(correctCode + " wurde eingegeben!");
+                if (moduleParam && room) {
+                    WA.player.state["module" + moduleParam] = room;
+                }
+                const cowebsites = await WA.nav.getCoWebSites();
+                for (const cowebsite of cowebsites) {
+                    cowebsite.close();
+                }
+                inputSequence = ""; // Reset nach der Erkennung
+            }
+        }
+    </script>
+</body>
+</html>
