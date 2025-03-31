@@ -1,7 +1,7 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { getChatAreas } from "./chatArea";
-import { quests } from "./quests";
+import { levelUp, quests } from "./quests";
 
 WA.onInit().then(async () => {
     console.log('loading main.ts');
@@ -107,6 +107,7 @@ WA.onInit().then(async () => {
                     WA.chat.sendChatMessage("Success: Das ist korrekt, ich teleportiere dich zurück zu Prof. Mumblecore!", "Zirze");
                     await new Promise(resolve => setTimeout(resolve, 2000));
                     WA.player.state.currentQuest = "quest27"
+                    levelUp("notlog", 177);
                     WA.nav.goToRoom("./notlog-solved.tmj");
                 } else {
                     WA.chat.sendChatMessage("Error: Das war nicht die korrekte Antwort. Erinnere dich daran was Wissenschaft ist und was nicht.", "Zirze");
