@@ -137,7 +137,8 @@ WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
                 'PlanungSelbstmanagement',
                 'ThemenfindungGliederung',
                 'Literaturrecherche',
-                'Lesen'
+                'Lesen',
+                'finalQuizTwo'
             ];
 
             // Object to track whether each key was solved
@@ -170,6 +171,8 @@ WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
                             case 3:
                                 WA.player.state.currentQuest = "quest14";
                                 break;
+                            case 4:
+                                WA.player.state.currentQuest = "quest16";
                         }
 
                         currentStep++;

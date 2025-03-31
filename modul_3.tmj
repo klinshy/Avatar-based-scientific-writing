@@ -1973,6 +1973,43 @@
                  "width":72,
                  "x":349.313531353135,
                  "y":2362.14853151815
+                }, 
+                {
+                 "height":80,
+                 "id":37,
+                 "name":"Endquiz",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/2Final.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":72,
+                 "x":253.333333333333,
+                 "y":1810.66666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2082,7 +2119,7 @@
          "y":0
         }],
  "nextlayerid":31,
- "nextobjectid":37,
+ "nextobjectid":38,
  "orientation":"orthogonal",
  "properties":[
         {

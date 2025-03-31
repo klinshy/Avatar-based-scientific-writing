@@ -143,7 +143,8 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 'Sprache',
                 'Zitieren',
                 'Literaturverzeichnis',
-                'Literaturverwaltung'
+                'Literaturverwaltung',
+                'finalQuizThree'
             ];
 
             // Object to track whether each key was solved
@@ -182,6 +183,8 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                             case 5:
                                 WA.player.state.currentQuest = "quest24";
                                 break;
+                            case 6:
+                                WA.player.state.currentQuest = "quest26";
                         }
 
                         currentStep++;

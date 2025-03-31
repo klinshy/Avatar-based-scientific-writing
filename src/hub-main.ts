@@ -84,7 +84,7 @@ WA.onInit().then(async () => {
     if (WA.player.state.module2 === 'solved' && WA.player.state.module3 === 'solved') {
         // Only display the terminal layers
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage("Bitte gib das Lösungswort ein", "Terminal");
+            WA.chat.sendChatMessage("Bitte gib das Lösungswort ein", "Zirze");
         });
 
         WA.chat.onChatMessage(async (message, event) => {
@@ -101,13 +101,13 @@ WA.onInit().then(async () => {
                     await new Promise(resolve => setTimeout(resolve, 2000));
                     WA.nav.goToRoom("./notlog-solved.tmj");
                 } else {
-                    WA.chat.sendChatMessage("Error: Das war nicht die korrekte Antwort. Erinnere dich daran was Wissenschaft ist und was nicht.", "Terminal");
+                    WA.chat.sendChatMessage("Error: Das war nicht die korrekte Antwort. Erinnere dich daran was Wissenschaft ist und was nicht.", "Zirze");
                 }
             }
         }, { scope: 'local' });
     } else {
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage("Solve module2 and module3 and come back here and enter the correct code to repair the matrix", "Terminal");
+            WA.chat.sendChatMessage("Lösen Sie Modul 2 und Modul 3, kommen Sie hierher zurück und geben Sie den richtigen Code ein, um die Matrix zu reparieren", "Zirze");
         });
     }
     WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
