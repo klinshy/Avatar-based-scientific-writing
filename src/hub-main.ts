@@ -24,6 +24,8 @@ WA.onInit().then(async () => {
         });
     });
 
+
+
 WA.onInit().then(async () => {
     // Get chat areas and set up event listeners for entering and leaving them
     const chatAreas = await getChatAreas();
@@ -122,42 +124,41 @@ WA.onInit().then(async () => {
 });
 WA.onInit().then(() => {
     function updateRoomForSolved() {
-        if (WA.player.state.module2 === 'solved' && WA.player.state.module3 === 'solved') {
+        const solvedModule2 = WA.player.state.module2 === '2';
+        const solvedModule3 = WA.player.state.module3 === '2';
+
+        // Both modules solved: recolor the entire map and send the full success message.
+        if (solvedModule2 && solvedModule3) {
             const green: any[] = [];
             const red: any[] = [];
             for (let x = 0; x <= 47; x++) {
                 for (let y = 0; y <= 36; y++) {
                     green.push({ x, y, tile: "green", layer: "green" });
-                    red.push({ x, y, tile: null, layer: "red" });
+                    red.push({ x, y, tile: "red", layer: "red" });
                 }
             }
-            WA.room.setTiles(green);
-            WA.room.setTiles(red);
+            // Combine the green and red tile changes in one call.
+            WA.room.setTiles([...green, ...red]);
+            WA.chat.sendChatMessage(
+                "Wow, das ging schnell! Du hast beide Räume gemeistert. Ich hoffe du kannst dich noch an alle Codeschnipsel erinnern. Diese musst du nun in richtiger Reihenfolge im Sicherheitsterminal eingeben. Falls du Hilfe brauchst, frag doch deine Kolleg*innen, ob ihr diese Aufgabe zusammen lösen könnt. Ich darf nicht zu viel verraten, aber eine gezielte Recherche könnte durchaus hilfreich sein. Wenn du oder ihr es schafft, können wir Lord Modrevolt endlich aus unserem System entfernen und unsere Sicherheitseinstellungen des Kondensatoriums wieder herstellen.",
+                "Zirze"
+            );
+        } 
+        // Only module2 solved: send the message that encourages the user to continue.
+        else if (solvedModule2) {
+            WA.chat.sendChatMessage(
+                "Hervorragend, dich kann man gebrauchen! Du hast Modul 2 gemeistert und schon einiges über die Techniken des wissenschaftlichen Arbeitens gelernt. Vergiss deine Codeschnipsel nicht, diese sind sehr wichtig. Du bist nun bereit mit Raum 3 weiterzumachen, um mehr über das wissenschaftliche Schreiben zu erfahren. Vergiss nicht nach weiteren Codeschnipseln Ausschau zu halten. Viel Erfolg!",
+                "Zirze"
+            );
         }
     }
 
-    // Subscribe to changes on both module2 and module3
+    // Subscribe to changes on both module2 and module3.
     WA.player.state.onVariableChange("module2").subscribe(updateRoomForSolved);
     WA.player.state.onVariableChange("module3").subscribe(updateRoomForSolved);
 
-    // Run once in case both variables are already 'solved'
+    // Run once in case both variables are already set.
     updateRoomForSolved();
-});
-WA.onInit().then(() => {
-    const solvedModule2 = WA.player.state.module2 === 'solved';
-    const solvedModule3 = WA.player.state.module3 === 'solved';
-
-    if (solvedModule2 && solvedModule3) {
-        WA.chat.sendChatMessage(
-            "Wow, das ging schnell! Du hast beide Räume gemeistert. Ich hoffe du kannst dich noch an alle Codeschnipsel erinnern. Diese musst du nun in richtiger Reihenfolge im Sicherheitsterminal eingeben. Falls du Hilfe brauchst, frag doch deine Kolleg*innen, ob ihr diese Aufgabe zusammen lösen könnt. Ich darf nicht zu viel verraten, aber eine gezielte Recherche könnte durchaus hilfreich sein. Wenn du oder ihr es schafft, können wir Lord Modrevolt endlich aus unserem System entfernen und unsere Sicherheitseinstellungen des Kondensatoriums wieder herstellen.",
-            "Zirze"
-        );
-    } else if (solvedModule2) {
-        WA.chat.sendChatMessage(
-            "Hervorragend, dich kann man gebrauchen! Du hast Modul 2 gemeistert und schon einiges über die Techniken des wissenschaftlichen Arbeitens gelernt. Vergiss deine Codeschnipsel nicht, diese sind sehr wichtig. Du bist nun bereit mit Raum 3 weiterzumachen, um mehr über das wissenschaftliche Schreiben zu erfahren. Vergiss nicht nach weiteren Codeschnipseln Ausschau zu halten. Viel Erfolg!",
-            "Zirze"
-        );
-    }
 });
 export {};
 
