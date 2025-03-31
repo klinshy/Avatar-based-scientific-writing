@@ -123,7 +123,6 @@ WA.onInit().then(async () => {
             WA.player.state.module2 = '1';
             WA.chat.sendChatMessage("Code korrekt, fahre fort mit dem nächsten Raum!", "Zirze");
             WA.player.state.currentQuest = 'quest12';
-            levelUp("modul_2", 10);
             const cowebsites = await WA.nav.getCoWebSites();
             for (const cowebsite of cowebsites) {
                 cowebsite.close();
@@ -135,7 +134,7 @@ WA.onInit().then(async () => {
         if (newValue === "correct") {
             WA.player.state.module2 = '2';
             WA.player.state.currentQuest = 'quest15';
-            levelUp("modul_2", 10);
+    
             const cowebsites = await WA.nav.getCoWebSites();
             for (const cowebsite of cowebsites) {
                 cowebsite.close();

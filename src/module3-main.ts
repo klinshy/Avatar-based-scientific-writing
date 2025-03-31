@@ -109,7 +109,6 @@ WA.onInit().then(async () => {
                         WA.player.state.module3 = '1';
                         WA.chat.sendChatMessage("Schön, dass du wieder da bist! Beginne am besten mit Element 1. Plane für den zweiten Raum ca. 40 Minuten ein. Du kannst jederzeit aufhören und wieder zurückkommen. Vergiss nicht weiterhin nach den Zahlencodes in den Materialien Ausschau zu halten und dir diese zu notieren. Neben den Zahlencodes musst du auch wieder Wortschnipsel finden, die durch Lord Modrevolts Angriff durcheinandergeraten sind.  Viel Erfolg!", "Zirze");
                         WA.player.state.currentQuest = 'quest21';
-                        levelUp("modul_3", 10);
                         const cowebsites = await WA.nav.getCoWebSites();
                         for (const cowebsite of cowebsites) {
                             cowebsite.close();
