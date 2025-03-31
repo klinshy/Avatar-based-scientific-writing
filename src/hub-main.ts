@@ -16,6 +16,14 @@ WA.onInit().then(async () => {
     } catch (e) {
         console.error(e);
     }});
+    WA.onInit().then(() => {
+        WA.room.area.onLeave("toMatrix").subscribe(() => {
+            if (WA.player.state.currentQuest === "quest6") {
+                WA.player.state.currentQuest = "quest7";
+            }
+        });
+    });
+
 WA.onInit().then(async () => {
     // Get chat areas and set up event listeners for entering and leaving them
     const chatAreas = await getChatAreas();
