@@ -93,107 +93,136 @@ WA.onInit().then(async () => {
     }
 });
 WA.onInit().then(async () => {
-WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
-    WA.player.state.currentQuest = 'quest9' ;
-});})
+    WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
+        if (WA.player.state.currentQuest === 'quest8') {
+            WA.player.state.currentQuest = 'quest9';
+        }
+    });
+});
+WA.onInit().then(async () => {
 
-            
-            // Listen for terminal-related state changes
-            WA.player.state.onVariableChange('terminal-1').subscribe((newValue) => {
-                if (newValue === true) {
-                    WA.player.state.module2 = '1';
-                    WA.chat.sendChatMessage("Code korrekt, fahre fort mit dem nächsten Raum!", "Zirze");
-                    WA.player.state.currentQuest = 'quest12';
-                    levelUp("modul_2", 10);
-                }
-            });
-
-            WA.player.state.onVariableChange('terminal-2').subscribe((newValue) => {
-                if (newValue === true) {
-                    WA.player.state.module2 = '2';
-                    WA.player.state.currentQuest = 'quest15';
-                    levelUp("modul_2", 10);
-                }
-            });
-
-            // When module2 changes to "2", paint the room green and remove the red layer
-            WA.player.state.onVariableChange('module2').subscribe((newValue) => {
-                if (newValue === '2') {
-                    const greenTiles: any[] = [];
-                    const redTiles: any[] = [];
-                    for (let x = 0; x <= 19; x++) {
-                        for (let y = 47; y <= 89; y++) {
-                            greenTiles.push({ x, y, tile: "green", layer: "green" });
-                            redTiles.push({ x, y, tile: null, layer: "red" });
-                        }
-                    }
-                    WA.room.setTiles(greenTiles);
-                    WA.room.setTiles(redTiles);
-                    WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
-                }
-            });
-            // List of variable keys that trigger events to do something (tbd)
-            const eventVariableKeys = [
-                'PlanungSelbstmanagement',
-                'ThemenfindungGliederung',
-                'Literaturrecherche',
-                'Lesen',
-                'finalQuizTwo'
-            ];
-
-            // Object to track whether each key was solved
-            const solvedStatus: { [key: string]: boolean } = {};
-            eventVariableKeys.forEach(key => solvedStatus[key] = false);
-
-            // Index to enforce the solving order
-            let currentStep = 0;
-
-            // Subscribe to changes for each variable key
-            for (const key of eventVariableKeys) {
-                WA.player.state.onVariableChange(key).subscribe((newValue) => {
-                    // Only trigger if the event turns to "solved" and if it’s the expected key in the order
-                    if (newValue === "solved" && key === eventVariableKeys[currentStep] && !solvedStatus[key]) {
-                        solvedStatus[key] = true;
-                        levelUp("modul_2", 10);
-                        console.log(`Variable "${key}" solved. Level up, +10XP`);
-
-                        // Set the quest based on the order
-                        switch (currentStep) {
-                            case 0:
-                                WA.player.state.currentQuest = "quest10";
-                                break;
-                            case 1:
-                                WA.player.state.currentQuest = "quest11";
-                                break;
-                            case 2:
-                                WA.player.state.currentQuest = "quest13";
-                                break;
-                            case 3:
-                                WA.player.state.currentQuest = "quest14";
-                                break;
-                            case 4:
-                                WA.player.state.currentQuest = "quest16";
-                        }
-
-                        currentStep++;
-                    }
-                });
+    // On start: if module2 is already "2", paint the room green and remove the red layer
+    if (WA.player.state.module2 === '2') {
+        const greenTiles: any[] = [];
+        const redTiles: any[] = [];
+        for (let x = 0; x <= 19; x++) {
+            for (let y = 47; y <= 89; y++) {
+                greenTiles.push({ x, y, tile: "green", layer: "green" });
+                redTiles.push({ x, y, tile: null, layer: "red" });
             }
+        }
+        WA.room.setTiles(greenTiles);
+        WA.room.setTiles(redTiles);
+        WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
+        WA.player.state.currentQuest = 'quest16';
+    }
+    
+    // Listen for terminal-related state changes
+    WA.player.state.onVariableChange('terminal1').subscribe(async (newValue) => {
+        if (newValue === "correct") {
+            WA.player.state.module2 = '1';
+            WA.chat.sendChatMessage("Code korrekt, fahre fort mit dem nächsten Raum!", "Zirze");
+            WA.player.state.currentQuest = 'quest12';
+            levelUp("modul_2", 10);
+            const cowebsites = await WA.nav.getCoWebSites();
+            for (const cowebsite of cowebsites) {
+                cowebsite.close();
+            }
+        }
+    });
 
+    WA.player.state.onVariableChange('terminal2').subscribe(async (newValue) => {
+        if (newValue === "correct") {
+            WA.player.state.module2 = '2';
+            WA.player.state.currentQuest = 'quest15';
+            levelUp("modul_2", 10);
+            const cowebsites = await WA.nav.getCoWebSites();
+            for (const cowebsite of cowebsites) {
+                cowebsite.close();
+            }
+        }
+    });
+
+    // When module2 changes to "2", paint the room green and remove the red layer
+    WA.player.state.onVariableChange('module2').subscribe((newValue) => {
+        if (newValue === '2') {
+            const greenTiles: any[] = [];
+            const redTiles: any[] = [];
+            for (let x = 0; x <= 19; x++) {
+                for (let y = 47; y <= 89; y++) {
+                    greenTiles.push({ x, y, tile: "green", layer: "green" });
+                    redTiles.push({ x, y, tile: null, layer: "red" });
+                }
+            }
+            WA.room.setTiles(greenTiles);
+            WA.room.setTiles(redTiles);
+            WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
+            WA.player.state.currentQuest = 'quest16';
+        }
+    });
+});
+            // Hardcoded step-by-step subscriptions for each variable key
+WA.onInit().then(() => {
+            // Step 1: PlanungSelbstmanagement
+     
+            WA.player.state.onVariableChange('PlanungSelbstmanagement').subscribe((newValue) => {
+                if (newValue === "solved") {
+                    levelUp("modul_2", 10);
+                    console.log(`Variable "PlanungSelbstmanagement" solved. Level up, +10XP`);
+                    WA.player.state.currentQuest = "quest10";
+                }
+            });
+
+            // Step 2: ThemenfindungGliederung (only if previous step solved)
+
+            WA.player.state.onVariableChange('ThemenfindungGliederung').subscribe((newValue) => {
+                if (newValue === "solved" ) {
+        
+                    levelUp("modul_2", 10);
+                    console.log(`Variable "ThemenfindungGliederung" solved. Level up, +10XP`);
+                    WA.player.state.currentQuest = "quest11";
+                }
+            });
+
+            // Step 3: Lesen (only if previous step solved)
+
+            WA.player.state.onVariableChange('Lesen').subscribe((newValue) => {
+                if (newValue === "solved" ) {
+      
+                    levelUp("modul_2", 10);
+                    console.log(`Variable "Lesen" solved. Level up, +10XP`);
+                    WA.player.state.currentQuest = "quest14";
+                }
+            });
+
+            // Step 4: finalQuizTwo (only if previous step solved)
+            WA.player.state.onVariableChange('finalQuizTwo').subscribe((newValue) => {
+                if (newValue === "solved" ) {
+                    levelUp("modul_2", 10);
+                    console.log(`Variable "finalQuizTwo" solved. Level up, +10XP`);
+                    WA.player.state.currentQuest = "quest16";
+                }
+            });
+        });
+WA.onInit().then(() => {
             let literatureAreaEnterTime: number | undefined;
 
             WA.room.area.onEnter('2_3Literaturrecherche').subscribe(() => {
                 literatureAreaEnterTime = Date.now();
+                console.log('Entered literature area');
             });
 
             WA.room.area.onLeave('2_3Literaturrecherche').subscribe(() => {
-                if (literatureAreaEnterTime) {
+                if (literatureAreaEnterTime && WA.player.state.Literaturrecherche !== "solved") {
                     const secondsSpent = (Date.now() - literatureAreaEnterTime) / 1000;
                     if (secondsSpent > 10) {
                         WA.player.state.Literaturrecherche = "solved";
+                        WA.player.state.currentQuest = 'quest13';
+                        levelUp("modul_2", 10);
+                        console.log(`Spent ${secondsSpent} seconds in literature area. Level up, +10XP`);
                     }
                     literatureAreaEnterTime = undefined;
                 }
-            });
+            });});
 export {};
 

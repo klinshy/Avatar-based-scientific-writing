@@ -1,30 +1,27 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { getChatAreas } from "./chatArea";
-import { quests, levelUp } from "./quests";
+import { quests } from "./quests";
 
 WA.onInit().then(async () => {
     console.log('loading main.ts');
     WA.controls.disableInviteButton();
     WA.controls.disableMapEditor();
     // Initialize the first quest if not already set
-    if (!WA.player.state.currentQuest) {
-        WA.player.state.currentQuest = 'quest6';
-    }
-    levelUp("notlog", 0);
-
+ 
     try {
         // Initialize the Scripting API Extra
         await bootstrapExtra();
         console.log('Scripting API Extra ready');
     } catch (e) {
         console.error(e);
-    }
+    }});
+WA.onInit().then(async () => {
     // Get chat areas and set up event listeners for entering and leaving them
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
         let triggerMessage: any;
-
+        
         // When player enters a chat area
         WA.room.area.onEnter(area.name).subscribe(() => {
             triggerMessage = WA.ui.displayActionMessage({
@@ -99,6 +96,7 @@ WA.onInit().then(async () => {
                 ) {
                     WA.chat.sendChatMessage("Success: Das ist korrekt, ich teleportiere dich zurück zu Prof. Mumblecore!", "Zirze");
                     await new Promise(resolve => setTimeout(resolve, 2000));
+                    WA.player.state.currentQuest = "quest27"
                     WA.nav.goToRoom("./notlog-solved.tmj");
                 } else {
                     WA.chat.sendChatMessage("Error: Das war nicht die korrekte Antwort. Erinnere dich daran was Wissenschaft ist und was nicht.", "Zirze");

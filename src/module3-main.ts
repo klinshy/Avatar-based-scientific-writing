@@ -93,36 +93,52 @@ WA.onInit().then(async () => {
     }
 });
 WA.onInit().then(async () => {
-WA.room.area.onEnter('triggerM3Quests').subscribe(() => {
-    WA.player.state.currentQuest = 'quest17' ;
-});})
+    WA.room.area.onEnter('triggerM3Quests').subscribe(() => {
+        if (WA.player.state.currentQuest === 'quest16') {
+            WA.player.state.currentQuest = 'quest17';
+        }
+    });
+});
 
+WA.onInit().then(async () => {
             
-            // Listen for terminal-related state changes
-            WA.player.state.onVariableChange('terminal-1').subscribe((newValue) => {
-                if (newValue === true) {
-                    WA.player.state.module3 = '1';
-                    WA.chat.sendChatMessage("Schön, dass du wieder da bist! Beginne am besten mit Element 1. Plane für den zweiten Raum ca. 40 Minuten ein. Du kannst jederzeit aufhören und wieder zurückkommen. Vergiss nicht weiterhin nach den Zahlencodes in den Materialien Ausschau zu halten und dir diese zu notieren. Neben den Zahlencodes musst du auch wieder Wortschnipsel finden, die durch Lord Modrevolts Angriff durcheinandergeraten sind.  Viel Erfolg!", "Zirze");
-                    WA.player.state.currentQuest = 'quest21';
-                    levelUp("modul_3", 10);
-                }
-            });
+    // Listen for terminal-related state changes
+    WA.player.state.onVariableChange('terminal1').subscribe(async (newValue) => {
+            if (newValue === "correct") {
+                    if (newValue === "correct") {
+                        WA.player.state.module3 = '1';
+                        WA.chat.sendChatMessage("Schön, dass du wieder da bist! Beginne am besten mit Element 1. Plane für den zweiten Raum ca. 40 Minuten ein. Du kannst jederzeit aufhören und wieder zurückkommen. Vergiss nicht weiterhin nach den Zahlencodes in den Materialien Ausschau zu halten und dir diese zu notieren. Neben den Zahlencodes musst du auch wieder Wortschnipsel finden, die durch Lord Modrevolts Angriff durcheinandergeraten sind.  Viel Erfolg!", "Zirze");
+                        WA.player.state.currentQuest = 'quest21';
+                        levelUp("modul_3", 10);
+                        const cowebsites = await WA.nav.getCoWebSites();
+                        for (const cowebsite of cowebsites) {
+                            cowebsite.close();
+                        }
+                    }
+            }
+    });
+            WA.player.state.onVariableChange('terminal2').subscribe(async (newValue) => {
+                            if (newValue === "correct") {
+                                WA.player.state.module3 = '2';
+                                WA.player.state.currentQuest = 'quest25';
+                                levelUp("modul_3", 10);
+                                const cowebsites = await WA.nav.getCoWebSites();
+                                for (const cowebsite of cowebsites) {
+                                    cowebsite.close();
+                                }
+                            }
+                        })
+            })
 
-            WA.player.state.onVariableChange('terminal-2').subscribe((newValue) => {
-                if (newValue === true) {
-                    WA.player.state.module3 = '2';
-                    WA.player.state.currentQuest = 'quest25';
-                    levelUp("modul_3", 10);
-                }
-            });
+
 WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
     if (newQuest === "quest26") {
         WA.chat.sendChatMessage("Wow, das ging schnell! Du hast beide Räume gemeistert. Ich hoffe du kannst dich noch an alle Wortschnipsel erinnern. Diese musst du nun in richtiger Reihenfolge im Sicherheitsterminal eingeben. Falls du Hilfe brauchst, frag doch deine Kolleg*innen, ob ihr diese Aufgabe zusammen lösen könnt. Ich darf nicht zu viel verraten, aber eine gezielte Recherche könnte durchaus hilfreich sein. Wenn du oder ihr es schafft, können wir Lord Modrevolt endlich aus unserem System entfernen und unsere Sicherheitseinstellungen des Kondensatoriums wieder herstellen. ", "Zirze");
     }
 });
-            // When module3 changes to "2", paint the room green and remove the red layer
-            WA.player.state.onVariableChange('module3').subscribe((newValue) => {
-                if (newValue === '2') {
+            WA.onInit().then(() => {
+                // On start, check if module3 is already "2" and, if so, paint the room green and remove the red layer
+                if (WA.player.state.module3 === '2') {
                     const greenTiles: any[] = [];
                     const redTiles: any[] = [];
                     for (let x = 0; x <= 19; x++) {
@@ -135,81 +151,137 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                     WA.room.setTiles(redTiles);
                     WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: zu/ denken/ Art", "Zirze");
                 }
-            });
-            // List of variable keys that trigger events to do something (tbd)
-            const eventVariableKeys = [
-                'Textarten',
-                'Allgemeine Regeln',
-                'Sprache',
-                'Zitieren',
-                'Literaturverzeichnis',
-                'Literaturverwaltung',
-                'finalQuizThree'
-            ];
 
-            // Object to track whether each key was solved
-            const solvedStatus: { [key: string]: boolean } = {};
-            eventVariableKeys.forEach(key => solvedStatus[key] = false);
-
-            // Index to enforce the solving order
-            let currentStep = 0;
-
-            // Subscribe to changes for each variable key
-            for (const key of eventVariableKeys) {
-                WA.player.state.onVariableChange(key).subscribe((newValue) => {
-                    // Only trigger if the event turns to "solved" and if it’s the expected key in the order
-                    if (newValue === "solved" && key === eventVariableKeys[currentStep] && !solvedStatus[key]) {
-                        solvedStatus[key] = true;
-                        levelUp("modul_3", 10);
-                        console.log(`Variable "${key}" solved. Level up, +10XP`);
-
-                        // Set the quest based on the order
-                        switch (currentStep) {
-                            case 0:
-                                WA.player.state.currentQuest = "quest18";
-                                break;
-                            case 1:
-                                WA.player.state.currentQuest = "quest19";
-                                break;
-                            case 2:
-                                WA.player.state.currentQuest = "quest20";
-                                break;
-                            case 3:
-                                WA.player.state.currentQuest = "quest22";
-                                break;
-                            case 4:
-                                WA.player.state.currentQuest = "quest23";
-                                break;
-                            case 5:
-                                WA.player.state.currentQuest = "quest24";
-                                break;
-                            case 6:
-                                WA.player.state.currentQuest = "quest26";
+                // When module3 changes to "2", paint the room green and remove the red layer
+                WA.player.state.onVariableChange('module3').subscribe((newValue) => {
+                    if (newValue === '2') {
+                        const greenTiles: any[] = [];
+                        const redTiles: any[] = [];
+                        for (let x = 0; x <= 19; x++) {
+                            for (let y = 47; y <= 89; y++) {
+                                greenTiles.push({ x, y, tile: "green", layer: "green" });
+                                redTiles.push({ x, y, tile: null, layer: "red" });
+                            }
                         }
-
-                        currentStep++;
+                        WA.room.setTiles(greenTiles);
+                        WA.room.setTiles(redTiles);
+                        WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: zu/ denken/ Art", "Zirze");
                     }
                 });
-            }
-
-            function setupAreaTimer(areaName: string, stateKey: string) {
+            });
+              // Handling area "3_2_1Zitieren"
+              {
                 let areaEnterTime: number | undefined;
-                WA.room.area.onEnter(areaName).subscribe(() => {
+                WA.room.area.onEnter("3_2_1Zitieren").subscribe(() => {
                     areaEnterTime = Date.now();
                 });
-                WA.room.area.onLeave(areaName).subscribe(() => {
+                WA.room.area.onLeave("3_2_1Zitieren").subscribe(() => {
                     if (areaEnterTime) {
                         const secondsSpent = (Date.now() - areaEnterTime) / 1000;
                         if (secondsSpent > 10) {
-                            WA.player.state[stateKey] = "solved";
+                            WA.player.state["Zitieren"] = "solved";
+                            WA.player.state.currentQuest = undefined;
+                            levelUp("modul_3", 10);
                         }
                         areaEnterTime = undefined;
                     }
                 });
             }
 
-            setupAreaTimer("3_2_1Zitieren", "Zitieren");
-            setupAreaTimer("3_2_2Literaturverzeichnis", "Literaturverzeichnis");
-            setupAreaTimer("3_3Literaturverwaltung", "Literaturverwaltung");
+            // Handling area "3_2_2Literaturverzeichnis"
+            {
+                let areaEnterTime: number | undefined;
+                WA.room.area.onEnter("3_2_2Literaturverzeichnis").subscribe(() => {
+                    areaEnterTime = Date.now();
+                });
+                WA.room.area.onLeave("3_2_2Literaturverzeichnis").subscribe(() => {
+                    if (areaEnterTime) {
+                        const secondsSpent = (Date.now() - areaEnterTime) / 1000;
+                        if (secondsSpent > 10) {
+                            WA.player.state["Literaturverzeichnis"] = "solved";
+                            // Additional actions for Literaturverzeichnis can be added here if needed.
+                        }
+                        areaEnterTime = undefined;
+                    }
+                });
+            }
+
+            // Handling area "3_3Literaturverwaltung"
+            {
+                let areaEnterTime: number | undefined;
+                WA.room.area.onEnter("3_3Literaturverwaltung").subscribe(() => {
+                    areaEnterTime = Date.now();
+                });
+                WA.room.area.onLeave("3_3Literaturverwaltung").subscribe(() => {
+                    if (areaEnterTime) {
+                        const secondsSpent = (Date.now() - areaEnterTime) / 1000;
+                        if (secondsSpent > 10) {
+                            WA.player.state["Literaturverwaltung"] = "solved";
+                            // Additional actions for Literaturverwaltung can be added here if needed.
+                        }
+                        areaEnterTime = undefined;
+                    }
+                });
+            }
+            
+            
+            
+            // Hardcoded subscriptions for each event variable key in the required order
+    
+    WA.player.state.onVariableChange('Textarten').subscribe((newValue) => {
+        if (newValue === "solved") {
+            levelUp("modul_3", 10);
+            console.log(`Variable "Textarten" solved. Level up, +10XP`);
+            WA.player.state.currentQuest = "quest18";
+        }
+    });
+
+    WA.player.state.onVariableChange('AllgemeineRegeln').subscribe((newValue) => {
+        if (newValue === "solved") {
+            levelUp("modul_3", 10);
+            console.log(`Variable "AllgemeineRegeln" solved. Level up, +10XP`);
+            WA.player.state.currentQuest = "quest19";
+        }
+    });
+
+    WA.player.state.onVariableChange('Sprache').subscribe((newValue) => {
+        if (newValue === "solved") {
+            levelUp("modul_3", 10);
+            console.log(`Variable "Sprache" solved. Level up, +10XP`);
+            WA.player.state.currentQuest = "quest20";
+        }
+    });
+
+    WA.player.state.onVariableChange('Zitieren').subscribe((newValue) => {
+        if (newValue === "solved") {
+            levelUp("modul_3", 10);
+            console.log(`Variable "Zitieren" solved. Level up, +10XP`);
+            WA.player.state.currentQuest = "quest22";
+        }
+    });
+
+    WA.player.state.onVariableChange('Literaturverzeichnis').subscribe((newValue) => {
+        if (newValue === "solved") {
+            levelUp("modul_3", 10);
+            console.log(`Variable "Literaturverzeichnis" solved. Level up, +10XP`);
+            WA.player.state.currentQuest = "quest23";
+        }
+    });
+
+    WA.player.state.onVariableChange('Literaturverwaltung').subscribe((newValue) => {
+        if (newValue === "solved") {
+            levelUp("modul_3", 10);
+            console.log(`Variable "Literaturverwaltung" solved. Level up, +10XP`);
+            WA.player.state.currentQuest = "quest24";
+        }
+    });
+
+    WA.player.state.onVariableChange('finalQuizThree').subscribe((newValue) => {
+        if (newValue === "solved") {
+            levelUp("modul_3", 10);
+            console.log(`Variable "finalQuizThree" solved. Level up, +10XP`);
+            WA.player.state.currentQuest = "quest26";
+        }
+    });
 export {};
 
