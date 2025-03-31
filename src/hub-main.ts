@@ -92,7 +92,7 @@ WA.onInit().then(async () => {
         // Only display the terminal layers
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
             WA.chat.sendChatMessage("Bitte gib das Lösungswort ein", "Zirze");
-        });
+    
 
         WA.chat.onChatMessage(async (message, event) => {
             // Check if the message is coming from the local user
@@ -112,7 +112,7 @@ WA.onInit().then(async () => {
                     WA.chat.sendChatMessage("Error: Das war nicht die korrekte Antwort. Erinnere dich daran was Wissenschaft ist und was nicht.", "Zirze");
                 }
             }
-        }, { scope: 'local' });
+        }, { scope: 'local' })});
     } else {
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
             WA.chat.sendChatMessage("Lösen Sie Modul 2 und Modul 3, kommen Sie hierher zurück und geben Sie den richtigen Code ein, um die Matrix zu reparieren", "Zirze");
