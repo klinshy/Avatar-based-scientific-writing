@@ -119,6 +119,7 @@ WA.onInit().then(async () => {
     
     // Listen for terminal-related state changes
     WA.player.state.onVariableChange('m2terminal1').subscribe(async (newValue) => {
+        WA.player.state.module2 = '1';
         if (newValue === "correct") {
             WA.player.state.module2 = '1';
             WA.chat.sendChatMessage("Code korrekt, fahre fort mit dem nächsten Raum!", "Zirze");
@@ -131,8 +132,9 @@ WA.onInit().then(async () => {
     });
 
     WA.player.state.onVariableChange('m2terminal2').subscribe(async (newValue) => {
+        WA.player.state.module2 = '2';
         if (newValue === "correct") {
-            WA.player.state.module2 = '2';
+       
             WA.player.state.currentQuest = 'quest15';
     
             const cowebsites = await WA.nav.getCoWebSites();
