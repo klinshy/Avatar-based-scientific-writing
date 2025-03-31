@@ -88,7 +88,7 @@ WA.onInit().then(async () => {
     }
 });
 WA.onInit().then(async () => {
-    if (WA.player.state.module2 === 'solved' && WA.player.state.module3 === 'solved') {
+    if (WA.player.state.module2 === '2' && WA.player.state.module3 === '2') {
         // Only display the terminal layers
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
             WA.chat.sendChatMessage("Bitte gib das Lösungswort ein", "Zirze");
