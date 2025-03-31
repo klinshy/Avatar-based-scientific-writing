@@ -115,7 +115,7 @@
             if (inputSequence.includes(correctCode)) {
                 console.log(correctCode + " wurde eingegeben!");
                 if (moduleParam && room) {
-                    WA.player.state["terminal" + room] = "correct";
+                    WA.player.state["m"+moduleParm+"terminal" + room] = "correct";
                 }
                 inputSequence = "";
             }

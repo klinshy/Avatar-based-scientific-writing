@@ -103,7 +103,7 @@ WA.onInit().then(async () => {
 
          
     // Listen for terminal-related state changes
-    WA.player.state.onVariableChange('terminal1').subscribe(async (newValue) => {
+    WA.player.state.onVariableChange('m3terminal1').subscribe(async (newValue) => {
             if (newValue === "correct") {
                     if (newValue === "correct") {
                         WA.player.state.module3 = '1';
@@ -117,7 +117,7 @@ WA.onInit().then(async () => {
                     }
             }
     });
-            WA.player.state.onVariableChange('terminal2').subscribe(async (newValue) => {
+            WA.player.state.onVariableChange('m3terminal2').subscribe(async (newValue) => {
                             if (newValue === "correct") {
                                 WA.player.state.module3 = '2';
                                 WA.player.state.currentQuest = 'quest25';
