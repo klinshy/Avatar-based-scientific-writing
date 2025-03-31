@@ -100,8 +100,8 @@ WA.onInit().then(async () => {
     });
 });
 
-WA.onInit().then(async () => {
-            
+
+         
     // Listen for terminal-related state changes
     WA.player.state.onVariableChange('terminal1').subscribe(async (newValue) => {
             if (newValue === "correct") {
@@ -128,7 +128,7 @@ WA.onInit().then(async () => {
                                 }
                             }
                         })
-            })
+    
 
 
 WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
