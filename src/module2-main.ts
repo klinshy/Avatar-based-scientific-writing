@@ -4,7 +4,6 @@ import { getChatAreas } from "./chatArea";
 import { levelUp, quests } from "./quests";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
-
 WA.onInit().then(async () => {
     try {
         // Initialize the Scripting API Extra
@@ -98,145 +97,99 @@ WA.room.area.onEnter('triggerM2Quests').subscribe(() => {
 });
 
             
-            // Hardcoded module configurations
-            interface ModuleTileConfig {
-                moduleName: string;
-                triggerValue: string | number;
-                startX: number;
-                endX: number;
-                startY: number;
-                endY: number;
-            }
+            // Listen for terminal-related state changes
+            WA.player.state.onVariableChange('terminal-1').subscribe((newValue) => {
+                if (newValue === true) {
+                    WA.player.state.module2 = '1';
+                    WA.chat.sendChatMessage("Code korrekt, fahre fort mit dem nächsten Raum!", "Zirze");
+                    WA.player.state.currentQuest = 'quest12';
+                    levelUp("modul_2", 10);
+                }
+            });
 
-            function updateTiles(config: ModuleTileConfig) {
-                const { moduleName, triggerValue, startX, endX, startY, endY } = config;
-                if (WA.player.state[moduleName] !== triggerValue) return;
-                const green: any[] = [];
-                const red: any[] = [];
-                for (let x = startX; x <= endX; x++) {
-                    for (let y = startY; y <= endY; y++) {
-                        green.push({ x, y, tile: "green", layer: "green" });
-                        red.push({ x, y, tile: null, layer: "red" });
+            WA.player.state.onVariableChange('terminal-2').subscribe((newValue) => {
+                if (newValue === true) {
+                    WA.player.state.module2 = '2';
+                    WA.player.state.currentQuest = 'quest15';
+                    levelUp("modul_2", 10);
+                }
+            });
+
+            // When module2 changes to "2", paint the room green and remove the red layer
+            WA.player.state.onVariableChange('module2').subscribe((newValue) => {
+                if (newValue === '2') {
+                    const greenTiles: any[] = [];
+                    const redTiles: any[] = [];
+                    for (let x = 0; x <= 19; x++) {
+                        for (let y = 47; y <= 89; y++) {
+                            greenTiles.push({ x, y, tile: "green", layer: "green" });
+                            redTiles.push({ x, y, tile: null, layer: "red" });
+                        }
                     }
-                }
-                WA.room.setTiles(green);
-                WA.room.setTiles(red);
-            }
-
-            const hardcodedModules: { [key: string]: {triggerValue: string; startX: number; endX: number; startY: number; endY: number } } = {
-                module_2_1: {
-                    triggerValue: "2",
-                    startX: 4,
-                    endX: 15,
-                    startY: 71,
-                    endY: 89,
-                },
-                module_2_2: {
-                    triggerValue: "2",
-                    startX: 4,
-                    endX: 15,
-                    startY: 47,
-                    endY: 70,
-                },
-            };
-
-
-            let moduleSumTriggered = false;
-            function checkModuleSumTrigger() {
-                if (moduleSumTriggered) return;
-                const module2_1 = Number(WA.player.state.module_2_1);
-                const module2_2 = Number(WA.player.state.module_2_2);
-                const requiredSum =
-                    Number(hardcodedModules.module_2_1.triggerValue) +
-                    Number(hardcodedModules.module_2_2.triggerValue);
-                if (module2_1 + module2_2 === requiredSum) {
-                    moduleSumTriggered = true;
-                    WA.player.state.currentQuest = 'quest16';
-                    WA.player.state.module2 = 'solved';
-                }
-            }
-
-            WA.player.state.onVariableChange("module_2_1").subscribe(() => {
-                checkModuleSumTrigger();
-            });
-            WA.player.state.onVariableChange("module_2_2").subscribe(() => {
-                checkModuleSumTrigger();
-            });
-            WA.player.state.onVariableChange("module_2_1").subscribe((newValue) => {
-                if(newValue === "2"){
-                    WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Codeschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
+                    WA.room.setTiles(greenTiles);
+                    WA.room.setTiles(redTiles);
+                    WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
                 }
             });
-
-            WA.player.state.onVariableChange("module_2_2").subscribe((newValue) => {
-                if(newValue === "2"){
-                    WA.chat.sendChatMessage("Prima, du hast weitere verlorene Codeschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: eine/ als/ Wissenssammlung", "Zirze");
-                }
-            });
-
-            WA.onInit().then(() => {
-                // Initial updates using hardcodedModules
-                for (const moduleName in hardcodedModules) {
-                    const config = hardcodedModules[moduleName];
-                    updateTiles({
-                        moduleName,
-                        triggerValue: config.triggerValue,
-                        startX: config.startX,
-                        endX: config.endX,
-                        startY: config.startY,
-                        endY: config.endY,
-                    });
-                }
-            });
-
-            // Subscribe to changes for each module tile configuration from hardcodedModules
-            for (const moduleName in hardcodedModules) {
-                const config = hardcodedModules[moduleName];
-                WA.player.state.onVariableChange(moduleName).subscribe((newValue) => {
-                    if (newValue === config.triggerValue) {
-                        updateTiles({
-                            moduleName,
-                            triggerValue: config.triggerValue,
-                            startX: config.startX,
-                            endX: config.endX,
-                            startY: config.startY,
-                            endY: config.endY,
-                        });
-                    }
-                });
-            }
             // List of variable keys that trigger events to do something (tbd)
             const eventVariableKeys = [
-                'PlanungSelbstmanagement', 'ThemenfindungGliederung', 'Literaturrecherche', 'Lesen'
-                // The key used to track the current quest state
-                // Add additional keys here when needed
+                'PlanungSelbstmanagement',
+                'ThemenfindungGliederung',
+                'Literaturrecherche',
+                'Lesen'
             ];
 
-            // Object to track whether each key has been set to "solved"
+            // Object to track whether each key was solved
             const solvedStatus: { [key: string]: boolean } = {};
+            eventVariableKeys.forEach(key => solvedStatus[key] = false);
+
+            // Index to enforce the solving order
+            let currentStep = 0;
 
             // Subscribe to changes for each variable key
             for (const key of eventVariableKeys) {
-                solvedStatus[key] = false;
                 WA.player.state.onVariableChange(key).subscribe((newValue) => {
-                    levelUp("modul_2", 10);
-                    console.log(`Variable "${key}" changed to:`, newValue, "Level up, +10XP");
+                    // Only trigger if the event turns to "solved" and if it’s the expected key in the order
+                    if (newValue === "solved" && key === eventVariableKeys[currentStep] && !solvedStatus[key]) {
+                        solvedStatus[key] = true;
+                        levelUp("modul_2", 10);
+                        console.log(`Variable "${key}" solved. Level up, +10XP`);
 
-                    solvedStatus[key] = newValue === "solved";
+                        // Set the quest based on the order
+                        switch (currentStep) {
+                            case 0:
+                                WA.player.state.currentQuest = "quest10";
+                                break;
+                            case 1:
+                                WA.player.state.currentQuest = "quest11";
+                                break;
+                            case 2:
+                                WA.player.state.currentQuest = "quest13";
+                                break;
+                            case 3:
+                                WA.player.state.currentQuest = "quest14";
+                                break;
+                        }
 
-                    if (key === "PlanungSelbstmanagement" && newValue === "solved") {
-                        WA.player.state.currentQuest = "quest10";
-                    }
-
-                    // Trigger quest11 only after both PlanungSelbstmanagement and ThemenfindungGliederung are solved
-                    if (solvedStatus["PlanungSelbstmanagement"] && solvedStatus["ThemenfindungGliederung"]) {
-                        WA.player.state.currentQuest = "quest11";
-                    }
-                    
-                    if ((key === "Lesen" || key === "Literaturrecherche") && newValue === "solved") {
-                        WA.player.state.currentQuest = "quest14";
+                        currentStep++;
                     }
                 });
             }
+
+            let literatureAreaEnterTime: number | undefined;
+
+            WA.room.area.onEnter('2_3Literaturrecherche').subscribe(() => {
+                literatureAreaEnterTime = Date.now();
+            });
+
+            WA.room.area.onLeave('2_3Literaturrecherche').subscribe(() => {
+                if (literatureAreaEnterTime) {
+                    const secondsSpent = (Date.now() - literatureAreaEnterTime) / 1000;
+                    if (secondsSpent > 10) {
+                        WA.player.state.Literaturrecherche = "solved";
+                    }
+                    literatureAreaEnterTime = undefined;
+                }
+            });
 export {};
 
