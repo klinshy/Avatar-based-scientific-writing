@@ -44,12 +44,12 @@ const quests = [
     },
     {
         questId: 'quest9',
-        questDescription: 'Bearbeite das Lernmaterial: H5P Planung & Selbstmanagement abschließen.',
+        questDescription: 'earbeite das Lernmaterial Planung und Selbstmanagement',
         requireQuest: 'quest8',
     },
     {
         questId: 'quest10',
-        questDescription: 'H5P Themenfindung & Gliederung abschließen.',
+        questDescription: 'Bearbeite das Lernmaterial Themenfindung & Gliederung ',
         requireQuest: 'quest9',
     },
     {
@@ -59,12 +59,12 @@ const quests = [
     },
     {
         questId: 'quest12',
-        questDescription: 'H5P Literaturrecherche (mit Video Eric/Fachportal) abschließen.',
+        questDescription: 'Bearbeite das Lernmaterial zur Literaturrecherche',
         requireQuest: 'quest11',
     },
     {
         questId: 'quest13',
-        questDescription: 'H5P Wissenschaftliches Lesen abschließen.',
+        questDescription: 'Bearbeite das Lernmaterial zum wissenschaftlichen Lesen',
         requireQuest: 'quest12',
     },
     {
@@ -86,17 +86,17 @@ const quests = [
     // Modul 3 - Raum 3.1
     {
         questId: 'quest17',
-        questDescription: 'Allgemeine Regeln & Textarten I – Bearbeite das Lernmaterial!',
+        questDescription: 'Bearbeite das Lernmaterial zu den Textarten',
         requireQuest: 'quest16',
     },
     {
         questId: 'quest18',
-        questDescription: 'Allgemeine Regeln & Textarten II – Bearbeite das Lernmaterial!',
+        questDescription: 'Bearbeite das Lernmaterial zu den allgemeinen Regeln',
         requireQuest: 'quest17',
     },
     {
         questId: 'quest19',
-        questDescription: 'Sprache & Gendern – Bearbeite das Lernmaterial!',
+        questDescription: 'Bearbeite das Lernmaterial zu Sprache & Gendern',
         requireQuest: 'quest18',
     },
     {
@@ -108,17 +108,17 @@ const quests = [
     // Modul 3 - Raum 3.2
     {
         questId: 'quest21',
-        questDescription: 'Zitation und Literaturverzeichnis mit Video I.',
+        questDescription: 'Bearbeite das Lernmaterial zu Zitation im Text',
         requireQuest: 'quest20',
     },
     {
         questId: 'quest22',
-        questDescription: 'Zitation und Literaturverzeichnis mit Video II.',
+        questDescription: 'Bearbeite das Lernmaterial zum Literaturverzeichnis',
         requireQuest: 'quest21',
     },
     {
         questId: 'quest23',
-        questDescription: 'Literaturverwaltung (Video Zotero).',
+        questDescription: 'Bearbeite das Lernmaterial zur Literaturverwaltung mit Zotero',
         requireQuest: 'quest22',
     },
     {
@@ -135,7 +135,7 @@ const quests = [
     },
     {
         questId: 'quest26',
-        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und gebe dort die gesammelten Worte in der korrekten Reihenfolge ein!',
+        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und gebe dort die gesammelten Wortschnipsel in der korrekten Reihenfolge ein!',
         requireQuest: 'quest25',
     },
     {

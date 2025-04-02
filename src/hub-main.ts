@@ -116,7 +116,7 @@ WA.onInit().then(async () => {
         }, { scope: 'local' })});
     } else {
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage("Lösen Sie Modul 2 und Modul 3, kommen Sie hierher zurück und geben Sie den richtigen Code ein, um die Matrix zu reparieren", "Zirze");
+            WA.chat.sendChatMessage("## 🖥️ Reparatur des Computerterminals  \n\n Komme hierhin zurück, wenn du **Modul 2** und **3** gelöst hast. ✅   \n\n Um dieses **Computerterminal** zu reparieren, benötigst du die richtigen **Wortschnipsel**, die beim **Einbruch durch Lord Modrevolt** 💀 durcheinandergeraten sind.  \n\n Finde die Fragmente und setze sie korrekt zusammen, um das System wiederherzustellen! 🚀 ", "Zirze");
         });
     }
     WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
@@ -141,14 +141,14 @@ WA.onInit().then(() => {
             // Combine the green and red tile changes in one call.
             WA.room.setTiles([...green, ...red]);
             WA.chat.sendChatMessage(
-                "Wow, das ging schnell! Du hast beide Räume gemeistert. Ich hoffe du kannst dich noch an alle Codeschnipsel erinnern. Diese musst du nun in richtiger Reihenfolge im Sicherheitsterminal eingeben. Falls du Hilfe brauchst, frag doch deine Kolleg*innen, ob ihr diese Aufgabe zusammen lösen könnt. Ich darf nicht zu viel verraten, aber eine gezielte Recherche könnte durchaus hilfreich sein. Wenn du oder ihr es schafft, können wir Lord Modrevolt endlich aus unserem System entfernen und unsere Sicherheitseinstellungen des Kondensatoriums wieder herstellen.",
+                "🌟 **Wow, das ging schnell!** 🌟   \n\nDu hast **beide Module gemeistert**. 💪   \n\nIch hoffe, du kannst dich noch an alle **Wortschnipsel**✂️ erinnern. Diese musst du nun in **richtiger Reihenfolge** im **Sicherheitsterminal** eingeben. 🔐   \n\nFalls du Hilfe brauchst, frag doch deine **Kolleg*innen**, ob ihr diese Aufgabe zusammen lösen könnt. 🤝👩‍💻👨‍💻   \n\nIch darf nicht zu viel verraten, aber eine **gezielte Recherche** könnte durchaus hilfreich sein. 🔍   \n\nWenn du oder ihr es schafft, können wir **Lord Modrevolt**💀 endlich aus unserem System entfernen und unsere **Sicherheitseinstellungen** des **Kondensatoriums** wieder herstellen. 🛡️🚀",
                 "Zirze"
             );
         } 
         // Only module2 solved: send the message that encourages the user to continue.
         else if (solvedModule2) {
             WA.chat.sendChatMessage(
-                "Hervorragend, dich kann man gebrauchen! Du hast Modul 2 gemeistert und schon einiges über die Techniken des wissenschaftlichen Arbeitens gelernt. Vergiss deine Codeschnipsel nicht, diese sind sehr wichtig. Du bist nun bereit mit Raum 3 weiterzumachen, um mehr über das wissenschaftliche Schreiben zu erfahren. Vergiss nicht nach weiteren Codeschnipseln Ausschau zu halten. Viel Erfolg!",
+                "🎉 **Hervorragend, dich kann man gebrauchen!** 🎉   \n\nDu hast **Modul 2** gemeistert und schon einiges über die Techniken des wissenschaftlichen Arbeitens gelernt. 🧠📚   \n\nVergiss deine **Wortschnipsel** nicht, diese sind sehr wichtig! ✂️💡   \n\nDu bist nun bereit, mit **Modul 3** weiterzumachen, um mehr über das **wissenschaftliche Schreiben** zu erfahren. ✍️📖",
                 "Zirze"
             );
         }

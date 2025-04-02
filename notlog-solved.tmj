@@ -3142,7 +3142,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"Willkommen zur\u00fcck! Du hast Gro\u00dfes getan f\u00fcr unsere Universit\u00e4t. Du hast den Virus neutralisiert und Lord Modrevolt ein f\u00fcr alle Mal aus unserem System verbannt. Unsere Universit\u00e4t Notlog ist endlich wieder funktionst\u00fcchtig und wir k\u00f6nnen weiter digitale Lehr- und Lernmaterialien im Kondensatorium produzieren. Wir sind dir zutiefst zu Dank verpflichtet."
+                         "value":"\ud83c\udf89 **Willkommen zur\u00fcck!** \ud83c\udf89 \n\n \n\nDu hast **Gro\u00dfes getan** f\u00fcr unsere Universit\u00e4t. Du hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n\n \n\nUnsere Universit\u00e4t **Notlog** ist endlich wieder funktionst\u00fcchtig und wir k\u00f6nnen weiter **digitale Lehr- und Lernmaterialien** im **Kondensatorium** produzieren. \ud83d\udcbb\ud83d\udcda \n\n \n\nWir sind dir zutiefst zu Dank verpflichtet. \ud83d\ude4f "
                         }, 
                         {
                          "name":"isNpc",

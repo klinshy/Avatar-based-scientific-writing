@@ -1621,7 +1621,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"Sch\u00f6n, dass du wieder da bist! Beginne mit Element 1. Plane f\u00fcr den ersten Raum ca. 30 Minuten ein. Du kannst jederzeit aufh\u00f6ren und wieder zur\u00fcckkommen. Vergiss nicht nach Codeschnipseln Ausschau zu halten und bleibe wachsam, eventuell sind diese durcheinandergeraten. Viel Erfolg!"
+                         "value":"## \ud83d\ude80 Starte mit Element 1!   \n\n \n\n**Sch\u00f6n, dass du wieder da bist!** \ud83c\udf89 Mach dich bereit f\u00fcr die n\u00e4chste Herausforderung!   \n\n \n\n\ud83d\udd04 **Elemente bauen aufeinander auf** \u2013 folge der Reihenfolge.   \n\n\ud83d\udd52 **Plane ca. 40 Minuten f\u00fcr den zweiten Raum ein.**   \n\n\u23f8\ufe0f **Du kannst jederzeit pausieren und zur\u00fcckkommen.**   \n\n \n\n\ud83d\udd22 **Vergiss nicht die Zahlencodes in den Materialien zu suchen und zu notieren!**   \n\n\u2702\ufe0f **Finde au\u00dferdem wieder Wortschnipsel**, die durch **Lord Modrevolts Angriff** \ud83d\udc80\u26a1 durcheinandergeraten sind.   \n\n \n\n\ud83c\udfaf **Viel Erfolg!** "
                         }, 
                         {
                          "name":"isNpc",
