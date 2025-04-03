@@ -140,7 +140,7 @@ const quests = [
     },
     {
         questId: 'quest27',
-        questDescription: 'Abschluss des Kondensatoriums – du hast alle Herausforderungen gemeistert!',
+        questDescription: 'Rückkehr in die Notlog',
         requireQuest: 'quest26',
     }
 ];
