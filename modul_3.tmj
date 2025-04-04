@@ -96,7 +96,7 @@
          "height":90,
          "id":24,
          "name":"misc",
-         "opacity":0.83,
+         "opacity":0,
          "type":"tilelayer",
          "visible":true,
          "width":20,

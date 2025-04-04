@@ -72,56 +72,7 @@ WA.onInit().then(async () => {
         }
     });
 
-    // Event listener for entering the downstairs area to the lab
-    WA.room.area.onEnter('downstairs_toLab').subscribe(async () => {
-        WA.controls.disablePlayerControls();
-        WA.controls.disableRightClick();
-        WA.room.hideLayer('fg-objects/stair-2');
-        if (isAutoMoving) return;
-        isAutoMoving = true;
-        let result = await WA.player.moveTo(1199, 996);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1199, 996);
-        }
-        result = await WA.player.moveTo(1200, 900);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1200, 900);
-        }
-        WA.room.showLayer('fg-objects/stair-2');
-        result = await WA.player.moveTo(1355, 1035);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1355, 1035);
-            WA.controls.restorePlayerControls();
-            WA.controls.restoreRightClick();
-        }
-        isAutoMoving = false;
-    });
-
-    // Event listener for entering the upstairs area from the lab
-    WA.room.area.onEnter('upstairs_fromLab').subscribe(async () => {
-        WA.room.showLayer('fg-objects/stair-2');
-        WA.controls.disablePlayerControls();
-        WA.controls.disableRightClick();
-        if (isAutoMoving) return;
-        isAutoMoving = true;
-        let result = await WA.player.moveTo(1200, 900);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1200, 900);
-        }
-        result = await WA.player.moveTo(1199, 996);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1199, 996);
-        }
-        WA.room.hideLayer('fg-objects/stair-2');
-        result = await WA.player.moveTo(1355, 871);
-        while (result.cancelled) {
-            result = await WA.player.moveTo(1355, 871);
-            WA.controls.restorePlayerControls();
-            WA.controls.restoreRightClick();
-        }
-        isAutoMoving = false;
-    });
-
+   
     // Check if the player has solved the notlog quest and is not an admin
     const solvedNotlog = WA.player.state.solvedNotlog;
     const isAdmin = WA.player.tags.includes('admin');

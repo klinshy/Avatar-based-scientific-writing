@@ -2,32 +2,15 @@
 <!doctype html>
     <html class="h5p-iframe">
     <head>
-    
-        <script src="../scripts/workadventure-iframe-fixed.js"></script>
+        <script src="../scripts/completionEventScript.js"></script>
         <script>
-            const moduleName = "module_3_3"; //Enter the module name here and chamber here
-            const completionMessage = "Literaturverwaltung gelöst"; //Enter the completion message here
+            const moduleName = "module_3_2"; //Enter the module name here and chamber here
+            const completionMessage = "## 🧑‍💻 Zotero zur Literaturverwaltung nutzen   \n\n**Toll, du hast auch diesen Bereich gemeistert!** 🎉 Jetzt kannst du Zotero effektiv für deine wissenschaftlichen Arbeiten einsetzen.   \n\n💻 **Grundlagen von Zotero verstehen**  \n\n📚 **Quellenmanagement**  \n\n📝 **Zitationsstile anwenden**  \n\n📑 **Literaturverzeichnisse erstellen**  \n\n🌐 **Web-Integration** – Zotero für das Sammeln von **Online-Quellen** nutzen  \n\n🔗 **Zotero mit Textverarbeitungssoftware integrieren**  \n\n🔢 Als Belohnung hier dein Zahlencode: **63** merke ihn dir gut! Du benötigst ihn wieder am Ende des Raumes."; //Enter the completion message here
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 3; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "Literaturverwaltung"; //Enter Workbookname here
-            WA.onInit().then(() => {
-                WA.chat.sendChatMessage(${workbookName}+' geladen', messageNpc);
-                const checkState = () => {
-                    try {
-                        const stateValue = WA.player.state[workbookName];
-                        if (stateValue !== undefined) {
-                            if (stateValue === "solved") {
-                                WA.chat.sendChatMessage(`${workbookName} ist bereits gelöst.`, messageNpc);
-                            }
-                        } else {
-                            setTimeout(checkState, 200); // Retry after 200ms
-                        }
-                    } catch (error) {
-                    }
-                };
-                checkState();
-            });
         </script>
+
 
 
         <meta charset="utf-8">

@@ -11,22 +11,7 @@
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 3; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "Sprache"; //Enter Workbookname here, e.g. "1_1_name..." for Module 1, Workbook 1 
-            WA.onInit().then(() => {
-            const checkState = () => {
-                try {
-                    const stateValue = WA.player.state[workbookName];
-                    if (stateValue !== undefined) {
-                        if (stateValue === "solved") {
-                            WA.chat.sendChatMessage(`${workbookName} ist bereits gelöst.`, messageNpc);
-                        }
-                    } else {
-                        setTimeout(checkState, 200); // Retry after 200ms
-                    }
-                } catch (error) {
-                }
-            };
-            checkState();
-        });
+            
         </script>
 
 

@@ -101,11 +101,11 @@ WA.onInit().then(async () => {
 });
 WA.onInit().then(async () => {
 
-    // On start: if module2 is already "2", paint the room green and remove the red layer
+    // On start: if module2 is already "2", update the room colors in the m2terminal2 region.
     if (WA.player.state.module2 === '2') {
         const greenTiles: any[] = [];
         const redTiles: any[] = [];
-        for (let x = 0; x <= 19; x++) {
+        for (let x = 4; x <= 15; x++) {
             for (let y = 47; y <= 89; y++) {
                 greenTiles.push({ x, y, tile: "green", layer: "green" });
                 redTiles.push({ x, y, tile: null, layer: "red" });
@@ -114,16 +114,26 @@ WA.onInit().then(async () => {
         WA.room.setTiles(greenTiles);
         WA.room.setTiles(redTiles);
         WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
-        WA.player.state.currentQuest = 'quest16';
     }
     
     // Listen for terminal-related state changes
     WA.player.state.onVariableChange('m2terminal1').subscribe(async (newValue) => {
+        // Set module2 to "1" for terminal1.
         WA.player.state.module2 = '1';
         if (newValue === "correct") {
-            WA.player.state.module2 = '1';
             WA.chat.sendChatMessage("Code korrekt, fahre fort mit dem nächsten Raum!", "Zirze");
             WA.player.state.currentQuest = 'quest12';
+            // Change tiles in the m2terminal1 region: from (4,71) to (15,89)
+            const greenTiles: any[] = [];
+            const redTiles: any[] = [];
+            for (let x = 4; x <= 15; x++) {
+                for (let y = 71; y <= 89; y++) {
+                    greenTiles.push({ x, y, tile: "green", layer: "green" });
+                    redTiles.push({ x, y, tile: null, layer: "red" });
+                }
+            }
+            WA.room.setTiles(greenTiles);
+            WA.room.setTiles(redTiles);
             const cowebsites = await WA.nav.getCoWebSites();
             for (const cowebsite of cowebsites) {
                 cowebsite.close();
@@ -132,11 +142,21 @@ WA.onInit().then(async () => {
     });
 
     WA.player.state.onVariableChange('m2terminal2').subscribe(async (newValue) => {
+        // Set module2 to "2" for terminal2.
         WA.player.state.module2 = '2';
         if (newValue === "correct") {
-       
             WA.player.state.currentQuest = 'quest15';
-    
+            // Change tiles in the m2terminal2 region: from (4,47) to (15,70)
+            const greenTiles: any[] = [];
+            const redTiles: any[] = [];
+            for (let x = 4; x <= 15; x++) {
+                for (let y = 47; y <= 89; y++) {
+                    greenTiles.push({ x, y, tile: "green", layer: "green" });
+                    redTiles.push({ x, y, tile: null, layer: "red" });
+                }
+            }
+            WA.room.setTiles(greenTiles);
+            WA.room.setTiles(redTiles);
             const cowebsites = await WA.nav.getCoWebSites();
             for (const cowebsite of cowebsites) {
                 cowebsite.close();
@@ -144,12 +164,12 @@ WA.onInit().then(async () => {
         }
     });
 
-    // When module2 changes to "2", paint the room green and remove the red layer
+    // When module2 changes to "2", update the room colors in the m2terminal2 region.
     WA.player.state.onVariableChange('module2').subscribe((newValue) => {
         if (newValue === '2') {
             const greenTiles: any[] = [];
             const redTiles: any[] = [];
-            for (let x = 0; x <= 19; x++) {
+            for (let x = 4; x <= 15; x++) {
                 for (let y = 47; y <= 89; y++) {
                     greenTiles.push({ x, y, tile: "green", layer: "green" });
                     redTiles.push({ x, y, tile: null, layer: "red" });
@@ -164,7 +184,7 @@ WA.onInit().then(async () => {
 });
             // Hardcoded step-by-step subscriptions for each variable key
 WA.onInit().then(() => {
-            // Step 1: PlanungSelbstmanagement
+   
      
             WA.player.state.onVariableChange('PlanungSelbstmanagement').subscribe((newValue) => {
                 if (newValue === "solved") {
@@ -174,7 +194,7 @@ WA.onInit().then(() => {
                 }
             });
 
-            // Step 2: ThemenfindungGliederung (only if previous step solved)
+       
 
             WA.player.state.onVariableChange('ThemenfindungGliederung').subscribe((newValue) => {
                 if (newValue === "solved" ) {
@@ -185,7 +205,7 @@ WA.onInit().then(() => {
                 }
             });
 
-            // Step 3: Lesen (only if previous step solved)
+    
 
             WA.player.state.onVariableChange('Lesen').subscribe((newValue) => {
                 if (newValue === "solved" ) {
@@ -193,6 +213,14 @@ WA.onInit().then(() => {
                     levelUp("modul_2", 10);
                     console.log(`Variable "Lesen" solved. Level up, +10XP`);
                     WA.player.state.currentQuest = "quest14";
+                }
+            });
+            WA.player.state.onVariableChange('Literaturrecherche').subscribe((newValue) => {
+                if (newValue === "solved" ) {
+      
+                    levelUp("modul_2", 10);
+                    console.log(`Variable "Literaturrecherche" solved. Level up, +10XP`);
+                    WA.player.state.currentQuest = "quest13";
                 }
             });
 
@@ -205,25 +233,6 @@ WA.onInit().then(() => {
                 }
             });
         });
-WA.onInit().then(() => {
-            let literatureAreaEnterTime: number | undefined;
 
-            WA.room.area.onEnter('2_3Literaturrecherche').subscribe(() => {
-                literatureAreaEnterTime = Date.now();
-                console.log('Entered literature area');
-            });
-
-            WA.room.area.onLeave('2_3Literaturrecherche').subscribe(() => {
-                if (literatureAreaEnterTime && WA.player.state.Literaturrecherche !== "solved") {
-                    const secondsSpent = (Date.now() - literatureAreaEnterTime) / 1000;
-                    if (secondsSpent > 10) {
-                        WA.player.state.Literaturrecherche = "solved";
-                        WA.player.state.currentQuest = 'quest13';
-                        levelUp("modul_2", 10);
-                        console.log(`Spent ${secondsSpent} seconds in literature area. Level up, +10XP`);
-                    }
-                    literatureAreaEnterTime = undefined;
-                }
-            });});
 export {};
 

@@ -12,22 +12,7 @@
             const messageNpc = "Zirze";
             const moduleMax = 3;
             const workbookName = "AllgemeineRegeln";
-            WA.onInit().then(() => {
-                const checkState = () => {
-                    try {
-                        const stateValue = WA.player.state[workbookName];
-                        if (stateValue !== undefined) {
-                            if (stateValue === "solved") {
-                                WA.chat.sendChatMessage(`${workbookName} ist gelöst.`, messageNpc);
-                            }
-                        } else {
-                            setTimeout(checkState, 200);
-                        }
-                    } catch (error) {
-                    }
-                };
-                checkState();
-            });
+            
         </script>
 
         

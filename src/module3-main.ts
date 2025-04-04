@@ -101,34 +101,96 @@ WA.onInit().then(async () => {
 });
 
 
-         
+
+
+
+
+
+
+WA.onInit().then(async () => {
+
+    // On start: if module2 is already "2", update the room colors in the m2terminal2 region.
+    if (WA.player.state.module3 === '2') {
+        const greenTiles: any[] = [];
+        const redTiles: any[] = [];
+        for (let x = 4; x <= 15; x++) {
+            for (let y = 47; y <= 89; y++) {
+                greenTiles.push({ x, y, tile: "green", layer: "green" });
+                redTiles.push({ x, y, tile: null, layer: "red" });
+            }
+        }
+        WA.room.setTiles(greenTiles);
+        WA.room.setTiles(redTiles);
+        WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: zu/ denken/ Art", "Zirze");
+    }
+    
     // Listen for terminal-related state changes
     WA.player.state.onVariableChange('m3terminal1').subscribe(async (newValue) => {
+        // Set module2 to "1" for terminal1.
         WA.player.state.module3 = '1';
-                    if (newValue === "correct") {
-                  
-                        WA.chat.sendChatMessage("Schön, dass du wieder da bist! Beginne am besten mit Element 1. Plane für den zweiten Raum ca. 40 Minuten ein. Du kannst jederzeit aufhören und wieder zurückkommen. Vergiss nicht weiterhin nach den Zahlencodes in den Materialien Ausschau zu halten und dir diese zu notieren. Neben den Zahlencodes musst du auch wieder Wortschnipsel finden, die durch Lord Modrevolts Angriff durcheinandergeraten sind.  Viel Erfolg!", "Zirze");
-                        WA.player.state.currentQuest = 'quest21';
-                        const cowebsites = await WA.nav.getCoWebSites();
-                        for (const cowebsite of cowebsites) {
-                            cowebsite.close();
-                        }
-                    }
+        if (newValue === "correct") {
+            WA.chat.sendChatMessage("Schön, dass du wieder da bist! Beginne am besten mit Element 1. Plane für den zweiten Raum ca. 40 Minuten ein. Du kannst jederzeit aufhören und wieder zurückkommen. Vergiss nicht weiterhin nach den Zahlencodes in den Materialien Ausschau zu halten und dir diese zu notieren. Neben den Zahlencodes musst du auch wieder Wortschnipsel finden, die durch Lord Modrevolts Angriff durcheinandergeraten sind.  Viel Erfolg!", "Zirze");
+            WA.player.state.currentQuest = 'quest21';
+            // Change tiles in the m2terminal1 region: from (4,71) to (15,89)
+            const greenTiles: any[] = [];
+            const redTiles: any[] = [];
+            for (let x = 4; x <= 15; x++) {
+                for (let y = 71; y <= 89; y++) {
+                    greenTiles.push({ x, y, tile: "green", layer: "green" });
+                    redTiles.push({ x, y, tile: null, layer: "red" });
+                }
             }
-    );
-            WA.player.state.onVariableChange('m3terminal2').subscribe(async (newValue) => {
-                WA.player.state.module3 = '2';          
-                if (newValue === "correct") {
-                             
-                                WA.player.state.currentQuest = 'quest25';
-                                levelUp("modul_3", 10);
-                                const cowebsites = await WA.nav.getCoWebSites();
-                                for (const cowebsite of cowebsites) {
-                                    cowebsite.close();
-                                }
-                            }
-                        })
-    
+            WA.room.setTiles(greenTiles);
+            WA.room.setTiles(redTiles);
+            const cowebsites = await WA.nav.getCoWebSites();
+            for (const cowebsite of cowebsites) {
+                cowebsite.close();
+            }
+        }
+    });
+
+    WA.player.state.onVariableChange('m3terminal2').subscribe(async (newValue) => {
+        // Set module2 to "2" for terminal2.
+        WA.player.state.module3 = '2';
+        if (newValue === "correct") {
+            WA.player.state.currentQuest = '';
+            // Change tiles in the m2terminal2 region: from (4,47) to (15,70)
+            const greenTiles: any[] = [];
+            const redTiles: any[] = [];
+            for (let x = 4; x <= 15; x++) {
+                for (let y = 47; y <= 89; y++) {
+                    greenTiles.push({ x, y, tile: "green", layer: "green" });
+                    redTiles.push({ x, y, tile: null, layer: "red" });
+                }
+            }
+            WA.room.setTiles(greenTiles);
+            WA.room.setTiles(redTiles);
+            const cowebsites = await WA.nav.getCoWebSites();
+            for (const cowebsite of cowebsites) {
+                cowebsite.close();
+            }
+        }
+    });
+
+    // When module2 changes to "2", update the room colors in the m2terminal2 region.
+    WA.player.state.onVariableChange('module3').subscribe((newValue) => {
+        if (newValue === '2') {
+            const greenTiles: any[] = [];
+            const redTiles: any[] = [];
+            for (let x = 4; x <= 15; x++) {
+                for (let y = 47; y <= 89; y++) {
+                    greenTiles.push({ x, y, tile: "green", layer: "green" });
+                    redTiles.push({ x, y, tile: null, layer: "red" });
+                }
+            }
+            WA.room.setTiles(greenTiles);
+            WA.room.setTiles(redTiles);
+            WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: zu/ denken/ Art", "Zirze");
+            WA.player.state.currentQuest = 'quest25';
+        }
+    });
+});
+       
 
 
 WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
@@ -136,96 +198,8 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
         WA.chat.sendChatMessage("Wow, das ging schnell! Du hast beide Räume gemeistert. Ich hoffe du kannst dich noch an alle Wortschnipsel erinnern. Diese musst du nun in richtiger Reihenfolge im Sicherheitsterminal eingeben. Falls du Hilfe brauchst, frag doch deine Kolleg*innen, ob ihr diese Aufgabe zusammen lösen könnt. Ich darf nicht zu viel verraten, aber eine gezielte Recherche könnte durchaus hilfreich sein. Wenn du oder ihr es schafft, können wir Lord Modrevolt endlich aus unserem System entfernen und unsere Sicherheitseinstellungen des Kondensatoriums wieder herstellen. ", "Zirze");
     }
 });
-            WA.onInit().then(() => {
-                // On start, check if module3 is already "2" and, if so, paint the room green and remove the red layer
-                if (WA.player.state.module3 === '2') {
-                    const greenTiles: any[] = [];
-                    const redTiles: any[] = [];
-                    for (let x = 0; x <= 19; x++) {
-                        for (let y = 47; y <= 89; y++) {
-                            greenTiles.push({ x, y, tile: "green", layer: "green" });
-                            redTiles.push({ x, y, tile: null, layer: "red" });
-                        }
-                    }
-                    WA.room.setTiles(greenTiles);
-                    WA.room.setTiles(redTiles);
-                    WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: zu/ denken/ Art", "Zirze");
-                }
+ 
 
-                // When module3 changes to "2", paint the room green and remove the red layer
-                WA.player.state.onVariableChange('module3').subscribe((newValue) => {
-                    if (newValue === '2') {
-                        const greenTiles: any[] = [];
-                        const redTiles: any[] = [];
-                        for (let x = 0; x <= 19; x++) {
-                            for (let y = 47; y <= 89; y++) {
-                                greenTiles.push({ x, y, tile: "green", layer: "green" });
-                                redTiles.push({ x, y, tile: null, layer: "red" });
-                            }
-                        }
-                        WA.room.setTiles(greenTiles);
-                        WA.room.setTiles(redTiles);
-                        WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: zu/ denken/ Art", "Zirze");
-                    }
-                });
-            });
-              // Handling area "3_2_1Zitieren"
-              {
-                let areaEnterTime: number | undefined;
-                WA.room.area.onEnter("3_2_1Zitieren").subscribe(() => {
-                    areaEnterTime = Date.now();
-                });
-                WA.room.area.onLeave("3_2_1Zitieren").subscribe(() => {
-                    if (areaEnterTime) {
-                        const secondsSpent = (Date.now() - areaEnterTime) / 1000;
-                        if (secondsSpent > 10) {
-                            WA.player.state["Zitieren"] = "solved";
-                            WA.player.state.currentQuest = undefined;
-                            levelUp("modul_3", 10);
-                        }
-                        areaEnterTime = undefined;
-                    }
-                });
-            }
-
-            // Handling area "3_2_2Literaturverzeichnis"
-            {
-                let areaEnterTime: number | undefined;
-                WA.room.area.onEnter("3_2_2Literaturverzeichnis").subscribe(() => {
-                    areaEnterTime = Date.now();
-                });
-                WA.room.area.onLeave("3_2_2Literaturverzeichnis").subscribe(() => {
-                    if (areaEnterTime) {
-                        const secondsSpent = (Date.now() - areaEnterTime) / 1000;
-                        if (secondsSpent > 10) {
-                            WA.player.state["Literaturverzeichnis"] = "solved";
-                            // Additional actions for Literaturverzeichnis can be added here if needed.
-                        }
-                        areaEnterTime = undefined;
-                    }
-                });
-            }
-
-            // Handling area "3_3Literaturverwaltung"
-            {
-                let areaEnterTime: number | undefined;
-                WA.room.area.onEnter("3_3Literaturverwaltung").subscribe(() => {
-                    areaEnterTime = Date.now();
-                });
-                WA.room.area.onLeave("3_3Literaturverwaltung").subscribe(() => {
-                    if (areaEnterTime) {
-                        const secondsSpent = (Date.now() - areaEnterTime) / 1000;
-                        if (secondsSpent > 10) {
-                            WA.player.state["Literaturverwaltung"] = "solved";
-                            // Additional actions for Literaturverwaltung can be added here if needed.
-                        }
-                        areaEnterTime = undefined;
-                    }
-                });
-            }
-            
-            
-            
             // Hardcoded subscriptions for each event variable key in the required order
     
     WA.player.state.onVariableChange('Textarten').subscribe((newValue) => {

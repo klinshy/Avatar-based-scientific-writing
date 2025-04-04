@@ -18,7 +18,23 @@
     workbookName
   ) {
     console.log("🚩 Completion Event Script loaded");
-
+    WA.onInit().then(() => {
+      console.log(workbookName+" geladen", messageNpc);
+      const checkState = () => {
+          try {
+              const stateValue = WA.player.state[workbookName];
+              if (stateValue !== undefined) {
+                  if (stateValue === "solved") {
+                      WA.chat.sendChatMessage(`${workbookName} ist bereits gelöst.`, messageNpc);
+                  }
+              } else {
+                  setTimeout(checkState, 200); // Retry after 200ms
+              }
+          } catch (error) {
+          }
+      };
+      checkState();
+  });
 
     // Validate H5P and externalDispatcher
     if (!window.H5P || !H5P.externalDispatcher) {
