@@ -250,7 +250,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
         }
     });
 
-    WA.player.state.onVariableChange('finalQuizThree').subscribe((newValue) => {
+    WA.player.state.onVariableChange('Abschlussquiz3').subscribe((newValue) => {
         if (newValue === "solved") {
             levelUp("modul_3", 10);
             console.log(`Variable "finalQuizThree" solved. Level up, +10XP`);

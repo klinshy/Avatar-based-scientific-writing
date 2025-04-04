@@ -225,7 +225,7 @@ WA.onInit().then(() => {
             });
 
             // Step 4: finalQuizTwo (only if previous step solved)
-            WA.player.state.onVariableChange('finalQuizTwo').subscribe((newValue) => {
+            WA.player.state.onVariableChange('Abschlussquiz2').subscribe((newValue) => {
                 if (newValue === "solved" ) {
                     levelUp("modul_2", 10);
                     console.log(`Variable "finalQuizTwo" solved. Level up, +10XP`);
