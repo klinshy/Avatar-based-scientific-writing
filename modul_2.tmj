@@ -1786,7 +1786,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/H5P Video Example for Pedro.html"
+                         "value":".\/H5P\/2_3Literaturrecherche.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
