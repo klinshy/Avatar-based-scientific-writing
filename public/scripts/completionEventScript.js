@@ -3,7 +3,7 @@
 (function () {
   // Dynamically load the external script
   const script = document.createElement("script");
-  script.src = "./scripts/workadventure-iframe-fixed.js";
+  script.src = "../scripts/workadventure-iframe-fixed.js";
   script.onload = () => {
     console.log("External iframe API loaded.");
    
@@ -18,10 +18,7 @@
     workbookName
   ) {
     console.log("🚩 Completion Event Script loaded");
-    WA.onInit = () => {
-      WA.chat.sendChatMessage(
-        "The iframe API is loaded. You can now use the handleModuleCompletionEvents function.","system"
-      );}
+
 
     // Validate H5P and externalDispatcher
     if (!window.H5P || !H5P.externalDispatcher) {
