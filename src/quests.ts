@@ -44,7 +44,7 @@ const quests = [
     },
     {
         questId: 'quest9',
-        questDescription: 'earbeite das Lernmaterial Planung und Selbstmanagement',
+        questDescription: 'Bearbeite das Lernmaterial Planung und Selbstmanagement',
         requireQuest: 'quest8',
     },
     {
