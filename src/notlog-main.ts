@@ -138,8 +138,6 @@ WA.onInit().then(async () => {
     }
 });
 
-// Variable to track if the player is auto-moving
-let isAutoMoving = false;
 
 
 WA.room.area.onLeave('H5P_video_1').subscribe(() => {
