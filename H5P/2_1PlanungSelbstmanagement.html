@@ -8,26 +8,11 @@
         <script src="https://play.workadventu.re/iframe_api.js"></script>
         <script>
             const moduleName = "module_2_1"; //Enter the module name here and chamber here
-            const completionMessage = "## 📅 Planung & Selbstmanagement   \n\n**Super, du hast diese Bereiche gelernt!** 🎉  \n\n✅ Aufgaben priorisieren \n\n⏳In Zeitfenstern arbeiten  \n\n☕Pausen und Puffer-Zeiten einplanen  \n\n🧠 Wissen über Anlaufstellen bei Stress und psychischer Belastung \n\n🚀 **Du hast jetzt das nötige Wissen, um deine Aufgaben mit Struktur und Gelassenheit anzugehen!**"; //Enter the completion message here
+            const completionMessage = "## 📅 Planung & Selbstmanagement   \n\n**Super, du hast diese Bereiche gelernt!** 🎉  \n\n✅ Aufgaben priorisieren \n\n⏳In Zeitfenstern arbeiten  \n\n☕Pausen und Puffer-Zeiten einplanen  \n\n🧠 Wissen über Anlaufstellen bei Stress und psychischer Belastung \n\n🚀 **Du hast jetzt das nötige Wissen, um deine Aufgaben mit Struktur und Gelassenheit anzugehen!**   \n\n🔢 Als Belohnung hier dein Zahlencode: **35** merke ihn dir gut! Du benötigst ihn wieder am Ende des Raumes."; //Enter the completion message here
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 2; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "PlanungSelbstmanagement"; //Enter Workbookname here
-            WA.onInit().then(() => {
-                const checkState = () => {
-                    try {
-                        const stateValue = WA.player.state[workbookName];
-                        if (stateValue !== undefined) {
-                            if (stateValue === "solved") {
-                                WA.chat.sendChatMessage(`${workbookName} ist bereits gelöst.`, messageNpc);
-                            }
-                        } else {
-                            setTimeout(checkState, 200); // Retry after 200ms
-                        }
-                    } catch (error) {
-                    }
-                };
-                checkState();
-            });
+           
         </script>
         
 

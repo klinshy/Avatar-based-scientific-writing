@@ -6,26 +6,11 @@
         <script src="https://play.workadventu.re/iframe_api.js"></script>
         <script>
             const moduleName = "module_2_1"; //Enter the module name here and chamber here
-            const completionMessage = "## 📖 Wissenschaftliches Arbeiten   \n\n**Super, du hast diese Bereiche gelernt!** 🎉 Jetzt kannst du wissenschaftliche Arbeiten gezielt planen und strukturieren.   \n\n🔍 **Themenwahl** – Ein passendes Thema identifizieren und eingrenzen.   \n\n🎯 **Forschungsfrage** – Klare und präzise Fragestellungen formulieren.   \n\n📋 **Gliederung** – Eine logische Struktur für deine Arbeit erstellen."; //Enter the completion message here
+            const completionMessage = "## 📖 Wissenschaftliches Arbeiten   \n\n**Super, du hast diese Bereiche gelernt!** 🎉 Jetzt kannst du wissenschaftliche Arbeiten gezielt planen und strukturieren.   \n\n🔍 **Themenwahl** – Ein passendes Thema identifizieren und eingrenzen.   \n\n🎯 **Forschungsfrage** – Klare und präzise Fragestellungen formulieren.   \n\n📋 **Gliederung** – Eine logische Struktur für deine Arbeit erstellen.   \n\n🔢 Als Belohnung hier dein Zahlencode: **45** merke ihn dir gut! Du benötigst ihn wieder am Ende des Raumes. "; //Enter the completion message here
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 2; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "ThemenfindungGliederung"; //Enter Workbookname here
-            WA.onInit().then(() => {
-                const checkState = () => {
-                    try {
-                        const stateValue = WA.player.state[workbookName];
-                        if (stateValue !== undefined) {
-                            if (stateValue === "solved") {
-                                WA.chat.sendChatMessage(`${workbookName} ist bereits gelöst.`, messageNpc);
-                            }
-                        } else {
-                            setTimeout(checkState, 200); // Retry after 200ms
-                        }
-                    } catch (error) {
-                    }
-                };
-                checkState();
-            });
+            
         </script>
 
 
