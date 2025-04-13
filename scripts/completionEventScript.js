@@ -25,7 +25,7 @@
               const stateValue = WA.player.state[workbookName];
               if (stateValue !== undefined) {
                   if (stateValue === "solved") {
-                      WA.chat.sendChatMessage(`${workbookName} ist bereits gelöst.`, messageNpc);
+                      WA.chat.sendChatMessage(`${workbookName} ist gelöst.`, messageNpc);
                   }
               } else {
                   setTimeout(checkState, 200); // Retry after 200ms
