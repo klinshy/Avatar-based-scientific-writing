@@ -22,9 +22,18 @@ WA.onInit().then(async () => {
                 WA.player.state.currentQuest = "quest7";
             }
         });
+       
     });
 
-
+WA.onInit().then(() => {
+    if (WA.player.state.currentQuest === "quest26") {
+        WA.chat.sendChatMessage(
+            "Wow, das ging schnell! Du hast beide Räume gemeistert. Ich hoffe du kannst dich noch an alle Wortschnipsel erinnern. Diese musst du nun in richtiger Reihenfolge im Sicherheitsterminal eingeben. Falls du Hilfe brauchst, frag doch deine Kolleg*innen, ob ihr diese Aufgabe zusammen lösen könnt. Ich darf nicht zu viel verraten, aber eine gezielte Recherche könnte durchaus hilfreich sein. Wenn du oder ihr es schafft, können wir Lord Modrevolt endlich aus unserem System entfernen und unsere Sicherheitseinstellungen des Kondensatoriums wieder herstellen.",
+            "Zirze"
+        );
+    }
+    else console.log("not quest26")
+});
 
 WA.onInit().then(async () => {
     // Get chat areas and set up event listeners for entering and leaving them
@@ -80,6 +89,7 @@ WA.onInit().then(async () => {
             WA.ui.banner.openBanner({
                 id: quest.questId,
                 text: quest.questDescription,
+                timeToClose: 0,
                 bgColor: '#1B1B29',
                 textColor: '#FFFFFF',
                 closable: false

@@ -86,6 +86,7 @@ WA.onInit().then(async () => {
                 id: quest.questId,
                 text: quest.questDescription,
                 bgColor: '#1B1B29',
+                timeToClose: 0,
                 textColor: '#FFFFFF',
                 closable: false
             });

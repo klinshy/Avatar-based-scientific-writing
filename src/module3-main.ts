@@ -86,6 +86,7 @@ WA.onInit().then(async () => {
                 id: quest.questId,
                 text: quest.questDescription,
                 bgColor: '#1B1B29',
+                timeToClose: 0,
                 textColor: '#FFFFFF',
                 closable: false
             });
@@ -102,15 +103,29 @@ WA.onInit().then(async () => {
 
 
 
+WA.onInit().then(async () => {
 
-
+    // On start: update room colors based on module3 state.
+if ((WA.player.state.module3 as string) === '1') {
+    const greenTiles: any[] = [];
+    const redTiles: any[] = [];
+    for (let x = 4; x <= 15; x++) {
+        for (let y = 71; y <= 89; y++) {
+            greenTiles.push({ x, y, tile: "green", layer: "green" });
+            redTiles.push({ x, y, tile: null, layer: "red" });
+        }
+    }
+    WA.room.setTiles(greenTiles);
+    WA.room.setTiles(redTiles);
+}
+});
 
 
 
 WA.onInit().then(async () => {
 
-    // On start: if module2 is already "2", update the room colors in the m2terminal2 region.
-    if (WA.player.state.module3 === '2') {
+    // On start: update room colors based on module3 state.
+    if ((WA.player.state.module3 as string) === '2') {
         const greenTiles: any[] = [];
         const redTiles: any[] = [];
         for (let x = 4; x <= 15; x++) {
@@ -121,8 +136,7 @@ WA.onInit().then(async () => {
         }
         WA.room.setTiles(greenTiles);
         WA.room.setTiles(redTiles);
-        WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: zu/ denken/ Art", "Zirze");
-    }
+    } })
     
     // Listen for terminal-related state changes
     WA.player.state.onVariableChange('m3terminal1').subscribe(async (newValue) => {
@@ -173,22 +187,20 @@ WA.onInit().then(async () => {
     });
 
     // When module2 changes to "2", update the room colors in the m2terminal2 region.
-    WA.player.state.onVariableChange('module3').subscribe((newValue) => {
-        if (newValue === '2') {
-            const greenTiles: any[] = [];
-            const redTiles: any[] = [];
-            for (let x = 4; x <= 15; x++) {
-                for (let y = 47; y <= 89; y++) {
-                    greenTiles.push({ x, y, tile: "green", layer: "green" });
-                    redTiles.push({ x, y, tile: null, layer: "red" });
-                }
+WA.player.state.onVariableChange('module3').subscribe((newValue) => {
+    if (newValue === '2') {
+        const greenTiles: any[] = [];
+        const redTiles: any[] = [];
+        for (let x = 4; x <= 15; x++) {
+            for (let y = 47; y <= 89; y++) {
+                greenTiles.push({ x, y, tile: "green", layer: "green" });
+                redTiles.push({ x, y, tile: null, layer: "red" });
             }
-            WA.room.setTiles(greenTiles);
-            WA.room.setTiles(redTiles);
-            WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. **Merk sie dir gut: zu/ denken/ Art**", "Zirze");
-            WA.player.state.currentQuest = 'quest25';
         }
-    });
+        WA.room.setTiles(greenTiles);
+        WA.room.setTiles(redTiles);
+        WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. **Merk sie dir gut: zu/ denken/ Art**", "Zirze");
+    }
 });
        
 

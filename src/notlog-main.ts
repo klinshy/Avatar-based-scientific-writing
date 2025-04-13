@@ -27,7 +27,8 @@ WA.onInit().then(async () => {
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
         let triggerMessage: any;
-
+        let playerName: string = WA.player.name;
+        console.log("Player name:", playerName);
         // When player enters a chat area
         WA.room.area.onEnter(area.name).subscribe(() => {
             triggerMessage = WA.ui.displayActionMessage({
@@ -132,6 +133,7 @@ WA.onInit().then(async () => {
                 text: quest.questDescription,
                 bgColor: '#1B1B29',
                 textColor: '#FFFFFF',
+                timeToClose: 0,
                 closable: false
             });
         }

@@ -87,6 +87,7 @@ WA.onInit().then(async () => {
                 text: quest.questDescription,
                 bgColor: '#1B1B29',
                 textColor: '#FFFFFF',
+                timeToClose: 0,
                 closable: false
             });
         }
@@ -99,6 +100,23 @@ WA.onInit().then(async () => {
         }
     });
 });
+
+WA.onInit().then(async () => {
+
+    // On start: if module2 is already "2", update the room colors in the m2terminal2 region.
+    if (WA.player.state.module2 === '1') {
+        const greenTiles: any[] = [];
+        const redTiles: any[] = [];
+        for (let x = 4; x <= 15; x++) {
+            for (let y = 71; y <= 89; y++) {
+                greenTiles.push({ x, y, tile: "green", layer: "green" });
+                redTiles.push({ x, y, tile: null, layer: "red" });
+            }
+        }
+        WA.room.setTiles(greenTiles);
+        WA.room.setTiles(redTiles);
+    }}
+),
 WA.onInit().then(async () => {
 
     // On start: if module2 is already "2", update the room colors in the m2terminal2 region.
@@ -113,9 +131,9 @@ WA.onInit().then(async () => {
         }
         WA.room.setTiles(greenTiles);
         WA.room.setTiles(redTiles);
-        WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
-    }
-    
+    }});
+
+    WA.onInit().then(async () => {
     // Listen for terminal-related state changes
     WA.player.state.onVariableChange('m2terminal1').subscribe(async (newValue) => {
         // Set module2 to "1" for terminal1.
