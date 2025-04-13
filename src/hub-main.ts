@@ -101,7 +101,7 @@ WA.onInit().then(async () => {
     if (WA.player.state.module2 === '2' && WA.player.state.module3 === '2') {
         // Only display the terminal layers
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage("Bitte gib das Lösungswort ein", "Zirze");
+            WA.chat.sendChatMessage("Füge nun die **Wortschnipsel **✂️ in richtiger Reihenfolge zusammen und gibt die **beiden Lösungssätze** hier im Chat ein. Ich darf nicht zu viel verraten, aber eine **gezielte Recherche** nach **Carl Sagan** könnte durchaus hilfreich sein. 🔍  \n\n \n\nVariante wenn alles richtig: \n\n \n\n🌟 **Alles korrekt** 🌟 \n\n \n\nIch teleportiere dich nun zurück zu **Prof. Mumblecore**. Er wird sich sehr freuen dich wieder zu sehen! 🎉 \n\n \n\nVariante wenn falsch: \n\n \n\nSchade, versuche es doch noch einmal mit meinem Recherchetipp! 🔍 \n\n ", "Zirze");
     
 
         WA.chat.onChatMessage(async (message, event) => {
@@ -126,7 +126,7 @@ WA.onInit().then(async () => {
         }, { scope: 'local' })});
     } else {
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage("## 🖥️ Reparatur des Computerterminals  \n\n Komme hierhin zurück, wenn du **Modul 2** und **3** gelöst hast. ✅   \n\n Um dieses **Computerterminal** zu reparieren, benötigst du die richtigen **Wortschnipsel**, die beim **Einbruch durch Lord Modrevolt** 💀 durcheinandergeraten sind.  \n\n Finde die Fragmente und setze sie korrekt zusammen, um das System wiederherzustellen! 🚀 ", "Zirze");
+            WA.chat.sendChatMessage("## 🖥️ Reparatur des Computerterminals \n\n \n\nKomme hierhin zurück, wenn du **Modul 2** und **Modul 3** gelöst hast. ✅   \n\n \n\nUm dieses **Computerterminal** zu reparieren, benötigst du die richtigen **Wortschnipsel**, die beim **Einbruch durch Lord Modrevolt** 💀 durcheinandergeraten sind.  \n\n \n\nFinde die Fragmente und setze sie korrekt zusammen, um das System wiederherzustellen! 🚀 \n\n  ", "Zirze");
         });
     }
     WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
@@ -151,14 +151,14 @@ WA.onInit().then(() => {
             // Combine the green and red tile changes in one call.
             WA.room.setTiles([...green, ...red]);
             WA.chat.sendChatMessage(
-                "🌟 **Wow, das ging schnell!** 🌟   \n\nDu hast **beide Module gemeistert**. 💪   \n\nIch hoffe, du kannst dich noch an alle **Wortschnipsel**✂️ erinnern. Diese musst du nun in **richtiger Reihenfolge** im **Sicherheitsterminal** eingeben. 🔐   \n\nFalls du Hilfe brauchst, frag doch deine **Kolleg*innen**, ob ihr diese Aufgabe zusammen lösen könnt. 🤝👩‍💻👨‍💻   \n\nIch darf nicht zu viel verraten, aber eine **gezielte Recherche** könnte durchaus hilfreich sein. 🔍   \n\nWenn du oder ihr es schafft, können wir **Lord Modrevolt**💀 endlich aus unserem System entfernen und unsere **Sicherheitseinstellungen** des **Kondensatoriums** wieder herstellen. 🛡️🚀",
+                "🌟 **Wow, das ging schnell!** 🌟 \n\n \n\nDu hast **beide Module gemeistert**. 💪 \n\n \n\nIch hoffe, du kannst dich noch an alle **Wortschnipsel**✂️  erinnern. Diese musst du nun in **richtiger Reihenfolge** im **Sicherheitsterminal** eingeben. 🔐 \n\n \n\nFalls du Hilfe brauchst, frag doch deine **Kolleg*innen**, ob ihr diese Aufgabe zusammen lösen könnt. 🤝👩‍💻👨‍💻 \n\n \n\nIch darf nicht zu viel verraten, aber eine **gezielte Recherche** könnte durchaus hilfreich sein. 🔍 \n\n \n\nWenn du oder ihr es schafft, können wir **Lord Modrevolt**💀 endlich aus unserem System entfernen und unsere **Sicherheitseinstellungen** des **Kondensatoriums** wieder herstellen. 🛡️🚀",
                 "Zirze"
             );
         } 
         // Only module2 solved: send the message that encourages the user to continue.
         else if (solvedModule2) {
             WA.chat.sendChatMessage(
-                "🎉 **Hervorragend, dich kann man gebrauchen!** 🎉   \n\nDu hast **Modul 2** gemeistert und schon einiges über die Techniken des wissenschaftlichen Arbeitens gelernt. 🧠📚   \n\nVergiss deine **Wortschnipsel** nicht, diese sind sehr wichtig! ✂️💡   \n\nDu bist nun bereit, mit **Modul 3** weiterzumachen, um mehr über das **wissenschaftliche Schreiben** zu erfahren. ✍️📖",
+                "🎉 **Hervorragend, dich kann man gebrauchen!** 🎉 \n\n \n\nDu hast **Modul 2** gemeistert und schon einiges über  wissenschaftliches Arbeiten gelernt. 🧠📚 \n\n \n\nVergiss deine **Wortschnipsel** nicht, diese sind sehr wichtig! ✂️💡 \n\n \n\nDu bist nun bereit, mit **Modul 3** weiterzumachen, um mehr über das **wissenschaftliche Schreiben** zu erfahren. ✍️📖 ",
                 "Zirze"
             );
         }

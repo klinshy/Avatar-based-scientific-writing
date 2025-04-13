@@ -195,7 +195,7 @@ WA.onInit().then(async () => {
             }
             WA.room.setTiles(greenTiles);
             WA.room.setTiles(redTiles);
-            WA.chat.sendChatMessage("Prima, du hast die ersten verlorenen Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. Merk sie dir gut: ist / Wissenschaft / mehr", "Zirze");
+            WA.chat.sendChatMessage("## 🔍 Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast die ersten **verlorenen Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **ist / Wissenschaft / mehr**   \n\n \n\n📢 Halte weiter Ausschau nach fehlenden Fragmenten – die Rettung unserer Universität hängt davon ab!    \n\n ", "Zirze");
             WA.player.state.currentQuest = 'quest16';
         }
     });

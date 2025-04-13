@@ -143,7 +143,7 @@ WA.onInit().then(async () => {
         // Set module2 to "1" for terminal1.
         WA.player.state.module3 = '1';
         if (newValue === "correct") {
-            WA.chat.sendChatMessage("Schön, dass du wieder da bist! Beginne am besten mit Element 1. Plane für den zweiten Raum ca. 40 Minuten ein. Du kannst jederzeit aufhören und wieder zurückkommen. Vergiss nicht weiterhin nach den Zahlencodes in den Materialien Ausschau zu halten und dir diese zu notieren. Neben den Zahlencodes musst du auch wieder Wortschnipsel finden, die durch Lord Modrevolts Angriff durcheinandergeraten sind.  Viel Erfolg!", "Zirze");
+            WA.chat.sendChatMessage("## 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **eine / ist / sie**   \n\n \n\n📢 Bleib dran und sammle alle Schnipsel – das Schicksal unseres Kondensatoriums liegt in deinen Händen!  \n\n", "Zirze");
             WA.player.state.currentQuest = 'quest21';
             // Change tiles in the m2terminal1 region: from (4,71) to (15,89)
             const greenTiles: any[] = [];
@@ -199,7 +199,7 @@ WA.player.state.onVariableChange('module3').subscribe((newValue) => {
         }
         WA.room.setTiles(greenTiles);
         WA.room.setTiles(redTiles);
-        WA.chat.sendChatMessage("Prima, du hast weitere verlorene Wortschnipsel gefunden. Diese sind wichtig, um Lord Modrevolt ein für alle Mal aus unserem System zu verbannen. **Merk sie dir gut: zu/ denken/ Art**", "Zirze");
+        WA.chat.sendChatMessage("## 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **zu / denken / Art**   \n\n", "Zirze");
     }
 });
        
