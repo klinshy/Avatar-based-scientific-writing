@@ -99,11 +99,14 @@ WA.onInit().then(async () => {
 });
 WA.onInit().then(async () => {
     if (WA.player.state.module2 === '2' && WA.player.state.module3 === '2') {
-        // Only display the terminal layers
+        // When both modules are solved, prompt the user and listen for their answer in chat.
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage("Füge nun die **Wortschnipsel **✂️ in richtiger Reihenfolge zusammen und gibt die **beiden Lösungssätze** hier im Chat ein. Ich darf nicht zu viel verraten, aber eine **gezielte Recherche** nach **Carl Sagan** könnte durchaus hilfreich sein. 🔍  \n\n \n\nVariante wenn alles richtig: \n\n \n\n🌟 **Alles korrekt** 🌟 \n\n \n\nIch teleportiere dich nun zurück zu **Prof. Mumblecore**. Er wird sich sehr freuen dich wieder zu sehen! 🎉 \n\n \n\nVariante wenn falsch: \n\n \n\nSchade, versuche es doch noch einmal mit meinem Recherchetipp! 🔍 \n\n ", "Zirze");
+            WA.chat.sendChatMessage(
+                "Füge nun die **Wortschnipsel**✂️ in richtiger Reihenfolge zusammen und gib die **beiden Lösungssätze** hier im Chat ein. Ich darf nicht zu viel verraten, aber eine **gezielte Recherche** nach **Carl Sagan** könnte durchaus hilfreich sein. \n\nVariante wenn alles richtig:\n\n🌟 **Alles korrekt** 🌟\n\nIch teleportiere dich nun zurück zu **Prof. Mumblecore**. Er wird sich sehr freuen, dich wiederzusehen! 🎉",
+                "Zirze"
+            );
+        });
     
-
         WA.chat.onChatMessage(async (message, event) => {
             // Check if the message is coming from the local user
             if (event.authorId === undefined) {
@@ -114,21 +117,32 @@ WA.onInit().then(async () => {
                     lowerMsg.includes("art") &&
                     lowerMsg.includes("denken")
                 ) {
-                    WA.chat.sendChatMessage("Success: Das ist korrekt, ich teleportiere dich zurück zu Prof. Mumblecore!", "Zirze");
+                    WA.chat.sendChatMessage(
+                        "Success: Das ist korrekt, ich teleportiere dich zurück zu Prof. Mumblecore!",
+                        "Zirze"
+                    );
                     await new Promise(resolve => setTimeout(resolve, 2000));
-                    WA.player.state.currentQuest = "quest27"
+                    WA.player.state.currentQuest = "quest27";
                     levelUp("notlog", 177);
                     WA.nav.goToRoom("./notlog-solved.tmj");
                 } else {
-                    WA.chat.sendChatMessage("Error: Das war nicht die korrekte Antwort. Erinnere dich daran was Wissenschaft ist und was nicht.", "Zirze");
+                    WA.chat.sendChatMessage(
+                        "Schade, versuche es doch noch einmal mit meinem Recherchetipp! 🔍",
+                        "Zirze"
+                    );
                 }
             }
-        }, { scope: 'local' })});
+        }, { scope: 'local' });
     } else {
+        // If modules aren't solved, prompt the user to come back later.
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage("## 🖥️ Reparatur des Computerterminals \n\n \n\nKomme hierhin zurück, wenn du **Modul 2** und **Modul 3** gelöst hast. ✅   \n\n \n\nUm dieses **Computerterminal** zu reparieren, benötigst du die richtigen **Wortschnipsel**, die beim **Einbruch durch Lord Modrevolt** 💀 durcheinandergeraten sind.  \n\n \n\nFinde die Fragmente und setze sie korrekt zusammen, um das System wiederherzustellen! 🚀 \n\n  ", "Zirze");
+            WA.chat.sendChatMessage(
+                "## 🖥️ Reparatur des Computerterminals\n\nKomme hierhin zurück, wenn du **Modul 2** und **Modul 3** gelöst hast. ✅ \n\nUm dieses **Computerterminal** zu reparieren, benötigst du die richtigen **Wortschnipsel**, die beim **Einbruch durch Lord Modrevolt** 💀 durcheinandergeraten sind.\n\nFinde die Fragmente und setze sie korrekt zusammen, um das System wiederherzustellen! 🚀",
+                "Zirze"
+            );
         });
     }
+    
     WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
         WA.chat.close();
     });

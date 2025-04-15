@@ -1582,7 +1582,7 @@
                         {
                          "name":"triggerQuest",
                          "type":"string",
-                         "value":""
+                         "value":"quest12"
                         }],
                  "rotation":0,
                  "type":"area",

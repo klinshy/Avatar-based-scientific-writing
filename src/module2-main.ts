@@ -140,7 +140,7 @@ WA.onInit().then(async () => {
         WA.player.state.module2 = '1';
         if (newValue === "correct") {
             WA.chat.sendChatMessage("Code korrekt, fahre fort mit dem nächsten Raum!", "Zirze");
-            WA.player.state.currentQuest = 'quest12';
+            WA.player.state.currentQuest = 'quest12a';
             // Change tiles in the m2terminal1 region: from (4,71) to (15,89)
             const greenTiles: any[] = [];
             const redTiles: any[] = [];
@@ -201,9 +201,7 @@ WA.onInit().then(async () => {
     });
 });
             // Hardcoded step-by-step subscriptions for each variable key
-WA.onInit().then(() => {
-   
-     
+
             WA.player.state.onVariableChange('PlanungSelbstmanagement').subscribe((newValue) => {
                 if (newValue === "solved") {
                     levelUp("modul_2", 10);
@@ -250,7 +248,7 @@ WA.onInit().then(() => {
                     WA.player.state.currentQuest = "quest16";
                 }
             });
-        });
-
+       
+    
 export {};
 

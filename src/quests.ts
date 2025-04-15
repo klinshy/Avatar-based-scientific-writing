@@ -58,6 +58,11 @@ const quests = [
         requireQuest: 'quest10',
     },
     {
+        questId: 'quest12a',
+        questDescription: 'Geh in den nächsten Raum und sprich mit der zitierenden Zirze',
+        requireQuest: 'quest11',
+    },
+    {
         questId: 'quest12',
         questDescription: 'Bearbeite das Lernmaterial zur Literaturrecherche',
         requireQuest: 'quest11',
