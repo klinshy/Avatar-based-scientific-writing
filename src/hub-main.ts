@@ -102,7 +102,7 @@ WA.onInit().then(async () => {
         // When both modules are solved, prompt the user and listen for their answer in chat.
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
             WA.chat.sendChatMessage(
-                "Füge nun die **Wortschnipsel**✂️ in richtiger Reihenfolge zusammen und gib die **beiden Lösungssätze** hier im Chat ein. Ich darf nicht zu viel verraten, aber eine **gezielte Recherche** nach **Carl Sagan** könnte durchaus hilfreich sein. \n\n🌟 **Alles korrekt** 🌟\n\nIch teleportiere dich nun zurück zu **Prof. Mumblecore**. Er wird sich sehr freuen, dich wiederzusehen! 🎉",
+                "Füge nun die **Wortschnipsel**✂️ in richtiger Reihenfolge zusammen und gib die **beiden Lösungssätze** hier im Chat ein. Ich darf nicht zu viel verraten, aber eine **gezielte Recherche** nach **Carl Sagan** könnte durchaus hilfreich sein.",
                 "Zirze"
             );
         });
@@ -118,7 +118,7 @@ WA.onInit().then(async () => {
                     lowerMsg.includes("denken")
                 ) {
                     WA.chat.sendChatMessage(
-                        "Success: Das ist korrekt, ich teleportiere dich zurück zu Prof. Mumblecore!",
+                        " 🌟 **Alles korrekt** 🌟\n\nIch teleportiere dich nun zurück zu **Prof. Mumblecore**. Er wird sich sehr freuen, dich wiederzusehen! 🎉",
                         "Zirze"
                     );
                     await new Promise(resolve => setTimeout(resolve, 2000));
