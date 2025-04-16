@@ -3194,7 +3194,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"# Herzlich Willkommen! \n\n**Du bist neu hier, oder?** Lass mich dir helfen!  \n\nUnsere Leitung, **Professor Mumbelcore**, begr\u00fc\u00dft alle Neuen am **oberen Ende dieser Halle**.  \n\n\ud83d\udc49{{{ playerName }}} **Du solltest umgehend mit ihm sprechen.** "
+                         "value":"# Herzlich Willkommen! \n\n**Du bist neu hier, oder?** Lass mich dir helfen!  \n\nUnsere Leitung, **Professor Mumbelcore**, begr\u00fc\u00dft alle Neuen am **oberen Ende dieser Halle**.  \n\n\ud83d\udc49**Du solltest umgehend mit ihm sprechen.** "
                         }, 
                         {
                          "name":"isNpc",
@@ -3215,8 +3215,8 @@
                  "type":"area",
                  "visible":true,
                  "width":123.5,
-                 "x":886.250000000001,
-                 "y":1224.16666666667
+                 "x":866.250000000001,
+                 "y":1226.16666666667
                 }, 
                 {
                  "height":65.6666333333333,

@@ -10,6 +10,7 @@ WA.onInit().then(async () => {
         await bootstrapExtra();
         WA.controls.disableInviteButton();
         WA.controls.disableMapEditor();
+        WA.controls.disableRoomList();
         console.log('Scripting API Extra ready');
     } catch (e) {
         console.error(e);

@@ -7,6 +7,7 @@ WA.onInit().then(async () => {
     console.log('loading main.ts');
     WA.controls.disableInviteButton();
     WA.controls.disableMapEditor();
+    WA.controls.disableRoomList();
     // Initialize the first quest if not already set
  
     try {

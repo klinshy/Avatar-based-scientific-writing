@@ -8,6 +8,7 @@ WA.onInit().then(async () => {
     console.log('loading main.ts');
     WA.controls.disableInviteButton();
     WA.controls.disableMapEditor();
+    WA.controls.disableRoomList();
 
     // Initialize the first quest if not already set
     if (!WA.player.state.currentQuest) {
@@ -141,10 +142,12 @@ WA.onInit().then(async () => {
 });
 
 
-
-WA.room.area.onLeave('H5P_video_1').subscribe(() => {
-    console.log("Entered H5P_video_1 area, triggering quest5");
-    WA.player.state.currentQuest = 'quest5';
+WA.player.state.onVariableChange('Einführungsvideo').subscribe((newValue) => {
+    if (newValue === "solved" ) {
+        levelUp("notlog", 10);
+        console.log(`Variable "finalQuizTwo" solved. Level up, +10XP`);
+        WA.player.state.currentQuest = "quest5";
+    }
 });
 
 export {};
