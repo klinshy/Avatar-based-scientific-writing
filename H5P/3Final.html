@@ -11,6 +11,7 @@
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 2; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "Abschlussquiz3"; //Enter Workbookname here
+            const chatTitle = "Modul Quiz 3"; //only gets gets displayed in the chat message
             
         </script>
         <meta charset="utf-8">
@@ -58,7 +59,7 @@ H5P.RequestQueue=function(n,t){function e(e){t.call(this),this.processingQueue=!
 <script src="../scripts/completionEventScript.js"></script>
 <script>
     //dont change anything here. just copy/paste
-        handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName );
+        handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, chatTitle );
 </script>
    
     </head>

@@ -10,7 +10,8 @@
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 2; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "ThemenfindungGliederung"; //Enter Workbookname here
-            
+            const chatTitle = workbookName; 
+
         </script>
 
 
@@ -73,7 +74,8 @@ H5P.RequestQueue=function(i,t){function e(e){t.call(this),this.processingQueue=!
 <script src="../scripts/completionEventScript.js"></script>
 <script>
     //dont change anything here. just copy/paste
-        handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName );
+            handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, chatTitle );
+
 </script>
 
 

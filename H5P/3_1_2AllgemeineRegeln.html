@@ -12,7 +12,7 @@
             const messageNpc = "Zirze";
             const moduleMax = 3;
             const workbookName = "AllgemeineRegeln";
-            
+            const chatTitle = workbookName; 
         </script>
 
         
@@ -77,7 +77,8 @@ function(g,e,m){e.Popup=function(e,t,i,o,n,r,s,a,l,c){m.call(this);var u=this;th
 <script src="../scripts/completionEventScript.js"></script>
 <script>
     //dont change anything here. just copy/paste
-        handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName );
+            handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, chatTitle );
+
 </script>
 
 
