@@ -15,7 +15,8 @@
     messageNpc,
     moduleName,
     moduleMax,
-    workbookName
+    workbookName,
+    chatTitle
   ) {
     console.log("🚩 Completion Event Script loaded");
     WA.onInit().then(() => {
@@ -25,7 +26,7 @@
               const stateValue = WA.player.state[workbookName];
               if (stateValue !== undefined) {
                   if (stateValue === "solved") {
-                      WA.chat.sendChatMessage(`${workbookName} ist gelöst.`, messageNpc);
+                      WA.chat.sendChatMessage(`${chatTitle} ist gelöst.`, messageNpc);
                   }
               } else {
                   setTimeout(checkState, 200); // Retry after 200ms
@@ -72,7 +73,7 @@
             for (const cowebsite of cowebsites) {
               cowebsite.close();
             }
-          }, 24000);
+          }, 3000);
         }
       }
     });
