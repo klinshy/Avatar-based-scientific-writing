@@ -54,7 +54,7 @@ const quests = [
     },
     {
         questId: 'quest11',
-        questDescription: 'Gebe die **Zahlencodes** in das Computerterminal ein!',
+        questDescription: 'Gebe die Zahlencodes in das Computerterminal ein!',
         requireQuest: 'quest10',
     },
     {
@@ -74,7 +74,7 @@ const quests = [
     },
     {
         questId: 'quest14',
-        questDescription: 'Gib die **Zahlencodes** in das Computerterminal ein!',
+        questDescription: 'Gib die Zahlencodes in das Computerterminal ein!',
         requireQuest: 'quest13',
     },
     {
@@ -84,7 +84,7 @@ const quests = [
     },
     {
         questId: 'quest16',
-        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des **Kondensatoriums** und bearbeite das nächste Lernmodul! ',
+        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und bearbeite das nächste Lernmodul! ',
         requireQuest: 'quest15',
     },
 
@@ -106,7 +106,7 @@ const quests = [
     },
     {
         questId: 'quest20',
-        questDescription: 'Gebe die **Zahlencodes** in das Computerterminal ein!',
+        questDescription: 'Gebe die Zahlencodes in das Computerterminal ein!',
         requireQuest: 'quest19',
     },
 
@@ -140,7 +140,7 @@ const quests = [
     },
     {
         questId: 'quest26',
-        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und gebe dort die gesammelten **Wortschnipsel** in der korrekten Reihenfolge ein!',
+        questDescription: 'Geh durch das Portal zurück zum Knotenpunkt des Kondensatoriums und gebe dort die gesammelten Wortschnipsel in der korrekten Reihenfolge ein!',
         requireQuest: 'quest25',
     },
     {
