@@ -64,6 +64,12 @@ WA.onInit().then(async () => {
     });
 
 
+    WA.onInit().then(async () => {
+        if (WA.player.state.Abschlussquiz2 === "solved") {
+            WA.room.hideLayer("blockPortals");
+        }
+    });
+
     // Display the current quest banner if a quest is active
     const currentQuestId = WA.player.state.currentQuest;
     const currentQuest = quests.find((q: { questId: string }) => q.questId === currentQuestId);
@@ -244,6 +250,7 @@ WA.onInit().then(async () => {
             // Step 4: finalQuizTwo (only if previous step solved)
             WA.player.state.onVariableChange('Abschlussquiz2').subscribe((newValue) => {
                 if (newValue === "solved" ) {
+                    WA.room.hideLayer("blockPortals")
                     levelUp("modul_2", 10);
                     console.log(`Variable "finalQuizTwo" solved. Level up, +10XP`);
                     WA.player.state.currentQuest = "quest16";

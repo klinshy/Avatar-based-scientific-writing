@@ -102,6 +102,11 @@ WA.onInit().then(async () => {
     });
 });
 
+WA.onInit().then(async () => {
+    if (WA.player.state.Abschlussquiz3 === "solved") {
+        WA.room.hideLayer("blockPortals");
+    }
+});
 
 
 WA.onInit().then(async () => {
@@ -266,6 +271,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
     WA.player.state.onVariableChange('Abschlussquiz3').subscribe((newValue) => {
         if (newValue === "solved") {
             levelUp("modul_3", 10);
+            WA.room.hideLayer("blockPortals");
             console.log(`Variable "finalQuizThree" solved. Level up, +10XP`);
             WA.player.state.currentQuest = "quest26";
         }
