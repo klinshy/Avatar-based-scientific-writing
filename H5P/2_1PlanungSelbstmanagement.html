@@ -12,7 +12,7 @@
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 2; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "PlanungSelbstmanagement"; //Enter Workbookname here
-            const chatTitle = workbookName; 
+            const returnMessage = "Planung & Selbstmanagement hast du gelöst. Der Zahlencode lautete **35**"; //Enter the return message here, its the message players receive on completion and when they return to the chamber
 
         </script>
         
@@ -72,7 +72,7 @@ H5P.RequestQueue=function(i,t){function e(e){t.call(this),this.processingQueue=!
 <script src="../scripts/completionEventScript.js"></script>
 <script>
     //dont change anything here. just copy/paste
-            handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, chatTitle );
+            handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, returnMessage );
 
 </script>
 

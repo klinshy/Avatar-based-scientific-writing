@@ -9,7 +9,7 @@
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 3; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "Literaturverwaltung"; //Enter Workbookname here
-            const chatTitle = workbookName; 
+            const returnMessage = "Literaturverwaltung hast du gelöst. Der Zahlencode lautete **63**"; //Enter the return message here, its the message players receive on completion and when they return to the chamber
         </script>
 
 
@@ -88,7 +88,7 @@ H5P.DragNBarElement=function(o,r){function t(t,i,e){var n=this;r.call(this),this
 
 <script>
     //dont change anything here. just copy/paste
-            handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, chatTitle );
+            handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, returnMessage );
 
 </script>
 

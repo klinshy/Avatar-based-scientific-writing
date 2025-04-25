@@ -12,7 +12,7 @@
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 2; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "Lesen"; //Enter Workbookname here
-            const chatTitle = workbookName; //Enter the title of the chat here
+            const returnMessage = "Wissenschaftliches Lesen hast du gelöst. Der Zahlencode lautete **24**"; //Enter the return message here, its the message players receive on completion and when they return to the chamber
 
         </script>
         
@@ -77,7 +77,7 @@ H5P.Video=function(p,h){function f(n,e,t={}){var r=this;r.oldTime=t.previousStat
 <script src="../scripts/completionEventScript.js"></script>
 <script>
     //dont change anything here. just copy/paste
-            handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, chatTitle );
+            handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, returnMessage );
 
 </script>
 
