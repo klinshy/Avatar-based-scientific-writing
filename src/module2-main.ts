@@ -35,6 +35,8 @@ WA.onInit().then(async () => {
                     }
                 }
             });
+            WA.room.area.onLeave(area.name).subscribe(() => {WA.chat.close();});
+
         });
 
         // When player leaves a chat area
@@ -208,55 +210,101 @@ WA.onInit().then(async () => {
     });
 });
             // Hardcoded step-by-step subscriptions for each variable key
-
-            WA.player.state.onVariableChange('PlanungSelbstmanagement').subscribe((newValue) => {
-                if (newValue === "solved") {
-                    levelUp("modul_2", 10);
-                    console.log(`Variable "PlanungSelbstmanagement" solved. Level up, +10XP`);
-                    WA.player.state.currentQuest = "quest10";
+            WA.player.state.onVariableChange('PlanungSelbstmanagement').subscribe({
+                next: (newValue) => {
+                    if (newValue === "solved") {
+                        levelUp("modul_2", 10);
+                        console.log(`Variable "PlanungSelbstmanagement" solved. Level up, +10XP`);
+                        WA.player.state.currentQuest = "quest10";
+                        setTimeout(() => {
+                            try {
+                                if (WA.chat && typeof WA.chat.close === "function") {
+                                    WA.chat.close();
+                                }
+                            } catch (e) {
+                                console.error("Error closing chat:", e);
+                            }
+                        }, 5000);
+                    }
                 }
             });
-
-       
-
-            WA.player.state.onVariableChange('ThemenfindungGliederung').subscribe((newValue) => {
-                if (newValue === "solved" ) {
-        
-                    levelUp("modul_2", 10);
-                    console.log(`Variable "ThemenfindungGliederung" solved. Level up, +10XP`);
-                    WA.player.state.currentQuest = "quest11";
+            
+            WA.player.state.onVariableChange('ThemenfindungGliederung').subscribe({
+                next: (newValue) => {
+                    if (newValue === "solved") {
+                        levelUp("modul_2", 10);
+                        console.log(`Variable "ThemenfindungGliederung" solved. Level up, +10XP`);
+                        WA.player.state.currentQuest = "quest11";
+                        setTimeout(() => {
+                            try {
+                                if (WA.chat && typeof WA.chat.close === "function") {
+                                    WA.chat.close();
+                                }
+                            } catch (e) {
+                                console.error("Error closing chat:", e);
+                            }
+                        }, 5000);
+                    }
                 }
             });
-
-    
-
-            WA.player.state.onVariableChange('Lesen').subscribe((newValue) => {
-                if (newValue === "solved" ) {
-      
-                    levelUp("modul_2", 10);
-                    console.log(`Variable "Lesen" solved. Level up, +10XP`);
-                    WA.player.state.currentQuest = "quest14";
+            
+            WA.player.state.onVariableChange('Lesen').subscribe({
+                next: (newValue) => {
+                    if (newValue === "solved") {
+                        levelUp("modul_2", 10);
+                        console.log(`Variable "Lesen" solved. Level up, +10XP`);
+                        WA.player.state.currentQuest = "quest14";
+                        setTimeout(() => {
+                            try {
+                                if (WA.chat && typeof WA.chat.close === "function") {
+                                    WA.chat.close();
+                                }
+                            } catch (e) {
+                                console.error("Error closing chat:", e);
+                            }
+                        }, 5000);
+                    }
                 }
             });
-            WA.player.state.onVariableChange('Literaturrecherche').subscribe((newValue) => {
-                if (newValue === "solved" ) {
-      
-                    levelUp("modul_2", 10);
-                    console.log(`Variable "Literaturrecherche" solved. Level up, +10XP`);
-                    WA.player.state.currentQuest = "quest13";
+            
+            WA.player.state.onVariableChange('Literaturrecherche').subscribe({
+                next: (newValue) => {
+                    if (newValue === "solved") {
+                        levelUp("modul_2", 10);
+                        console.log(`Variable "Literaturrecherche" solved. Level up, +10XP`);
+                        WA.player.state.currentQuest = "quest13";
+                        setTimeout(() => {
+                            try {
+                                if (WA.chat && typeof WA.chat.close === "function") {
+                                    WA.chat.close();
+                                }
+                            } catch (e) {
+                                console.error("Error closing chat:", e);
+                            }
+                        }, 5000);
+                    }
                 }
             });
-
+            
             // Step 4: finalQuizTwo (only if previous step solved)
-            WA.player.state.onVariableChange('Abschlussquiz2').subscribe((newValue) => {
-                if (newValue === "solved" ) {
-                    WA.room.hideLayer("blockPortals")
-                    levelUp("modul_2", 10);
-                    console.log(`Variable "finalQuizTwo" solved. Level up, +10XP`);
-                    WA.player.state.currentQuest = "quest16";
+            WA.player.state.onVariableChange('Abschlussquiz2').subscribe({
+                next: (newValue) => {
+                    if (newValue === "solved") {
+                        WA.room.hideLayer("blockPortals");
+                        levelUp("modul_2", 10);
+                        console.log(`Variable "finalQuizTwo" solved. Level up, +10XP`);
+                        WA.player.state.currentQuest = "quest16";
+                        setTimeout(() => {
+                            try {
+                                if (WA.chat && typeof WA.chat.close === "function") {
+                                    WA.chat.close();
+                                }
+                            } catch (e) {
+                                console.error("Error closing chat:", e);
+                            }
+                        }, 5000);
+                    }
                 }
             });
-       
-    
 export {};
 

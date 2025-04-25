@@ -57,6 +57,8 @@ WA.onInit().then(async () => {
                     }
                 }
             });
+            WA.room.area.onLeave(area.name).subscribe(() => {WA.chat.close();});
+        
         });
 
         // When player leaves a chat area
@@ -106,6 +108,7 @@ WA.onInit().then(async () => {
                 "Füge nun die **Wortschnipsel**✂️ in richtiger Reihenfolge zusammen und gib die **beiden Lösungssätze** hier im Chat ein. Ich darf nicht zu viel verraten, aber eine **gezielte Recherche** nach **Carl Sagan** könnte durchaus hilfreich sein.",
                 "Zirze"
             );
+            
         });
     
         WA.chat.onChatMessage(async (message, event) => {
@@ -147,6 +150,8 @@ WA.onInit().then(async () => {
     WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
         WA.chat.close();
     });
+    WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {WA.chat.close();});
+
 });
 WA.onInit().then(() => {
     function updateRoomForSolved() {

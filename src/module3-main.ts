@@ -35,6 +35,8 @@ WA.onInit().then(async () => {
                     }
                 }
             });
+            WA.room.area.onLeave(area.name).subscribe(() => {WA.chat.close();});
+
         });
 
         // When player leaves a chat area
@@ -225,6 +227,13 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
             levelUp("modul_3", 10);
             console.log(`Variable "Textarten" solved. Level up, +10XP`);
             WA.player.state.currentQuest = "quest18";
+            setTimeout(() => {
+                try {
+                    WA.chat.close();
+                } catch (e) {
+                    console.error("Failed to close chat:", e);
+                }
+            }, 5000);
         }
     });
 
@@ -233,6 +242,13 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
             levelUp("modul_3", 10);
             console.log(`Variable "AllgemeineRegeln" solved. Level up, +10XP`);
             WA.player.state.currentQuest = "quest19";
+            setTimeout(() => {
+                try {
+                    WA.chat.close();
+                } catch (e) {
+                    console.error("Failed to close chat:", e);
+                }
+            }, 5000);
         }
     });
 
@@ -241,6 +257,13 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
             levelUp("modul_3", 10);
             console.log(`Variable "Sprache" solved. Level up, +10XP`);
             WA.player.state.currentQuest = "quest20";
+            setTimeout(() => {
+                try {
+                    WA.chat.close();
+                } catch (e) {
+                    console.error("Failed to close chat:", e);
+                }
+            }, 5000);
         }
     });
 
@@ -249,6 +272,13 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
             levelUp("modul_3", 10);
             console.log(`Variable "Zitieren" solved. Level up, +10XP`);
             WA.player.state.currentQuest = "quest22";
+            setTimeout(() => {
+                try {
+                    WA.chat.close();
+                } catch (e) {
+                    console.error("Failed to close chat:", e);
+                }
+            }, 5000);
         }
     });
 
@@ -257,6 +287,13 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
             levelUp("modul_3", 10);
             console.log(`Variable "Literaturverzeichnis" solved. Level up, +10XP`);
             WA.player.state.currentQuest = "quest23";
+            setTimeout(() => {
+                try {
+                    WA.chat.close();
+                } catch (e) {
+                    console.error("Failed to close chat:", e);
+                }
+            }, 5000);
         }
     });
 
@@ -265,6 +302,13 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
             levelUp("modul_3", 10);
             console.log(`Variable "Literaturverwaltung" solved. Level up, +10XP`);
             WA.player.state.currentQuest = "quest24";
+            setTimeout(() => {
+                try {
+                    WA.chat.close();
+                } catch (e) {
+                    console.error("Failed to close chat:", e);
+                }
+            }, 5000);
         }
     });
 
@@ -274,7 +318,13 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
             WA.room.hideLayer("blockPortals");
             console.log(`Variable "finalQuizThree" solved. Level up, +10XP`);
             WA.player.state.currentQuest = "quest26";
+            setTimeout(() => {
+                try {
+                    WA.chat.close();
+                } catch (e) {
+                    console.error("Failed to close chat:", e);
+                }
+            }, 5000);
         }
     });
 export {};
-

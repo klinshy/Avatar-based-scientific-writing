@@ -11,7 +11,7 @@
             const messageNpc = "Zirze"; //default "Zirze"
             const moduleMax = 2; //Enter number of Workbooks in Module-Chamber here
             const workbookName = "Abschlussquiz2"; //Enter Workbookname here
-            const chatTitle = "Quiz Modul 2"; //only gets gets displayed in the chat message
+            const returnMessage = "Abschlussquiz Raum 2 gelöst."; //Enter the return message here, its the message players receive on completion and when they return to the chamber
 
         </script>
         <meta charset="utf-8">
@@ -60,7 +60,7 @@ H5P.RequestQueue=function(n,t){function e(e){t.call(this),this.processingQueue=!
 <script src="../scripts/completionEventScript.js"></script>
 <script>
     //dont change anything here. just copy/paste
-        handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, chatTitle );
+        handleModuleCompletionEvents(completionMessage, messageNpc, moduleName, moduleMax, workbookName, returnMessage );
 </script>
 
     </head>

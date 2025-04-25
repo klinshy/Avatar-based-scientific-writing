@@ -45,6 +45,7 @@ WA.onInit().then(async () => {
                     }
                 }
             });
+            WA.room.area.onLeave(area.name).subscribe(() => {WA.chat.close();});
         });
 
         // When player leaves a chat area
