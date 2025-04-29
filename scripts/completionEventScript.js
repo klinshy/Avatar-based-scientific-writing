@@ -12,11 +12,11 @@
 
   function handleModuleCompletionEvents(
     completionMessage,
-    returnMessage,
     messageNpc,
     moduleName,
     moduleMax,
-    workbookName
+    workbookName,
+    returnMessage
   ) {
     console.log("🚩 Completion Event Script loaded");
     WA.onInit().then(() => {
@@ -24,14 +24,11 @@
       const checkState = () => {
           try {
               const stateValue = WA.player.state[workbookName];
-              if (stateValue !== undefined) {
                   if (stateValue === "solved") {
                       WA.chat.sendChatMessage(returnMessage, messageNpc);
                   }
-              } else {
-                  setTimeout(checkState, 200); // Retry after 200ms
-              }
-          } catch (error) {
+              } 
+          catch (error) {
           }
       };
       checkState();
