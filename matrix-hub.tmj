@@ -957,6 +957,55 @@
                  "width":118.562608394034,
                  "x":830.886229621922,
                  "y":462.861949358307
+                }, 
+                {
+                 "height":910.267224058162,
+                 "id":18,
+                 "name":"background_music",
+                 "properties":[
+                        {
+                         "name":"audioLoop",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"audioVolume",
+                         "type":"float",
+                         "value":0.01
+                        }, 
+                        {
+                         "name":"playAudio",
+                         "type":"string",
+                         "value":".\/averysadmelody.wav"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":1671.50737607402,
+                 "x":-121.940072703238,
+                 "y":124.83995042961
+                }, 
+                {
+                 "height":783.7687838731,
+                 "id":20,
+                 "name":"stepFX",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"marble"
+                        }, 
+                        {
+                         "name":"stepSound",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":1421.42472108394,
+                 "x":38.1391350958363,
+                 "y":219.588780568407
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1087,7 +1136,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":18,
+ "nextobjectid":21,
  "orientation":"orthogonal",
  "properties":[
         {
