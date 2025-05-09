@@ -57,9 +57,8 @@
           `🚩 COMPLETED: ${instance.getScore()} / ${instance.getMaxScore()} for ${workbookName}`
         );
         if (WA.player.state[workbookName] !== "solved") {
-          const currentState = Number(WA.player.state[moduleName]) || 0;
-          const newState = Math.min(currentState + 1, moduleMax);
-          WA.player.state[moduleName] = newState.toString();
+          WA.player.state[workbookName] = "solved";
+          console.log("🚩 State variable has been changed to solved: " + workbookName);
         }
         // Send completion message if not already solved
         if (WA.player.state[workbookName] !== "solved") {
