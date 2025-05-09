@@ -102,12 +102,7 @@ WA.onInit().then(async () => {
     }
 });
 
-WA.onInit().then(() => {
-    WA.room.area.onEnter("mumblecore_1").subscribe(() => {
-        const playerName = WA.player.name;
-        WA.chat.sendChatMessage(`🎉 **Willkommen zurück ${playerName} !** 🎉 \n\n \n\nDu hast **Großes getan** für unsere Universität. Du hast den **Virus neutralisiert** und **Lord Modrevolt** ein für alle Mal aus unserem System verbannt. ⚔️ \n\n \n\nUnsere Universität **Notlog** ist endlich wieder funktionstüchtig und wir können weiter **digitale Lehr- und Lernmaterialien** im **Kondensatorium** produzieren. 💻📚 \n\n \n\nWir sind dir zutiefst zu Dank verpflichtet. 🙏 `, "Mumblecore");
-    });
-});
+
 
 export {};
 

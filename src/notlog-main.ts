@@ -5,6 +5,7 @@ import { getChatAreas } from "./chatArea";
 import { quests, levelUp } from "./quests";
 
 WA.onInit().then(async () => {
+    WA.state.playerName = WA.player.name;
     console.log('loading main.ts');
     WA.controls.disableInviteButton();
     WA.controls.disableMapEditor();
@@ -35,7 +36,9 @@ WA.onInit().then(async () => {
             triggerMessage = WA.ui.displayActionMessage({
                 message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
                 callback: () => {
-                    WA.chat.sendChatMessage(area.chatText, area.npcName);
+
+                    
+                    WA.chat.sendChatMessage(area.chatText.replace("{NameOfPlayer}", playerName),area.npcName);
                     if (area.triggerQuest) {
                         const currentQuest = WA.player.state.currentQuest;
                         const requiredQuest = quests.find((q: { questId: string }) => q.questId === area.triggerQuest)?.requireQuest;
@@ -149,6 +152,8 @@ WA.player.state.onVariableChange('Einführungsvideo').subscribe((newValue) => {
         WA.player.state.currentQuest = "quest5";
     }
 });
+
+
 
 export {};
 

@@ -20,11 +20,21 @@ WA.onInit().then(async () => {
         let triggerMessage: any;
 
         // When player enters a chat area
-        WA.room.area.onEnter(area.name).subscribe(() => {
-            triggerMessage = WA.ui.displayActionMessage({
-                message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
-                callback: () => {
-                    WA.chat.sendChatMessage(area.chatText, area.npcName);
+        WA.onInit().then(async () => {
+            // Get chat areas and set up event listeners for entering and leaving them
+            const chatAreas = await getChatAreas();
+            for (const area of chatAreas) {
+                let triggerMessage: any;
+                let playerName: string = WA.player.name;
+                console.log("Player name:", playerName);
+                // When player enters a chat area
+                WA.room.area.onEnter(area.name).subscribe(() => {
+                    triggerMessage = WA.ui.displayActionMessage({
+                        message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
+                        callback: () => {
+        
+                            
+                            WA.chat.sendChatMessage(area.chatText.replace("{NameOfPlayer}", playerName),area.npcName);
                     if (area.triggerQuest) {
                         const currentQuest = WA.player.state.currentQuest;
                         const requiredQuest = quests.find((q: { questId: string }) => q.questId === area.triggerQuest)?.requireQuest;

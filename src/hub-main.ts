@@ -41,13 +41,16 @@ WA.onInit().then(async () => {
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
         let triggerMessage: any;
-        
+        let playerName: string = WA.player.name;
+        console.log("Player name:", playerName);
         // When player enters a chat area
         WA.room.area.onEnter(area.name).subscribe(() => {
             triggerMessage = WA.ui.displayActionMessage({
                 message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
                 callback: () => {
-                    WA.chat.sendChatMessage(area.chatText, area.npcName);
+
+                    
+                    WA.chat.sendChatMessage(area.chatText.replace("{NameOfPlayer}", playerName),area.npcName);
                     if (area.triggerQuest) {
                         const currentQuest = WA.player.state.currentQuest;
                         const requiredQuest = quests.find((q: { questId: string }) => q.questId === area.triggerQuest)?.requireQuest;
@@ -130,7 +133,7 @@ WA.onInit().then(async () => {
                                         "Zirze"
                                     );
                                     await new Promise((resolve) =>
-                                        setTimeout(resolve, 2000)
+                                        setTimeout(resolve, 4000)
                                     );
                                     WA.player.state.currentQuest = "quest27";
                                     levelUp("notlog", 177);
@@ -145,7 +148,7 @@ WA.onInit().then(async () => {
                         },
                         { scope: "local" }
                     );
-                },
+                }
             });
 
             WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
@@ -156,29 +159,15 @@ WA.onInit().then(async () => {
             });
         });
     } else {
-        // If modules aren't solved, prompt the user to come back later.
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            let actionMessage: any;
-
-            actionMessage = WA.ui.displayActionMessage({
-                message: `[LEERTASTE] drücken um mit dem Terminal zu interagieren.`,
-                callback: () => {
-                    WA.chat.sendChatMessage(
-                        "Die Module sind noch nicht vollständig gelöst. Kehre später zurück.",
-                        "Zirze"
-                    );
-                },
-            });
-
-            WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
-                if (actionMessage) {
-                    actionMessage.remove();
-                }
-                WA.chat.close();
-            });
+            WA.chat.sendChatMessage(
+                "Die Module sind noch nicht vollständig gelöst. Kehre später zurück.",
+                "Zirze"
+            );
         });
     }
 });
+
             
 WA.onInit().then(() => {
     function updateRoomForSolved() {
