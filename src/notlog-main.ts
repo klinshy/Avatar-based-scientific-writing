@@ -145,7 +145,7 @@ WA.onInit().then(async () => {
 
 WA.player.state.onVariableChange('Einführungsvideo').subscribe((newValue) => {
     if (newValue === "solved" ) {
-        console.log(`Variable "finalQuizTwo" solved. Level up, +10XP`);
+        console.log(`Einführungsvideo" solved. Level up, +10XP`);
         WA.player.state.currentQuest = "quest5";
     }
 });

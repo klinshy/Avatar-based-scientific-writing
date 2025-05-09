@@ -3,7 +3,7 @@
 (function () {
   // Dynamically load the external script
   const script = document.createElement("script");
-  script.src = "../scripts/workadventure-iframe-fixed.js";
+  script.src = "https://komponentab.github.io/Avatar-based-scientific-writing/scripts/workadventure-iframe-fixed.js";
   script.onload = () => {
     console.log("External iframe API loaded.");
    
@@ -58,12 +58,8 @@
         );
         if (WA.player.state[workbookName] !== "solved") {
           WA.player.state[workbookName] = "solved";
-          console.log("🚩 State variable has been changed to solved: " + workbookName);
-        }
-        // Send completion message if not already solved
-        if (WA.player.state[workbookName] !== "solved") {
+          console.log( workbookName + "🚩 State variable has been changed to solved: " );
           WA.chat.sendChatMessage(completionMessage, messageNpc);
-          WA.player.state[workbookName] = "solved";
           setTimeout(async () => {
             const cowebsites = await WA.nav.getCoWebSites();
             for (const cowebsite of cowebsites) {
