@@ -104,55 +104,82 @@ WA.onInit().then(async () => {
     if (WA.player.state.module2 === '2' && WA.player.state.module3 === '2') {
         // When both modules are solved, prompt the user and listen for their answer in chat.
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage(
-                "Füge nun die **Wortschnipsel**✂️ in richtiger Reihenfolge zusammen und gib die **beiden Lösungssätze** hier im Chat ein. Ich darf nicht zu viel verraten, aber eine **gezielte Recherche** nach **Carl Sagan** könnte durchaus hilfreich sein.",
-                "Zirze"
-            );
-            
-        });
-    
-        WA.chat.onChatMessage(async (message, event) => {
-            // Check if the message is coming from the local user
-            if (event.authorId === undefined) {
-                const lowerMsg = message.toLowerCase();
-                if (
-                    lowerMsg.includes("wissenschaft") &&
-                    lowerMsg.includes("wissenssammlung") &&
-                    lowerMsg.includes("art") &&
-                    lowerMsg.includes("denken")
-                ) {
+            let actionMessage: any;
+
+            actionMessage = WA.ui.displayActionMessage({
+                message: `[LEERTASTE] drücken um mit dem Terminal zu interagieren.`,
+                callback: () => {
                     WA.chat.sendChatMessage(
-                        " 🌟 **Alles korrekt** 🌟\n\nIch teleportiere dich nun zurück zu **Prof. Mumblecore**. Er wird sich sehr freuen, dich wiederzusehen! 🎉",
+                        "Du kannst jetzt den Sicherheitscode eingeben. Schreibe die richtigen Begriffe in den Chat.",
                         "Zirze"
                     );
-                    await new Promise(resolve => setTimeout(resolve, 2000));
-                    WA.player.state.currentQuest = "quest27";
-                    levelUp("notlog", 177);
-                    WA.nav.goToRoom("./notlog-solved.tmj");
-                } else {
-                    WA.chat.sendChatMessage(
-                        "Schade, versuche es doch noch einmal mit meinem Recherchetipp! 🔍",
-                        "Zirze"
+
+                    WA.chat.onChatMessage(
+                        async (message, event) => {
+                            // Check if the message is coming from the local user
+                            if (event.authorId === undefined) {
+                                const lowerMsg = message.toLowerCase();
+                                if (
+                                    lowerMsg.includes("wissenschaft") &&
+                                    lowerMsg.includes("wissenssammlung") &&
+                                    lowerMsg.includes("art") &&
+                                    lowerMsg.includes("denken")
+                                ) {
+                                    WA.chat.sendChatMessage(
+                                        " 🌟 **Alles korrekt** 🌟\n\nIch teleportiere dich nun zurück zu **Prof. Mumblecore**. Er wird sich sehr freuen, dich wiederzusehen! 🎉",
+                                        "Zirze"
+                                    );
+                                    await new Promise((resolve) =>
+                                        setTimeout(resolve, 2000)
+                                    );
+                                    WA.player.state.currentQuest = "quest27";
+                                    levelUp("notlog", 177);
+                                    WA.nav.goToRoom("./notlog-solved.tmj");
+                                } else {
+                                    WA.chat.sendChatMessage(
+                                        "Schade, versuche es doch noch einmal mit meinem Recherchetipp! 🔍",
+                                        "Zirze"
+                                    );
+                                }
+                            }
+                        },
+                        { scope: "local" }
                     );
+                },
+            });
+
+            WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
+                if (actionMessage) {
+                    actionMessage.remove();
                 }
-            }
-        }, { scope: 'local' });
+                WA.chat.close();
+            });
+        });
     } else {
         // If modules aren't solved, prompt the user to come back later.
         WA.room.area.onEnter("finalCodeTerminal").subscribe(() => {
-            WA.chat.sendChatMessage(
-                "## 🖥️ Reparatur des Computerterminals\n\nKomme hierhin zurück, wenn du **Modul 2** und **Modul 3** gelöst hast. ✅ \n\nUm dieses **Computerterminal** zu reparieren, benötigst du die richtigen **Wortschnipsel**, die beim **Einbruch durch Lord Modrevolt** 💀 durcheinandergeraten sind.\n\nFinde die Fragmente und setze sie korrekt zusammen, um das System wiederherzustellen! 🚀",
-                "Zirze"
-            );
+            let actionMessage: any;
+
+            actionMessage = WA.ui.displayActionMessage({
+                message: `[LEERTASTE] drücken um mit dem Terminal zu interagieren.`,
+                callback: () => {
+                    WA.chat.sendChatMessage(
+                        "Die Module sind noch nicht vollständig gelöst. Kehre später zurück.",
+                        "Zirze"
+                    );
+                },
+            });
+
+            WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
+                if (actionMessage) {
+                    actionMessage.remove();
+                }
+                WA.chat.close();
+            });
         });
     }
-    
-    WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {
-        WA.chat.close();
-    });
-    WA.room.area.onLeave("finalCodeTerminal").subscribe(() => {WA.chat.close();});
-
 });
+            
 WA.onInit().then(() => {
     function updateRoomForSolved() {
         const solvedModule2 = WA.player.state.module2 === '2';
