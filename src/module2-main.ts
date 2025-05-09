@@ -224,7 +224,7 @@ WA.onInit().then(async () => {
                             } catch (e) {
                                 console.error("Error closing chat:", e);
                             }
-                        }, 5000);
+                        }, 10000);
                     }
                 }
             });
@@ -243,7 +243,7 @@ WA.onInit().then(async () => {
                             } catch (e) {
                                 console.error("Error closing chat:", e);
                             }
-                        }, 5000);
+                        }, 10000);
                     }
                 }
             });
@@ -262,7 +262,7 @@ WA.onInit().then(async () => {
                             } catch (e) {
                                 console.error("Error closing chat:", e);
                             }
-                        }, 5000);
+                        }, 10000);
                     }
                 }
             });
@@ -281,7 +281,7 @@ WA.onInit().then(async () => {
                             } catch (e) {
                                 console.error("Error closing chat:", e);
                             }
-                        }, 5000);
+                        }, 10000);
                     }
                 }
             });
@@ -302,7 +302,7 @@ WA.onInit().then(async () => {
                             } catch (e) {
                                 console.error("Error closing chat:", e);
                             }
-                        }, 5000);
+                        }, 10000);
                     }
                 }
             });
