@@ -4,6 +4,7 @@ import { getChatAreas } from "./chatArea";
 import { levelUp, quests } from "./quests";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
+
 WA.onInit().then(async () => {
     try {
         // Initialize the Scripting API Extra
@@ -70,6 +71,22 @@ WA.onInit().then(async () => {
         }
     });
 
+ // Event listener for player movement to play footstep sounds
+    WA.player.onPlayerMove(async ({ x, y, moving }) => {
+        const material = await checkPlayerMaterial({ x, y });
+        if (!material) {
+            mySound?.stop();
+            return;
+        }
+
+        if (!moving && !material) {
+            mySound?.stop();
+            return;
+        } else {
+            mySound?.stop();
+            playRandomSound(material);
+        }
+    });
 
     // Display the current quest banner if a quest is active
     const currentQuestId = WA.player.state.currentQuest;

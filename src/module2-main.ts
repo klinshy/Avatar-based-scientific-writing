@@ -116,6 +116,24 @@ WA.onInit().then(async () => {
     });
 });
 
+ // Event listener for player movement to play footstep sounds
+    WA.player.onPlayerMove(async ({ x, y, moving }) => {
+        const material = await checkPlayerMaterial({ x, y });
+        if (!material) {
+            mySound?.stop();
+            return;
+        }
+
+        if (!moving && !material) {
+            mySound?.stop();
+            return;
+        } else {
+            mySound?.stop();
+            playRandomSound(material);
+        }
+    });
+
+
 WA.onInit().then(async () => {
 
     // On start: if module2 is already "2", update the room colors in the m2terminal2 region.
