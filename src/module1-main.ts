@@ -53,7 +53,7 @@ WA.onInit().then(async () => {
                 WA.chat.close();
             }
         });
-    }
+    }})}
 
     // Event listener for player movement to play footstep sounds
     WA.player.onPlayerMove(async ({ x, y, moving }) => {
