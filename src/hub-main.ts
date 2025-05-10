@@ -131,7 +131,7 @@ WA.onInit().then(() => {
             {
                 label: "Weiter",
                 className: "primary",
-                callback: (popup: Popup) => {
+                callback: (popup) => {
                     WA.nav.goToRoom("./modul_2.tmj");
                     popup.close();
                 },
@@ -154,7 +154,7 @@ WA.onInit().then(() => {
             {
                 label: "Weiter",
                 className: "primary",
-                callback: (popup: Popup) => {
+                callback: (popup) => {
                     WA.nav.goToRoom("./modul_3.tmj");
                     popup.close();
                 },
