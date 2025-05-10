@@ -13,8 +13,6 @@
   function handleModuleCompletionEvents(
     completionMessage,
     messageNpc,
-    moduleName,
-    moduleMax,
     workbookName,
     returnMessage
   ) {
