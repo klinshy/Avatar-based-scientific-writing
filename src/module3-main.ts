@@ -183,10 +183,11 @@ WA.onInit().then(async () => {
                     greenTiles.push({ x, y, tile: "green", layer: "green" });
                     redTiles.push({ x, y, tile: null, layer: "red" });
                 }
-                   levelUp("modul_3", 10);
+                
             }
             WA.room.setTiles(greenTiles);
             WA.room.setTiles(redTiles);
+               levelUp("modul_3", 10);
             const cowebsites = await WA.nav.getCoWebSites();
             for (const cowebsite of cowebsites) {
                 cowebsite.close();
@@ -210,6 +211,7 @@ WA.onInit().then(async () => {
             }
             WA.room.setTiles(greenTiles);
             WA.room.setTiles(redTiles);
+               levelUp("modul_3", 10);
             const cowebsites = await WA.nav.getCoWebSites();
             for (const cowebsite of cowebsites) {
                 cowebsite.close();
