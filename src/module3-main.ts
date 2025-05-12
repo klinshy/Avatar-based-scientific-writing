@@ -183,6 +183,7 @@ WA.onInit().then(async () => {
                     greenTiles.push({ x, y, tile: "green", layer: "green" });
                     redTiles.push({ x, y, tile: null, layer: "red" });
                 }
+                   levelUp("modul_3", 10);
             }
             WA.room.setTiles(greenTiles);
             WA.room.setTiles(redTiles);

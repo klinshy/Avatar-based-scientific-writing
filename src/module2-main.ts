@@ -114,6 +114,11 @@ WA.onInit().then(async () => {
             WA.player.state.currentQuest = 'quest9';
         }
     });
+    WA.room.area.onLeave('fromMatrix').subscribe(() => {
+        if (WA.player.state.currentQuest === 'quest8') {
+            WA.player.state.currentQuest = 'quest9';
+        }
+    });
 });
 
  // Event listener for player movement to play footstep sounds
@@ -148,6 +153,7 @@ WA.onInit().then(async () => {
         }
         WA.room.setTiles(greenTiles);
         WA.room.setTiles(redTiles);
+        levelUp("modul_2", 10);
     }}
 ),
 WA.onInit().then(async () => {
