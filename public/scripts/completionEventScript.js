@@ -3,7 +3,7 @@
 (function () {
   // Dynamically load the external script
   const script = document.createElement("script");
-  script.src = "https://komponentab.github.io/Avatar-based-scientific-writing/scripts/workadventure-iframe-fixed.js";
+  script.src = "./scripts/workadventure-iframe-fixed.js";
   script.onload = () => {
     console.log("External iframe API loaded.");
    
