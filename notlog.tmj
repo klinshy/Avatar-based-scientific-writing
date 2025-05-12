@@ -3790,22 +3790,6 @@
                  "height":1403.18460025632,
                  "id":48,
                  "name":"background_music",
-                 "properties":[
-                        {
-                         "name":"audioLoop",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.01
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/No More Magic_3.mp3"
-                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -3817,22 +3801,6 @@
                  "height":1758.72509065223,
                  "id":49,
                  "name":"background_music2",
-                 "properties":[
-                        {
-                         "name":"audioLoop",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.01
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/Camille_Saint-Saens-Aquarium.mp3"
-                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,

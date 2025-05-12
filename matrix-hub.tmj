@@ -940,22 +940,6 @@
                  "height":910.267224058162,
                  "id":18,
                  "name":"background_music",
-                 "properties":[
-                        {
-                         "name":"audioLoop",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.01
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/averysadmelody.wav"
-                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,

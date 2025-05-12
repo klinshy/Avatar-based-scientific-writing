@@ -2015,22 +2015,6 @@
                  "height":1511.48157489879,
                  "id":38,
                  "name":"background_music",
-                 "properties":[
-                        {
-                         "name":"audioLoop",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.01
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/bitcrunch-1.mp3"
-                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
