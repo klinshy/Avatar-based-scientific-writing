@@ -258,7 +258,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 5000);
+            }, 15000);
         }
     });
 
