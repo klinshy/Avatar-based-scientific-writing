@@ -122,53 +122,7 @@ WA.onInit().then(async () => {
         }
     }
 });
-WA.onInit().then(() => {
-    let popupM2: any;
 
-    // Event listener for entering and leaving the "exit_m2" area
-    WA.room.area.onEnter("exit_m2").subscribe(() => {
-        popupM2 = WA.ui.openPopup("popup_m2", "⚠️ Achtung! Wenn du durch dieses Portal gehst, kannst du nicht zurückkehren, bis du die Aufgaben dahinter gelöst hast.", [
-            {
-                label: "Weiter",
-                className: "primary",
-                callback: (popup) => {
-                    WA.nav.goToRoom("./modul_2.tmj");
-                    popup.close();
-                },
-            },
-        ]);
-    });
-
-    WA.room.area.onLeave("exit_m2").subscribe(() => {
-        if (popupM2) {
-            popupM2.close();
-            popupM2 = undefined;
-        }
-    });
-
-    let popupM3:any;
-
-    // Event listener for entering and leaving the "exit_m3" area
-    WA.room.area.onEnter("exit_m3").subscribe(() => {
-        popupM3 = WA.ui.openPopup("popup_m3", "⚠️ Achtung! Wenn du durch dieses Portal gehst, kannst du nicht zurückkehren, bis du die Aufgaben dahinter gelöst hast.", [
-            {
-                label: "Weiter",
-                className: "primary",
-                callback: (popup) => {
-                    WA.nav.goToRoom("./modul_3.tmj");
-                    popup.close();
-                },
-            },
-        ]);
-    });
-
-    WA.room.area.onLeave("exit_m3").subscribe(() => {
-        if (popupM3) {
-            popupM3.close();
-            popupM3 = undefined;
-        }
-    });
-});
 WA.onInit().then(async () => {
     if (WA.player.state.module2 === '2' && WA.player.state.module3 === '2') {
         // When both modules are solved, prompt the user and listen for their answer in chat.

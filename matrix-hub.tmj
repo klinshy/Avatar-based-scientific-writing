@@ -718,6 +718,12 @@
                  "height":32,
                  "id":2,
                  "name":"exit_m3",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":".\/modul_3.tmj"
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -729,6 +735,12 @@
                  "height":32,
                  "id":3,
                  "name":"exit_m2",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":".\/modul_2.tmj"
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -968,28 +980,6 @@
                  "width":1421.42472108394,
                  "x":37.2180703449843,
                  "y":235.246881332891
-                }, 
-                {
-                 "height":142.765036382058,
-                 "id":21,
-                 "name":"popup_m2",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":202.634245187437,
-                 "x":361.057382333978,
-                 "y":116.05415860735
-                }, 
-                {
-                 "height":142.765,
-                 "id":23,
-                 "name":"popup_m3",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":202.634,
-                 "x":662.245678456295,
-                 "y":115.593644422953
                 }],
          "opacity":1,
          "type":"objectgroup",
