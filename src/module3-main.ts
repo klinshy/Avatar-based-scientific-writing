@@ -257,7 +257,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 15000);
+            }, 10000);
         }
     });
 
@@ -272,7 +272,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 5000);
+            }, 10000);
         }
     });
 
@@ -287,7 +287,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 5000);
+            }, 10000);
         }
     });
 
@@ -302,7 +302,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 5000);
+            }, 10000);
         }
     });
 
@@ -317,7 +317,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 5000);
+            }, 10000);
         }
     });
 
@@ -332,7 +332,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 5000);
+            }, 10000);
         }
     });
 
@@ -348,7 +348,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 5000);
+            }, 10000);
         }
     });
 export {};

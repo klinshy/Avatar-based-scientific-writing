@@ -63,7 +63,7 @@
             for (const cowebsite of cowebsites) {
               cowebsite.close();
             }
-          }, 3000);
+          }, 10000);
         }
       }
     });
