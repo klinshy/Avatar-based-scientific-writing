@@ -45,15 +45,6 @@ WA.onInit().then(async () => {
     });
 
 
-WA.onInit().then(() => {
-    if (WA.player.state.currentQuest === "quest26") {
-        WA.chat.sendChatMessage(
-            "Wow, das ging schnell! Du hast beide Räume gemeistert. Ich hoffe du kannst dich noch an alle Wortschnipsel erinnern. Diese musst du nun in richtiger Reihenfolge im Sicherheitsterminal eingeben. Falls du Hilfe brauchst, frag doch deine Kolleg*innen, ob ihr diese Aufgabe zusammen lösen könnt. Ich darf nicht zu viel verraten, aber eine gezielte Recherche könnte durchaus hilfreich sein. Wenn du oder ihr es schafft, können wir Lord Modrevolt endlich aus unserem System entfernen und unsere Sicherheitseinstellungen des Kondensatoriums wieder herstellen.",
-            "Zirze"
-        );
-    }
-    else console.log("not quest26")
-});
 
 WA.onInit().then(async () => {
     // Get chat areas and set up event listeners for entering and leaving them
@@ -220,9 +211,10 @@ WA.onInit().then(() => {
         }
     }
 
-    // Subscribe to changes on both module2 and module3.
-    WA.player.state.onVariableChange("module2").subscribe(updateRoomForSolved);
-    WA.player.state.onVariableChange("module3").subscribe(updateRoomForSolved);
+    // On Init, check if both module2 and module3 are solved.
+    if (WA.player.state.module2 === '2' && WA.player.state.module3 === '2') {
+        updateRoomForSolved();
+    }
 
     // Run once in case both variables are already set.
     updateRoomForSolved();

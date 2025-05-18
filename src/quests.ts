@@ -145,7 +145,7 @@ const quests = [
     },
     {
         questId: 'quest27',
-        questDescription: 'Rückkehr in die Notlog',
+        questDescription: 'Rückkehr in die Notlog. Sprich mit Prof. Mumblecore.',
         requireQuest: 'quest26',
     }
 ];

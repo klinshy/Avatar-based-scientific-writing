@@ -16,8 +16,8 @@ WA.onInit().then(async () => {
         console.log('Scripting API Extra ready');
     } catch (e) {
         console.error(e);
-    }
-    WA.onInit().then(async () => {
+    }});
+  WA.onInit().then(async () => {
     // Get chat areas and set up event listeners for entering and leaving them
     const chatAreas = await getChatAreas();
     for (const area of chatAreas) {
@@ -29,7 +29,9 @@ WA.onInit().then(async () => {
             triggerMessage = WA.ui.displayActionMessage({
                 message: `[LEERTASTE] drücken um mit ${area.npcName} zu sprechen.`,
                 callback: () => {
-                    WA.chat.sendChatMessage(area.chatText, area.npcName);
+
+                    
+                    WA.chat.sendChatMessage(area.chatText.replace("{NameOfPlayer}", playerName),area.npcName);
                     if (area.triggerQuest) {
                         const currentQuest = WA.player.state.currentQuest;
                         const requiredQuest = quests.find((q: { questId: string }) => q.questId === area.triggerQuest)?.requireQuest;
@@ -40,6 +42,7 @@ WA.onInit().then(async () => {
                 }
             });
             WA.room.area.onLeave(area.name).subscribe(() => {WA.chat.close();});
+        
         });
 
         // When player leaves a chat area
@@ -50,7 +53,6 @@ WA.onInit().then(async () => {
             }
         });
     }
-    });
     
     // Event listener for player movement to play footstep sounds
     WA.player.onPlayerMove(async ({ x, y, moving }) => {

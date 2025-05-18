@@ -119,12 +119,11 @@ WA.onInit().then(async () => {
     }
 });
 WA.onInit().then(async () => {
-    WA.room.area.onEnter('triggerM3Quests').subscribe(() => {
+    
         if (WA.player.state.currentQuest === 'quest16') {
             WA.player.state.currentQuest = 'quest17';
         }
     });
-});
 
 WA.onInit().then(async () => {
     if (WA.player.state.Abschlussquiz3 === "solved") {
