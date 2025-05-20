@@ -215,7 +215,7 @@ WA.onInit().then(async () => {
             }
             WA.room.setTiles(greenTiles);
             WA.room.setTiles(redTiles);
-                        WA.chat.sendChatMessage("Weitere Wortschnipsel gefunden! \n\n\n\nPrima! Du hast noch mehr verlorene Wortschnipsel entdeckt! \n\n \n\nDiese sind entscheidend, um Lord Modrevolt aus unserem System zu verbannen. \n\n Merk sie dir gut: \n\n \n\n eine / als / Wissenssammlung \n\n \n\n Bleib dran und sammle alle Schnipsel – das Schicksal unseres Kondensatoriums liegt in deinen Händen! \n\n ", "Zirze");
+                        WA.chat.sendChatMessage("## 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **eine / als / Wissenssammlung**   \n\n \n\n📢 Bleib dran und sammle alle Schnipsel – das Schicksal unseres Kondensatoriums liegt in deinen Händen!  \n\n  ", "Zirze");
 
              levelUp("modul_2", 10);
             const cowebsites = await WA.nav.getCoWebSites();
