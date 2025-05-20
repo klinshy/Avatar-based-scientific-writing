@@ -1567,7 +1567,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"## \ud83d\ude80 Weiter geht\u2019s mit Element 3!   \n\n \n\n**Sch\u00f6n, dass du noch da bist!** \ud83c\udf89 Mach dich bereit f\u00fcr die n\u00e4chste Herausforderung!   \n\n \n\n\ud83d\udd04 **Die Elemente bauen aufeinander auf** \u2013 folge der Reihenfolge.   \n\n\ud83d\udd52 **Plane ca. 50 Minuten f\u00fcr den zweiten Raum ein.**   \n\n\u23f8\ufe0f **Du kannst jederzeit pausieren und zur\u00fcckkommen.**   \n\n \n\n\ud83d\udd22 **Vergiss nicht die Zahlencodes in den Materialien zu suchen und zu notieren!**   \n\n \n\n\ud83d\udccc Nach jedem Element erh\u00e4ltst du einen **Zahlencode**. Daf\u00fcr musst du die Materialien korrekt l\u00f6sen und abschlie\u00dfend auf **\u00fcberpr\u00fcfen** oder **beenden** klicken! \n\n \n\n\u2702\ufe0f **Finde au\u00dferdem wieder Wortschnipsel**, die durch **Lord Modrevolts Angriff** \ud83d\udc80\u26a1 durcheinandergeraten sind.   \n\n \n\n\ud83c\udfaf **Viel Erfolg!**  \n\n  "
+                         "value":"## \ud83d\ude80 Weiter geht\u2019s mit Element 3!   \n\n \n\n**Sch\u00f6n, dass du noch da bist!** \ud83c\udf89 Mach dich bereit f\u00fcr die n\u00e4chste Herausforderung!   \n\n \n\n\ud83d\udd04 **Die Elemente bauen aufeinander auf** \u2013 folge der Reihenfolge.   \n\n\ud83d\udd52 **Plane ca. 50 Minuten f\u00fcr den zweiten Raum ein.**   \n\n\u23f8\ufe0f **Du kannst jederzeit pausieren und zur\u00fcckkommen.**   \n\n \n\n\ud83d\udd22 **Vergiss nicht die Zahlencodes in den Materialien zu suchen und zu notieren!**   \n\n \n\n\ud83d\udccc Nach jedem Element erh\u00e4ltst du einen **Zahlencode**. Daf\u00fcr musst du die Materialien korrekt l\u00f6sen und abschlie\u00dfend auf **\u00dcberpr\u00fcfen** oder **Beenden** klicken! \n\n \n\n\u2702\ufe0f **Finde au\u00dferdem wieder Wortschnipsel**, die durch **Lord Modrevolts Angriff** \ud83d\udc80\u26a1 durcheinandergeraten sind.   \n\n \n\n\ud83c\udfaf **Viel Erfolg!**  \n\n  "
                         }, 
                         {
                          "name":"isNpc",
@@ -1621,7 +1621,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"## \ud83d\udee0\ufe0f Mission: Starte mit Element 1 \n\n \n\n**Sch\u00f6n, dass du uns hilfst {NameOfPlayer}!** \ud83e\udd1d Starte doch schon mal mit **Element 1**.   \n\n \n\n\ud83d\udd04 Die Elemente **bauen aufeinander auf**, folge also der **Reihenfolge**.   \n\n\ud83d\udd52 **Plane f\u00fcr den ersten Raum ca. 20 Minuten Zeit ein.**   \n\n\u23f8\ufe0f Du kannst jederzeit **aufh\u00f6ren und wieder zur\u00fcckkommen**.   \n\n \n\n\ud83d\udcdc **Vergiss nicht, nach den Zahlencodes in den Materialien Ausschau zu halten** \ud83d\udd22 und dir diese zu **notieren** \ud83d\udcdd.   \n\n \n\n\ud83d\udccc Nach jedem Element erh\u00e4ltst du einen **Zahlencode**. Daf\u00fcr musst du die Materialien korrekt l\u00f6sen und abschlie\u00dfend auf **\u00fcberpr\u00fcfen** oder **beenden** klicken! \n\n \n\n\ud83d\udccc Neben den Zahlencodes musst du auch **Wortschnipsel** \u2702\ufe0f finden,   \n\ndie durch **Lord Modrevolts Angriff** \ud83d\udc80\u26a1 durcheinandergeraten sind.   \n\n \n\n\ud83c\udfaf **Viel Erfolg!**  \n\n  "
+                         "value":"## \ud83d\udee0\ufe0f Mission: Starte mit Element 1 \n\n \n\n**Sch\u00f6n, dass du uns hilfst {NameOfPlayer}!** \ud83e\udd1d Starte doch schon mal mit **Element 1**.   \n\n \n\n\ud83d\udd04 Die Elemente **bauen aufeinander auf**, folge also der **Reihenfolge**.   \n\n\ud83d\udd52 **Plane f\u00fcr den ersten Raum ca. 20 Minuten Zeit ein.**   \n\n\u23f8\ufe0f Du kannst jederzeit **aufh\u00f6ren und wieder zur\u00fcckkommen**.   \n\n \n\n\ud83d\udcdc **Vergiss nicht, nach den Zahlencodes in den Materialien Ausschau zu halten** \ud83d\udd22 und dir diese zu **notieren** \ud83d\udcdd.   \n\n \n\n\ud83d\udccc Nach jedem Element erh\u00e4ltst du einen **Zahlencode**. Daf\u00fcr musst du die Materialien korrekt l\u00f6sen und abschlie\u00dfend auf **\u00dcberpr\u00fcfen** oder **Beenden** klicken! \n\n \n\n\ud83d\udccc Neben den Zahlencodes musst du auch **Wortschnipsel** \u2702\ufe0f finden,   \n\ndie durch **Lord Modrevolts Angriff** \ud83d\udc80\u26a1 durcheinandergeraten sind.   \n\n \n\n\ud83c\udfaf **Viel Erfolg!**  \n\n  "
                         }, 
                         {
                          "name":"isNpc",
@@ -2208,7 +2208,7 @@
          "value":"src\/module2-main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {
