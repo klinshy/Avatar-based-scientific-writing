@@ -32,5 +32,5 @@ Vergiss deine **Wortschnipsel** nicht, diese sind sehr wichtig! ✂️💡
 
  
 
-Du bist nun bereit, mit **Modul 3** weiterzumachen, um mehr über das **wissenschaftliche Schreiben** zu erfahren. ✍️📖 `,"Zirze")}WA.player.state.module2==="2"&&WA.player.state.module3==="2"&&r(),r()});
-//# sourceMappingURL=hub-main-72aca6fe.js.map
+Du bist nun bereit, mit **Modul 3** weiterzumachen, um mehr über das **wissenschaftliche Schreiben** zu erfahren. ✍️📖 `,"Zirze")}WA.player.state.module2==="2"&&WA.player.state.module3==="2"&&r()});
+//# sourceMappingURL=hub-main-37a8d77d.js.map

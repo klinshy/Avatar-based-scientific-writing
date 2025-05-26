@@ -63,7 +63,7 @@
             for (const cowebsite of cowebsites) {
               cowebsite.close();
             }
-          }, 10000);
+          }, 120000); // Close all co-websites after 2 minutes
         }
       }
     });
