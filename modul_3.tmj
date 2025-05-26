@@ -1582,7 +1582,7 @@
                         {
                          "name":"triggerQuest",
                          "type":"string",
-                         "value":"modul2_quest1"
+                         "value":""
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1636,7 +1636,7 @@
                         {
                          "name":"triggerQuest",
                          "type":"string",
-                         "value":"quest5"
+                         "value":"quest17"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2282,7 +2282,7 @@
          "value":"src\/module3-main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.0",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tilesets":[
         {

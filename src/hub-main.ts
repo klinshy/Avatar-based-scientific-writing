@@ -216,8 +216,6 @@ WA.onInit().then(() => {
         updateRoomForSolved();
     }
 
-    // Run once in case both variables are already set.
-    updateRoomForSolved();
 });
 export {};
 

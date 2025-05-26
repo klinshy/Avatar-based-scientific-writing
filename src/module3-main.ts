@@ -121,9 +121,16 @@ WA.onInit().then(async () => {
 WA.onInit().then(async () => {
     
         if (WA.player.state.currentQuest === 'quest16') {
-            WA.player.state.currentQuest = 'quest17';
+            WA.ui.banner.openBanner({
+                id: 'quest16a',
+                text: 'Sprich mit Zirze',
+                bgColor: '#1B1B29',
+                timeToClose: 0,
+                textColor: '#FFFFFF',
+                closable: false
+            });
         }
-    });
+    }); 
 
 WA.onInit().then(async () => {
     if (WA.player.state.Abschlussquiz3 === "solved") {
@@ -257,7 +264,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 10000);
+            }, 60000);
         }
     });
 
@@ -272,7 +279,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 10000);
+            }, 60000);
         }
     });
 
@@ -287,7 +294,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 10000);
+            }, 60000);
         }
     });
 
@@ -302,7 +309,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 10000);
+            }, 60000);
         }
     });
 
@@ -317,7 +324,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 10000);
+            }, 60000);
         }
     });
 
@@ -332,7 +339,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 10000);
+            }, 60000);
         }
     });
 
@@ -348,7 +355,7 @@ WA.player.state.onVariableChange('currentQuest').subscribe((newQuest) => {
                 } catch (e) {
                     console.error("Failed to close chat:", e);
                 }
-            }, 10000);
+            }, 60000);
         }
     });
 export {};

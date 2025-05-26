@@ -276,7 +276,7 @@ WA.onInit().then(async () => {
                             } catch (e) {
                                 console.error("Error closing chat:", e);
                             }
-                        }, 10000);
+                        }, 60000);
                     }
                 }
             });
