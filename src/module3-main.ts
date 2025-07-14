@@ -179,7 +179,7 @@ WA.onInit().then(async () => {
         // Set module2 to "1" for terminal1.
         WA.player.state.module3 = '1';
         if (newValue === "correct") {
-            WA.chat.sendChatMessage("## 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **eine / ist / sie**   \n\n \n\n📢 Bleib dran und sammle alle Schnipsel – das Schicksal unseres Kondensatoriums liegt in deinen Händen!  \n\n", "Zirze");
+            WA.chat.sendChatMessage("##### 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **eine / ist / sie**   \n\n \n\n📢 Bleib dran und sammle alle Schnipsel – das Schicksal unseres Kondensatoriums liegt in deinen Händen!  \n\n", "Zirze");
             WA.player.state.currentQuest = 'quest21';
             // Change tiles in the m2terminal1 region: from (4,71) to (15,89)
             const greenTiles: any[] = [];
@@ -238,7 +238,7 @@ WA.player.state.onVariableChange('module3').subscribe((newValue) => {
         }
         WA.room.setTiles(greenTiles);
         WA.room.setTiles(redTiles);
-        WA.chat.sendChatMessage("## 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **zu / denken / Art**   \n\n", "Zirze");
+        WA.chat.sendChatMessage("##### 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **zu / denken / Art**   \n\n", "Zirze");
     }
 });
        

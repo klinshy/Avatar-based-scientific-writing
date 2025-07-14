@@ -178,7 +178,7 @@ WA.onInit().then(async () => {
         // Set module2 to "1" for terminal1.
         WA.player.state.module2 = '1';
         if (newValue === "correct") {
-            WA.chat.sendChatMessage("## 🔍 Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast die ersten **verlorenen Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **ist / Wissenschaft / mehr**   \n\n \n\n📢 Halte weiter Ausschau nach fehlenden Fragmenten – die Rettung unserer Universität hängt davon ab!    \n\n ", "Zirze");
+            WA.chat.sendChatMessage("##### 🔍 Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast die ersten **verlorenen Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **ist / Wissenschaft / mehr**   \n\n \n\n📢 Halte weiter Ausschau nach fehlenden Fragmenten – die Rettung unserer Universität hängt davon ab!    \n\n ", "Zirze");
             WA.player.state.currentQuest = 'quest12a';
             // Change tiles in the m2terminal1 region: from (4,71) to (15,89)
             const greenTiles: any[] = [];
@@ -215,7 +215,7 @@ WA.onInit().then(async () => {
             }
             WA.room.setTiles(greenTiles);
             WA.room.setTiles(redTiles);
-                        WA.chat.sendChatMessage("## 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **eine / als / Wissenssammlung**   \n\n \n\n📢 Bleib dran und sammle alle Schnipsel – das Schicksal unseres Kondensatoriums liegt in deinen Händen!  \n\n  ", "Zirze");
+                        WA.chat.sendChatMessage("##### 🔍 Weitere Wortschnipsel gefunden!   \n\n \n\n**Prima!** 🎉 Du hast noch mehr **verlorene Wortschnipsel** ✂️ entdeckt!   \n\n \n\nDiese sind entscheidend, um **Lord Modrevolt** 💀 aus unserem System zu **verbannen**.   \n\n🔐 **Merk sie dir gut:**   \n\n \n\n📝 **eine / als / Wissenssammlung**   \n\n \n\n📢 Bleib dran und sammle alle Schnipsel – das Schicksal unseres Kondensatoriums liegt in deinen Händen!  \n\n  ", "Zirze");
 
              levelUp("modul_2", 10);
             const cowebsites = await WA.nav.getCoWebSites();
